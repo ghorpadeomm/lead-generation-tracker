@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUB Energy — Opportunity Intelligence Command Center</title>
+<style>
+  :root{
+    --navy:#13294B; --navy-2:#1C3A66; --forest:#1E7B3E; --signal:#35B449;
+    --ground:#EEF1F5; --card:#FFFFFF; --line:#DCE2EA;
+    --ink:#16202E; --muted:#5B6878; --faint:#8A94A6;
+    --urgent:#D64545; --soon:#E0942B; --amber-ink:#7A5310;
+    --ring-track:#E3E8EF;
+    --tier-hi:#1E7B3E; --tier-md:#C98A2B; --tier-lo:#8A94A6;
+    --sans:"Calibri","Segoe UI",system-ui,Roboto,-apple-system,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+    --r:10px; --shadow:0 1px 2px rgba(16,32,46,.06),0 6px 18px rgba(16,32,46,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--ground);color:var(--ink);font-family:var(--sans);
+    font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+  .app{max-width:1320px;margin:0 auto;padding:0 18px 48px}
+
+  /* ---------- Command header ---------- */
+  .cmd{display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+    background:var(--navy);color:#fff;border-radius:0 0 var(--r) var(--r);
+    padding:16px 22px;margin-bottom:18px;
+    background-image:linear-gradient(110deg,var(--navy) 60%,var(--navy-2));}
+  .brand{display:flex;align-items:center;gap:12px}
+  .glyph{width:34px;height:34px;flex:0 0 auto}
+  .brand h1{font-size:15px;font-weight:700;letter-spacing:.04em;line-height:1.15}
+  .brand h1 small{display:block;font-size:10px;font-weight:600;letter-spacing:.22em;
+    color:var(--signal);text-transform:uppercase;margin-top:2px}
+  .cmd-spacer{flex:1 1 auto}
+  .live{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:700;color:#CFE9D6}
+  .live-dot{width:9px;height:9px;border-radius:50%;background:var(--signal);
+    box-shadow:0 0 0 0 rgba(53,180,73,.7);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(53,180,73,.55)}
+    70%{box-shadow:0 0 0 9px rgba(53,180,73,0)}100%{box-shadow:0 0 0 0 rgba(53,180,73,0)}}
+  .stamp{font-family:var(--mono);font-size:11px;color:#A9B6CA;letter-spacing:.02em}
+  .demo{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--navy);background:#F2C84B;border-radius:20px;padding:3px 10px}
+
+  /* ---------- KPI readouts ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:18px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:13px 15px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--forest)}
+  .kpi.k-urgent::before{background:var(--urgent)}
+  .kpi.k-signal::before{background:var(--signal)}
+  .kpi.k-hi::before{background:var(--navy)}
+  .kpi .lab{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--muted);display:flex;align-items:center;gap:6px}
+  .kpi .val{font-family:var(--mono);font-size:27px;font-weight:600;color:var(--navy);
+    line-height:1.1;margin-top:7px;letter-spacing:-.5px}
+  .kpi .sub{font-size:11px;color:var(--faint);margin-top:3px}
+  .kpi .val.cur{font-size:21px}
+
+  /* ---------- Workspace ---------- */
+  .work{display:grid;grid-template-columns:1fr 332px;gap:18px;align-items:start}
+
+  /* ---------- Filter bar ---------- */
+  .filterbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:10px 12px;margin-bottom:14px;box-shadow:var(--shadow)}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#F6F8FA}
+  .seg button{border:0;background:transparent;font-family:var(--sans);font-size:12.5px;
+    font-weight:600;color:var(--muted);padding:7px 13px;cursor:pointer;letter-spacing:.01em}
+  .seg button.on{background:var(--navy);color:#fff}
+  .seg button:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
+  .field{display:flex;flex-direction:column;gap:2px}
+  select,.search input{font-family:var(--sans);font-size:12.5px;color:var(--ink);
+    border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:#fff;height:34px}
+  select:focus-visible,.search input:focus-visible{outline:2px solid var(--signal);outline-offset:0}
+  .search{position:relative;flex:1 1 180px;min-width:160px}
+  .search input{width:100%;padding-left:30px}
+  .search svg{position:absolute;left:9px;top:9px;color:var(--faint)}
+  .fb-spacer{flex:1 1 8px}
+  .count-tag{font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
+  .count-tag b{font-family:var(--mono);color:var(--navy);font-weight:600}
+
+  /* ---------- Feed ---------- */
+  .feed{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow);overflow:hidden}
+  .feed-head{display:grid;grid-template-columns:78px 1fr 96px 96px 132px 54px;
+    gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);
+    font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);background:#FAFBFC}
+  .feed-head span:nth-child(3),.feed-head span:nth-child(4){text-align:right}
+  .feed-head span:nth-child(6){text-align:center}
+  .opp{border-bottom:1px solid #EEF1F5;animation:rise .35s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .opp-row{display:grid;grid-template-columns:78px 1fr 96px 96px 132px 54px;gap:10px;
+    align-items:center;padding:12px 16px 12px 13px;cursor:pointer;border-left:3px solid transparent;
+    transition:background .12s}
+  .opp-row:hover{background:#F7FAF8}
+  .opp[data-kind="tender"] .opp-row{border-left-color:var(--navy)}
+  .opp[data-kind="signal"] .opp-row{border-left-color:var(--signal)}
+  .badge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.08em;
+    text-transform:uppercase;padding:3px 7px;border-radius:5px;white-space:nowrap}
+  .badge.tender{background:#E7ECF4;color:var(--navy)}
+  .badge.signal{background:#E4F4E9;color:#176B33}
+  .opp-id{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:5px}
+  .opp-title{font-weight:600;color:var(--ink);font-size:13.5px;line-height:1.3}
+  .opp-org{font-size:11.5px;color:var(--muted);margin-top:1px}
+  .col-r{text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink)}
+  .col-r .u{display:block;font-family:var(--sans);font-size:9.5px;color:var(--faint);
+    text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;
+    padding:4px 9px;border-radius:20px;white-space:nowrap}
+  .chip.urgent{background:#FBE3E3;color:var(--urgent)}
+  .chip.soon{background:#FBEFD8;color:var(--amber-ink)}
+  .chip.sched{background:#EAF0F7;color:var(--navy)}
+  .chip.intel{background:#EFF2F5;color:var(--muted)}
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.85}
+  .ring{width:42px;height:42px;border-radius:50%;margin:0 auto;display:grid;place-items:center;
+    background:conic-gradient(var(--rc) calc(var(--p)*1%),var(--ring-track) 0);position:relative}
+  .ring::before{content:"";position:absolute;inset:4px;background:#fff;border-radius:50%}
+  .ring span{position:relative;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--navy)}
+  .caret{justify-self:center;color:var(--faint);transition:transform .18s}
+  .opp.open .caret{transform:rotate(90deg)}
+
+  /* expanded detail */
+  .opp-detail{display:none;padding:2px 16px 18px 56px;background:#FAFCFB}
+  .opp.open .opp-detail{display:block;animation:rise .25s ease both}
+  .dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 22px;margin:10px 0 14px}
+  .dgrid div{font-size:12px}
+  .dgrid .dl{display:block;font-size:9.5px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+  .dgrid .dv{font-weight:600;color:var(--ink)}
+  .dnote{font-size:12.5px;color:var(--ink);background:#fff;border:1px solid var(--line);
+    border-left:3px solid var(--signal);border-radius:6px;padding:9px 12px;margin-bottom:12px}
+  .dnote b{color:var(--forest)}
+  .dact{display:flex;gap:9px;flex-wrap:wrap}
+  .btn{font-family:var(--sans);font-size:12px;font-weight:600;border-radius:7px;padding:7px 13px;
+    cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--navy)}
+  .btn.primary{background:var(--forest);border-color:var(--forest);color:#fff}
+  .btn:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
+  .empty{padding:46px 20px;text-align:center;color:var(--muted)}
+  .empty b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+
+  /* ---------- Intel panel ---------- */
+  .intel-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow);padding:15px 16px;margin-bottom:14px}
+  .intel-card h3{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:13px;display:flex;align-items:center;justify-content:space-between}
+  .intel-card h3 .view{font-size:9px;color:var(--faint);font-weight:600;letter-spacing:.04em}
+  .donut-wrap{display:flex;align-items:center;gap:16px}
+  .donut{width:104px;height:104px;flex:0 0 auto}
+  .legend{font-size:12px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .legend .li{display:flex;align-items:center;gap:8px}
+  .legend .sw{width:11px;height:11px;border-radius:3px;flex:0 0 auto}
+  .legend .ln{flex:1;color:var(--muted)}
+  .legend .lv{font-family:var(--mono);font-weight:600;color:var(--navy)}
+  .bars .bar{margin-bottom:9px}
+  .bars .bt{display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:3px}
+  .bars .bt .bn{color:var(--ink);font-weight:600}
+  .bars .bt .bv{font-family:var(--mono);color:var(--muted)}
+  .bars .track{height:7px;background:#EDF1F5;border-radius:5px;overflow:hidden}
+  .bars .fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--forest),var(--signal))}
+  .useg{display:flex;height:11px;border-radius:6px;overflow:hidden;margin-bottom:11px;background:#EDF1F5}
+  .useg i{display:block;height:100%}
+  .ulegend{display:flex;gap:14px;font-size:11.5px;flex-wrap:wrap}
+  .ulegend .ui{display:flex;align-items:center;gap:6px;color:var(--muted)}
+  .ulegend .ud{width:9px;height:9px;border-radius:2px}
+  .ulegend b{font-family:var(--mono);color:var(--navy)}
+  /* digest */
+  .digest p{font-size:13px;color:var(--ink);line-height:1.5}
+  .digest .lede{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:9px}
+  .digest .lede b{color:var(--navy)}
+  .digest ul{list-style:none;margin-top:11px;display:flex;flex-direction:column;gap:9px}
+  .digest li{display:flex;gap:9px;font-size:12.5px;align-items:flex-start}
+  .digest li .pri{font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 6px;border-radius:4px;flex:0 0 auto;margin-top:1px}
+  .digest li .pri.t{background:#E7ECF4;color:var(--navy)}
+  .digest li .pri.s{background:#E4F4E9;color:#176B33}
+  .digest li span{color:var(--ink)}
+  .digest li b{color:var(--forest)}
+
+  .foot{margin-top:18px;font-size:11px;color:var(--faint);text-align:center;line-height:1.6}
+
+  @media (max-width:980px){
+    .kpis{grid-template-columns:repeat(3,1fr)}
+    .work{grid-template-columns:1fr}
+  }
+  @media (max-width:680px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .feed-head{display:none}
+    .opp-row{grid-template-columns:1fr 48px;grid-template-areas:"a r" "b r" "c r";row-gap:7px;padding:13px 14px}
+    .opp-row .c-meta{grid-area:a}.opp-row .c-main{grid-area:b}.opp-row .c-vals{grid-area:c;display:flex;gap:14px}
+    .opp-row .c-ring{grid-area:r}
+    .col-r{text-align:left}
+    .opp-detail{padding-left:18px}
+    .dgrid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header class="cmd">
+    <div class="brand">
+      <svg class="glyph" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="8.5" fill="#35B449"/>
+        <g stroke="#35B449" stroke-width="2.4" stroke-linecap="round">
+          <line x1="20" y1="3" x2="20" y2="9"/><line x1="20" y1="31" x2="20" y2="37"/>
+          <line x1="3" y1="20" x2="9" y2="20"/><line x1="31" y1="20" x2="37" y2="20"/>
+          <line x1="8" y1="8" x2="12" y2="12"/><line x1="28" y1="28" x2="32" y2="32"/>
+          <line x1="32" y1="8" x2="28" y2="12"/><line x1="12" y1="28" x2="8" y2="32"/>
+        </g>
+      </svg>
+      <h1>B. U. Bhandari Energy<small>Opportunity Intelligence</small></h1>
+    </div>
+    <div class="cmd-spacer"></div>
+    <span class="demo">Demo data</span>
+    <div class="live"><span class="live-dot"></span>Live feed</div>
+    <div class="stamp" id="stamp"></div>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="work">
+    <div class="feed-col">
+      <div class="filterbar">
+        <div class="seg" id="kindSeg" role="tablist" aria-label="Source">
+          <button class="on" data-kind="all">All</button>
+          <button data-kind="tender">Tenders</button>
+          <button data-kind="signal">Signals</button>
+        </div>
+        <select id="stateSel" aria-label="Filter by state"></select>
+        <select id="tierSel" aria-label="Filter by priority">
+          <option value="all">All priority</option>
+          <option value="hi">High (75+)</option>
+          <option value="md">Medium (50–74)</option>
+          <option value="lo">Low (&lt;50)</option>
+        </select>
+        <select id="sortSel" aria-label="Sort by">
+          <option value="priority">Sort: Priority</option>
+          <option value="deadline">Sort: Deadline</option>
+          <option value="value">Sort: Value</option>
+          <option value="recent">Sort: Newest</option>
+        </select>
+        <div class="search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+          <input id="searchInp" type="search" placeholder="Search company, authority, project…">
+        </div>
+        <div class="fb-spacer"></div>
+        <span class="count-tag"><b id="shownCount">0</b> shown</span>
+      </div>
+
+      <div class="feed">
+        <div class="feed-head">
+          <span>Source</span><span>Opportunity</span><span>Value</span>
+          <span>Capacity</span><span>Timing</span><span>Score</span>
+        </div>
+        <div id="feedBody"></div>
+      </div>
+    </div>
+
+    <aside class="intel-col">
+      <div class="intel-card">
+        <h3>Signal mix <span class="view">current view</span></h3>
+        <div class="donut-wrap">
+          <svg class="donut" id="donut" viewBox="0 0 42 42" aria-hidden="true"></svg>
+          <div class="legend" id="donutLegend"></div>
+        </div>
+      </div>
+      <div class="intel-card">
+        <h3>Top states <span class="view">current view</span></h3>
+        <div class="bars" id="stateBars"></div>
+      </div>
+      <div class="intel-card">
+        <h3>Tender urgency <span class="view">open bids</span></h3>
+        <div class="useg" id="urgSeg"></div>
+        <div class="ulegend" id="urgLegend"></div>
+      </div>
+      <div class="intel-card digest">
+        <h3>Today's brief <span class="view" id="briefDate"></span></h3>
+        <div id="digest"></div>
+      </div>
+    </aside>
+  </div>
+
+  <p class="foot">
+    Prototype interface for the combined Tender Alert + LinkedIn Opportunity Intelligence systems (Deliverables 3 + 4).<br>
+    Sample data shown. In production, the feed is populated by the tender-alert ingestion service and the LinkedIn signal pipeline via <code>POST /api/ingest</code>.
+  </p>
+</div>
+
+<script>
+/* ---------------- Data (sample — mirrors BUBEPL live pipeline) ---------------- */
+const NOW = new Date('2026-06-19T09:00:00');
+const DATA = [
+  // ---- Tenders ----
+  {id:'BUB-T001',kind:'tender',title:'700 MW Solar EPC',org:'GUVNL / Patel Infrastructure',source:'GUVNL Portal',state:'Gujarat',value:2100,capacity:700,deadline:'2026-07-15',detected:'2026-06-05',priority:78,owner:'P. Sharma',note:'Large EPC, PQR criteria met. Finalise bid + ₹105 Cr bank guarantee. Watch LD exposure clause.'},
+  {id:'BUB-T002',kind:'tender',title:'1.7 MWp Rooftop Solar',org:'Shree Sai Baba Sansthan, Shirdi',source:'Tender Tiger',state:'Maharashtra',value:1.1,capacity:1.7,deadline:'2026-06-28',detected:'2026-06-04',priority:81,owner:'A. Deshmukh',note:'Close and highly winnable. Submit pre-bid query on CUF clause, then bid. Strong local fit.'},
+  {id:'BUB-T003',kind:'tender',title:'1012 MW PM-KUSUM-C BOS',org:'MP DISCOM (via SSPPL)',source:'State DISCOM',state:'Madhya Pradesh',value:1850,capacity:1012,deadline:'2026-08-10',detected:'2026-06-06',priority:64,owner:'R. Patil',note:'Multi-site BOS across 116 feeders. Validate land availability and penalty structure before committing.'},
+  {id:'BUB-T004',kind:'tender',title:'5.5 MW Rooftop (RESCO)',org:'SECI',source:'SECI RfS',state:'Multi-State',value:3.3,capacity:5.5,deadline:'2026-07-05',detected:'2026-06-08',priority:58,owner:'R. Patil',note:'RESCO mode — check PBG and 25-yr payment security mechanism. Tranche-X RTSPV.'},
+  {id:'BUB-T005',kind:'tender',title:'4 MW Rooftop RFQ',org:'Swan Defence & Heavy Ind. (Pipavav)',source:'BidAssist',state:'Gujarat',value:2.4,capacity:4,deadline:'2026-06-30',detected:'2026-06-07',priority:55,owner:'P. Sharma',note:'"Go with caution" — partial eligibility. Clarify scope ambiguity in price-bid format.'},
+  {id:'BUB-T006',kind:'tender',title:'30 MW MSKVY 2.0 Cluster',org:'MSEDCL — Latur',source:'State DISCOM',state:'Maharashtra',value:16.5,capacity:30,deadline:'2026-07-20',detected:'2026-06-09',priority:71,owner:'A. Deshmukh',note:'Home-turf scheme. Strong margin profile. Assign and begin techno-commercial workup.'},
+  {id:'BUB-T007',kind:'tender',title:'100 MW Floating Solar',org:'NTPC Ltd',source:'NTPC Portal',state:'Madhya Pradesh',value:450,capacity:100,deadline:'2026-07-12',detected:'2026-06-10',priority:60,owner:'P. Sharma',note:'Floating BOS specialism required. Assess in-house vs partner execution.'},
+  {id:'BUB-T008',kind:'tender',title:'50 MW Ground Mount',org:'NHPC Ltd',source:'NHPC Portal',state:'Rajasthan',value:220,capacity:50,deadline:'2026-08-02',detected:'2026-06-12',priority:55,owner:'R. Patil',note:'Standard ground-mount EPC. Comfortable technical fit; commercial competitiveness is the question.'},
+  {id:'BUB-T009',kind:'tender',title:'2 MW Govt Office Rooftop',org:'Govt of Maharashtra',source:'GeM',state:'Maharashtra',value:11,capacity:2,deadline:'2026-06-25',detected:'2026-06-14',priority:70,owner:'A. Deshmukh',note:'Closing soon. Straightforward CAPEX rooftop on GeM — quick win if priced sharp.'},
+  {id:'BUB-T010',kind:'tender',title:'200 MW Solar Park',org:'SJVN Ltd',source:'SJVN Portal',state:'Himachal Pradesh',value:900,capacity:200,deadline:'2026-08-18',detected:'2026-06-09',priority:52,owner:'Unassigned',note:'Long runway. Terrain due-diligence needed before go/no-go.'},
+  // ---- LinkedIn / market signals (value = announced investment) ----
+  {id:'BUB-S001',kind:'signal',title:'New manufacturing plant',org:'Foxconn India',source:'LinkedIn',state:'Tamil Nadu',value:30000,capacity:null,deadline:null,detected:'2026-06-04',priority:88,owner:'—',note:'Mega captive RE requirement likely. Map decision-makers via Sales Navigator and open dialogue early.',sigtype:'New Plant'},
+  {id:'BUB-S002',kind:'signal',title:'Logistics park expansion',org:'Reliance Logistics',source:'LinkedIn',state:'Maharashtra',value:4500,capacity:null,deadline:null,detected:'2026-06-07',priority:84,owner:'—',note:'Rooftop opportunity across multiple fulfilment centres. High roof-area density.',sigtype:'Warehouse / Logistics'},
+  {id:'BUB-S003',kind:'signal',title:'Data center build-out',org:'AdaniConneX',source:'Industrial News',state:'Telangana',value:12000,capacity:null,deadline:null,detected:'2026-06-10',priority:86,owner:'—',note:'24×7 carbon-free energy mandate — strong OA + rooftop hybrid play. Time-sensitive.',sigtype:'Data Center'},
+  {id:'BUB-S004',kind:'signal',title:'Capacity expansion',org:'Raymond Ltd',source:'LinkedIn',state:'Maharashtra',value:800,capacity:null,deadline:null,detected:'2026-06-12',priority:66,owner:'—',note:'Textile rooftop CAPEX candidate. Sustainability lead is the entry point.',sigtype:'Capacity Expansion'},
+  {id:'BUB-S005',kind:'signal',title:'Renewable commitment',org:'Greenko',source:'LinkedIn',state:'Andhra Pradesh',value:0,capacity:null,deadline:null,detected:'2026-06-14',priority:35,owner:'—',note:'Competitor-adjacent. Low fit for our EPC scope — monitor only.',sigtype:'Renewable Commitment'},
+  {id:'BUB-S006',kind:'signal',title:'Semiconductor fab',org:'Tata Electronics (Dholera)',source:'Industrial News',state:'Gujarat',value:27000,capacity:null,deadline:null,detected:'2026-06-05',priority:85,owner:'—',note:'Enormous load growth in our backyard cluster. Position for captive + OA supply.',sigtype:'New Facility'},
+  {id:'BUB-S007',kind:'signal',title:'Fulfilment centre',org:'Amazon India',source:'LinkedIn',state:'Haryana',value:1500,capacity:null,deadline:null,detected:'2026-06-11',priority:64,owner:'—',note:'Warehouse rooftop. Repeatable model if first site lands.',sigtype:'Warehouse / Logistics'},
+  {id:'BUB-S008',kind:'signal',title:'Steel capacity expansion',org:'JSW Steel',source:'LinkedIn',state:'Karnataka',value:9000,capacity:null,deadline:null,detected:'2026-06-08',priority:72,owner:'—',note:'Heavy industrial captive RE potential. Long sales cycle but large ticket.',sigtype:'Capacity Expansion'},
+  {id:'BUB-S009',kind:'signal',title:'Greenfield facility',org:'Vedanta',source:'Industrial News',state:'Gujarat',value:15000,capacity:null,deadline:null,detected:'2026-06-13',priority:70,owner:'—',note:'Early-stage, long horizon. Track and build relationship ahead of RE planning.',sigtype:'Greenfield Project'},
+  {id:'BUB-S010',kind:'signal',title:'Cold storage hub',org:'Maersk',source:'LinkedIn',state:'Gujarat',value:900,capacity:null,deadline:null,detected:'2026-06-15',priority:60,owner:'—',note:'Cold-chain rooftop. Energy-intensive load — solid ROI pitch.',sigtype:'Warehouse / Logistics'},
+];
+
+/* ---------------- Helpers ---------------- */
+const $ = s => document.querySelector(s);
+const daysFrom = d => Math.ceil((new Date(d) - NOW) / 86400000);
+const daysAgo = d => Math.max(0, Math.round((NOW - new Date(d)) / 86400000));
+function fmtCr(v){
+  if(!v) return '—';
+  const dec = v < 10 ? 1 : 0;
+  return '₹' + v.toLocaleString('en-IN',{maximumFractionDigits:dec}) + ' Cr';
+}
+function tierOf(p){ return p>=75 ? 'hi' : p>=50 ? 'md' : 'lo'; }
+const tierColor = {hi:'var(--tier-hi)', md:'var(--tier-md)', lo:'var(--tier-lo)'};
+
+let filters = {kind:'all', state:'all', tier:'all', q:'', sort:'priority'};
+
+function applyFilters(){
+  let r = DATA.filter(o=>{
+    if(filters.kind!=='all' && o.kind!==filters.kind) return false;
+    if(filters.state!=='all' && o.state!==filters.state) return false;
+    if(filters.tier!=='all' && tierOf(o.priority)!==filters.tier) return false;
+    if(filters.q){
+      const h = (o.title+' '+o.org+' '+o.source+' '+o.state).toLowerCase();
+      if(!h.includes(filters.q.toLowerCase())) return false;
+    }
+    return true;
+  });
+  const s = filters.sort;
+  r.sort((a,b)=>{
+    if(s==='value') return b.value - a.value;
+    if(s==='recent') return new Date(b.detected) - new Date(a.detected);
+    if(s==='deadline'){
+      const ad = a.deadline?daysFrom(a.deadline):9999, bd = b.deadline?daysFrom(b.deadline):9999;
+      return ad - bd;
+    }
+    return b.priority - a.priority;
+  });
+  return r;
+}
+
+/* ---------------- KPI cards (global snapshot) ---------------- */
+function renderKpis(){
+  const tenders = DATA.filter(o=>o.kind==='tender');
+  const signals = DATA.filter(o=>o.kind==='signal');
+  const closing7 = tenders.filter(o=>{const d=daysFrom(o.deadline);return d>=0&&d<=7;}).length;
+  const highPri = DATA.filter(o=>o.priority>=75).length;
+  const pipeline = tenders.reduce((s,o)=>s+o.value,0);
+  const newWeek = DATA.filter(o=>daysAgo(o.detected)<=7).length;
+  const cards = [
+    {cls:'', lab:'Open tenders', val:tenders.length, sub:'live across portals'},
+    {cls:'k-urgent', lab:'Closing ≤ 7 days', val:closing7, sub:'act now'},
+    {cls:'k-signal', lab:'Market signals', val:signals.length, sub:'industrial + LinkedIn'},
+    {cls:'k-hi', lab:'High priority', val:highPri, sub:'score 75 +'},
+    {cls:'', lab:'Tender pipeline', val:fmtCr(pipeline), sub:'addressable bid value', cur:true},
+    {cls:'', lab:'New this week', val:newWeek, sub:'detected ≤ 7 days'},
+  ];
+  $('#kpis').innerHTML = cards.map(c=>`
+    <div class="kpi ${c.cls}">
+      <div class="lab">${c.lab}</div>
+      <div class="val ${c.cur?'cur':''}">${c.val}</div>
+      <div class="sub">${c.sub}</div>
+    </div>`).join('');
+}
+
+/* ---------------- Feed ---------------- */
+function timingChip(o){
+  if(o.kind==='signal') return `<span class="chip intel"><span class="dot"></span>seen ${daysAgo(o.detected)}d ago</span>`;
+  const d = daysFrom(o.deadline);
+  if(d<0) return `<span class="chip urgent"><span class="dot"></span>closed</span>`;
+  const cls = d<=7?'urgent':d<=15?'soon':'sched';
+  return `<span class="chip ${cls}"><span class="dot"></span>${d}d left</span>`;
+}
+function renderFeed(rows){
+  const body = $('#feedBody');
+  $('#shownCount').textContent = rows.length;
+  if(!rows.length){
+    body.innerHTML = `<div class="empty"><b>No opportunities match these filters</b>Clear a filter or widen your search to see the queue.</div>`;
+    return;
+  }
+  body.innerHTML = rows.map(o=>{
+    const t = tierOf(o.priority);
+    const isT = o.kind==='tender';
+    const valU = isT ? 'tender value' : 'announced capex';
+    return `
+    <div class="opp" data-kind="${o.kind}" data-id="${o.id}">
+      <div class="opp-row" tabindex="0" role="button" aria-expanded="false">
+        <div class="c-meta">
+          <span class="badge ${o.kind}">${isT?'Tender':(o.source==='LinkedIn'?'LinkedIn':'Signal')}</span>
+          <div class="opp-id">${o.id}</div>
+        </div>
+        <div class="c-main">
+          <div class="opp-title">${o.title}</div>
+          <div class="opp-org">${o.org} · ${o.source}${o.state!=='Multi-State'?' · '+o.state:''}</div>
+        </div>
+        <div class="c-vals col-r">${fmtCr(o.value)}<span class="u">${valU}</span></div>
+        <div class="col-r">${o.capacity?o.capacity+' <span class="u" style="display:inline">MWp</span>':'—'}</div>
+        <div>${timingChip(o)}</div>
+        <div class="c-ring"><div class="ring" style="--p:${o.priority};--rc:${tierColor[t]}"><span>${o.priority}</span></div></div>
+      </div>
+      <div class="opp-detail">
+        <div class="dgrid">
+          <div><span class="dl">${isT?'Authority':'Company'}</span><span class="dv">${o.org}</span></div>
+          <div><span class="dl">Source</span><span class="dv">${o.source}</span></div>
+          <div><span class="dl">State</span><span class="dv">${o.state}</span></div>
+          <div><span class="dl">${isT?'Submission':'Detected'}</span><span class="dv">${isT?new Date(o.deadline).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):daysAgo(o.detected)+' days ago'}</span></div>
+          <div><span class="dl">${isT?'Tender value':'Announced investment'}</span><span class="dv">${fmtCr(o.value)}</span></div>
+          <div><span class="dl">Capacity</span><span class="dv">${o.capacity?o.capacity+' MWp':'—'}</span></div>
+          <div><span class="dl">Priority score</span><span class="dv">${o.priority} / 100 · ${t==='hi'?'High':t==='md'?'Medium':'Low'}</span></div>
+          <div><span class="dl">Suggested owner</span><span class="dv">${o.owner}</span></div>
+        </div>
+        <div class="dnote"><b>Next action — </b>${o.note}</div>
+        <div class="dact">
+          <button class="btn primary">${isT?'Assign & start bid':'Assign for outreach'}</button>
+          <button class="btn">Open source</button>
+          <button class="btn">Add to CRM</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  body.querySelectorAll('.opp-row').forEach(row=>{
+    const toggle = ()=>{
+      const opp = row.closest('.opp');
+      const open = opp.classList.toggle('open');
+      row.setAttribute('aria-expanded', open);
+    };
+    row.addEventListener('click', toggle);
+    row.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();} });
+  });
+  body.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',e=>e.stopPropagation()));
+}
+
+/* ---------------- Donut: tenders vs signals ---------------- */
+function renderDonut(rows){
+  const t = rows.filter(o=>o.kind==='tender').length;
+  const s = rows.filter(o=>o.kind==='signal').length;
+  const total = t+s;
+  const svg = $('#donut');
+  if(!total){ svg.innerHTML=''; $('#donutLegend').innerHTML='<div class="li"><span class="ln">No items in view</span></div>'; return; }
+  const C = 2*Math.PI*15.9155;
+  const tLen = C*(t/total);
+  svg.innerHTML = `
+    <circle cx="21" cy="21" r="15.9155" fill="none" stroke="#EDF1F5" stroke-width="6"/>
+    <circle cx="21" cy="21" r="15.9155" fill="none" stroke="#13294B" stroke-width="6"
+       stroke-dasharray="${tLen} ${C-tLen}" stroke-dashoffset="${C*0.25}" transform="rotate(0 21 21)"/>
+    <circle cx="21" cy="21" r="15.9155" fill="none" stroke="#35B449" stroke-width="6"
+       stroke-dasharray="${C-tLen} ${tLen}" stroke-dashoffset="${C*0.25 - tLen}"/>
+    <text x="21" y="20.5" text-anchor="middle" font-size="9" font-weight="700" fill="#13294B" font-family="ui-monospace,monospace">${total}</text>
+    <text x="21" y="26" text-anchor="middle" font-size="3.4" fill="#8A94A6" letter-spacing=".1" font-family="sans-serif">IN VIEW</text>`;
+  $('#donutLegend').innerHTML = `
+    <div class="li"><span class="sw" style="background:#13294B"></span><span class="ln">Tenders</span><span class="lv">${t}</span></div>
+    <div class="li"><span class="sw" style="background:#35B449"></span><span class="ln">Market signals</span><span class="lv">${s}</span></div>`;
+}
+
+/* ---------------- State bars ---------------- */
+function renderBars(rows){
+  const counts = {};
+  rows.forEach(o=>counts[o.state]=(counts[o.state]||0)+1);
+  const sorted = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const max = sorted.length?sorted[0][1]:1;
+  $('#stateBars').innerHTML = sorted.length ? sorted.map(([st,n])=>`
+    <div class="bar">
+      <div class="bt"><span class="bn">${st}</span><span class="bv">${n}</span></div>
+      <div class="track"><div class="fill" style="width:${Math.round(n/max*100)}%"></div></div>
+    </div>`).join('') : `<div class="bt"><span class="bn" style="color:var(--faint)">No items in view</span></div>`;
+}
+
+/* ---------------- Tender urgency ---------------- */
+function renderUrgency(rows){
+  const tenders = rows.filter(o=>o.kind==='tender' && daysFrom(o.deadline)>=0);
+  const urgent = tenders.filter(o=>daysFrom(o.deadline)<=7).length;
+  const soon = tenders.filter(o=>{const d=daysFrom(o.deadline);return d>7&&d<=15;}).length;
+  const sched = tenders.filter(o=>daysFrom(o.deadline)>15).length;
+  const tot = urgent+soon+sched || 1;
+  $('#urgSeg').innerHTML = `
+    <i style="width:${urgent/tot*100}%;background:#D64545"></i>
+    <i style="width:${soon/tot*100}%;background:#E0942B"></i>
+    <i style="width:${sched/tot*100}%;background:#13294B"></i>`;
+  $('#urgLegend').innerHTML = `
+    <div class="ui"><span class="ud" style="background:#D64545"></span>≤7d <b>${urgent}</b></div>
+    <div class="ui"><span class="ud" style="background:#E0942B"></span>8–15d <b>${soon}</b></div>
+    <div class="ui"><span class="ud" style="background:#13294B"></span>15d+ <b>${sched}</b></div>`;
+}
+
+/* ---------------- Daily brief ---------------- */
+function renderDigest(rows){
+  const tenders = rows.filter(o=>o.kind==='tender');
+  const signals = rows.filter(o=>o.kind==='signal');
+  const closing = tenders.filter(o=>{const d=daysFrom(o.deadline);return d>=0&&d<=7;}).length;
+  const pipeline = tenders.reduce((s,o)=>s+o.value,0);
+  const topTender = [...tenders].sort((a,b)=>b.priority-a.priority)[0];
+  const topSignal = [...signals].sort((a,b)=>b.priority-a.priority)[0];
+  const urgentTop = [...tenders].filter(o=>daysFrom(o.deadline)>=0&&daysFrom(o.deadline)<=7)
+                     .sort((a,b)=>daysFrom(a.deadline)-daysFrom(b.deadline))[0];
+  let picks = '';
+  if(urgentTop) picks += `<li><span class="pri t">Now</span><span><b>${urgentTop.org}</b> — ${urgentTop.title} closes in ${daysFrom(urgentTop.deadline)} days.</span></li>`;
+  if(topSignal) picks += `<li><span class="pri s">Hot</span><span><b>${topSignal.org}</b> — ${topSignal.title}, score ${topSignal.priority}. Open outreach.</span></li>`;
+  if(topTender && (!urgentTop || topTender.id!==urgentTop.id))
+    picks += `<li><span class="pri t">Bid</span><span><b>${topTender.org}</b> — ${topTender.title}, score ${topTender.priority}.</span></li>`;
+  $('#digest').innerHTML = `
+    <p class="lede"><b>${rows.length}</b> live opportunities in view — <b>${tenders.length}</b> tenders, <b>${signals.length}</b> signals.
+      <b>${closing}</b> closing within 7 days. Tender pipeline <b>${fmtCr(pipeline)}</b>.</p>
+    <ul>${picks || '<li><span>No priority items in the current view.</span></li>'}</ul>`;
+  $('#briefDate').textContent = NOW.toLocaleDateString('en-IN',{day:'numeric',month:'short'});
+}
+
+/* ---------------- Orchestration ---------------- */
+function render(){
+  const rows = applyFilters();
+  renderFeed(rows);
+  renderDonut(rows);
+  renderBars(rows);
+  renderUrgency(rows);
+  renderDigest(rows);
+}
+
+function initControls(){
+  // state options
+  const states = [...new Set(DATA.map(o=>o.state))].sort();
+  $('#stateSel').innerHTML = '<option value="all">All states</option>' +
+    states.map(s=>`<option value="${s}">${s}</option>`).join('');
+  // segmented kind
+  $('#kindSeg').querySelectorAll('button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      $('#kindSeg').querySelector('.on').classList.remove('on');
+      b.classList.add('on');
+      filters.kind = b.dataset.kind; render();
+    });
+  });
+  $('#stateSel').addEventListener('change',e=>{filters.state=e.target.value;render();});
+  $('#tierSel').addEventListener('change',e=>{filters.tier=e.target.value;render();});
+  $('#sortSel').addEventListener('change',e=>{filters.sort=e.target.value;render();});
+  $('#searchInp').addEventListener('input',e=>{filters.q=e.target.value;render();});
+  $('#stamp').textContent = 'Updated ' + NOW.toLocaleString('en-IN',
+    {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hour12:true});
+}
+
+initControls();
+renderKpis();
+render();
+</script>
+</body>
+</html>
