@@ -12,9 +12,29 @@
     --urgent:#D64545; --soon:#E0942B; --amber-ink:#7A5310;
     --ring-track:#E3E8EF;
     --tier-hi:#1E7B3E; --tier-md:#C98A2B; --tier-lo:#8A94A6;
+    --chart-tender:#13294B; --chart-track:#EDF1F5;
+    --head-bg:#FAFBFC; --row-hover:#F7FAF8; --detail-bg:#FAFCFB; --inset:#F6F8FA;
+    --field-bg:#FFFFFF; --inner:#FFFFFF; --row-line:#EEF1F5;
+    --b-tender-bg:#E7ECF4; --b-tender-fg:#13294B; --b-signal-bg:#E4F4E9; --b-signal-fg:#176B33;
+    --c-urgent-bg:#FBE3E3; --c-soon-bg:#FBEFD8; --c-sched-bg:#EAF0F7; --c-intel-bg:#EFF2F5;
     --sans:"Calibri","Segoe UI",system-ui,Roboto,-apple-system,sans-serif;
     --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
     --r:10px; --shadow:0 1px 2px rgba(16,32,46,.06),0 6px 18px rgba(16,32,46,.05);
+  }
+
+  /* ---------- Dark theme ---------- */
+  html[data-theme="dark"]{
+    --navy:#3F6CA8; --navy-2:#27456E;
+    --ground:#0E1724; --card:#16222F; --line:#293848;
+    --ink:#E6ECF3; --muted:#9DABBD; --faint:#6E7E91;
+    --ring-track:#293848;
+    --chart-tender:#5B8FD6; --chart-track:#293848;
+    --head-bg:#101B27; --row-hover:#1B2836; --detail-bg:#131E2A; --inset:#1B2836;
+    --field-bg:#0F1A26; --inner:#16222F; --row-line:#1E2A38;
+    --b-tender-bg:#1C3658; --b-tender-fg:#AECCF3; --b-signal-bg:#15371F; --b-signal-fg:#84D89C;
+    --c-urgent-bg:#3A1D1D; --c-sched-bg:#1C2A3B; --c-soon-bg:#3A2F16; --c-intel-bg:#222D39;
+    --amber-ink:#E8C480;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 6px 18px rgba(0,0,0,.4);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--ground);color:var(--ink);font-family:var(--sans);
@@ -64,14 +84,14 @@
   .filterbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
     background:var(--card);border:1px solid var(--line);border-radius:var(--r);
     padding:10px 12px;margin-bottom:14px;box-shadow:var(--shadow)}
-  .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#F6F8FA}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--inset)}
   .seg button{border:0;background:transparent;font-family:var(--sans);font-size:12.5px;
     font-weight:600;color:var(--muted);padding:7px 13px;cursor:pointer;letter-spacing:.01em}
   .seg button.on{background:var(--navy);color:#fff}
   .seg button:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
   .field{display:flex;flex-direction:column;gap:2px}
   select,.search input{font-family:var(--sans);font-size:12.5px;color:var(--ink);
-    border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:#fff;height:34px}
+    border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:var(--field-bg);height:34px}
   select:focus-visible,.search input:focus-visible{outline:2px solid var(--signal);outline-offset:0}
   .search{position:relative;flex:1 1 180px;min-width:160px}
   .search input{width:100%;padding-left:30px}
@@ -85,21 +105,21 @@
     box-shadow:var(--shadow);overflow:hidden}
   .feed-head{display:grid;grid-template-columns:78px 1fr 96px 96px 132px 54px;
     gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);
-    font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);background:#FAFBFC}
+    font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);background:var(--head-bg)}
   .feed-head span:nth-child(3),.feed-head span:nth-child(4){text-align:right}
   .feed-head span:nth-child(6){text-align:center}
-  .opp{border-bottom:1px solid #EEF1F5;animation:rise .35s ease both}
+  .opp{border-bottom:1px solid var(--row-line);animation:rise .35s ease both}
   @keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
   .opp-row{display:grid;grid-template-columns:78px 1fr 96px 96px 132px 54px;gap:10px;
     align-items:center;padding:12px 16px 12px 13px;cursor:pointer;border-left:3px solid transparent;
     transition:background .12s}
-  .opp-row:hover{background:#F7FAF8}
+  .opp-row:hover{background:var(--row-hover)}
   .opp[data-kind="tender"] .opp-row{border-left-color:var(--navy)}
   .opp[data-kind="signal"] .opp-row{border-left-color:var(--signal)}
   .badge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.08em;
     text-transform:uppercase;padding:3px 7px;border-radius:5px;white-space:nowrap}
-  .badge.tender{background:#E7ECF4;color:var(--navy)}
-  .badge.signal{background:#E4F4E9;color:#176B33}
+  .badge.tender{background:var(--b-tender-bg);color:var(--b-tender-fg)}
+  .badge.signal{background:var(--b-signal-bg);color:var(--b-signal-fg)}
   .opp-id{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:5px}
   .opp-title{font-weight:600;color:var(--ink);font-size:13.5px;line-height:1.3}
   .opp-org{font-size:11.5px;color:var(--muted);margin-top:1px}
@@ -108,32 +128,32 @@
     text-transform:uppercase;letter-spacing:.05em;margin-top:1px}
   .chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;
     padding:4px 9px;border-radius:20px;white-space:nowrap}
-  .chip.urgent{background:#FBE3E3;color:var(--urgent)}
-  .chip.soon{background:#FBEFD8;color:var(--amber-ink)}
-  .chip.sched{background:#EAF0F7;color:var(--navy)}
-  .chip.intel{background:#EFF2F5;color:var(--muted)}
+  .chip.urgent{background:var(--c-urgent-bg);color:var(--urgent)}
+  .chip.soon{background:var(--c-soon-bg);color:var(--amber-ink)}
+  .chip.sched{background:var(--c-sched-bg);color:var(--navy)}
+  .chip.intel{background:var(--c-intel-bg);color:var(--muted)}
   .chip .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.85}
   .ring{width:42px;height:42px;border-radius:50%;margin:0 auto;display:grid;place-items:center;
     background:conic-gradient(var(--rc) calc(var(--p)*1%),var(--ring-track) 0);position:relative}
-  .ring::before{content:"";position:absolute;inset:4px;background:#fff;border-radius:50%}
+  .ring::before{content:"";position:absolute;inset:4px;background:var(--inner);border-radius:50%}
   .ring span{position:relative;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--navy)}
   .caret{justify-self:center;color:var(--faint);transition:transform .18s}
   .opp.open .caret{transform:rotate(90deg)}
 
   /* expanded detail */
-  .opp-detail{display:none;padding:2px 16px 18px 56px;background:#FAFCFB}
+  .opp-detail{display:none;padding:2px 16px 18px 56px;background:var(--detail-bg)}
   .opp.open .opp-detail{display:block;animation:rise .25s ease both}
   .dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 22px;margin:10px 0 14px}
   .dgrid div{font-size:12px}
   .dgrid .dl{display:block;font-size:9.5px;font-weight:700;letter-spacing:.06em;
     text-transform:uppercase;color:var(--faint);margin-bottom:3px}
   .dgrid .dv{font-weight:600;color:var(--ink)}
-  .dnote{font-size:12.5px;color:var(--ink);background:#fff;border:1px solid var(--line);
+  .dnote{font-size:12.5px;color:var(--ink);background:var(--inner);border:1px solid var(--line);
     border-left:3px solid var(--signal);border-radius:6px;padding:9px 12px;margin-bottom:12px}
   .dnote b{color:var(--forest)}
   .dact{display:flex;gap:9px;flex-wrap:wrap}
   .btn{font-family:var(--sans);font-size:12px;font-weight:600;border-radius:7px;padding:7px 13px;
-    cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--navy)}
+    cursor:pointer;border:1px solid var(--line);background:var(--inner);color:var(--navy)}
   .btn.primary{background:var(--forest);border-color:var(--forest);color:#fff}
   .btn:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
   .empty{padding:46px 20px;text-align:center;color:var(--muted)}
@@ -156,9 +176,9 @@
   .bars .bt{display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:3px}
   .bars .bt .bn{color:var(--ink);font-weight:600}
   .bars .bt .bv{font-family:var(--mono);color:var(--muted)}
-  .bars .track{height:7px;background:#EDF1F5;border-radius:5px;overflow:hidden}
+  .bars .track{height:7px;background:var(--chart-track);border-radius:5px;overflow:hidden}
   .bars .fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--forest),var(--signal))}
-  .useg{display:flex;height:11px;border-radius:6px;overflow:hidden;margin-bottom:11px;background:#EDF1F5}
+  .useg{display:flex;height:11px;border-radius:6px;overflow:hidden;margin-bottom:11px;background:var(--chart-track)}
   .useg i{display:block;height:100%}
   .ulegend{display:flex;gap:14px;font-size:11.5px;flex-wrap:wrap}
   .ulegend .ui{display:flex;align-items:center;gap:6px;color:var(--muted)}
@@ -179,6 +199,43 @@
 
   .foot{margin-top:18px;font-size:11px;color:var(--faint);text-align:center;line-height:1.6}
 
+  /* ---------- Header action buttons ---------- */
+  .cmd-btn{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.02em;
+    border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;
+    border-radius:6px;padding:6px 11px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .cmd-btn:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.32)}
+  .cmd-btn.primary{background:var(--signal);border-color:var(--signal);color:#0B2E15}
+  .cmd-btn.primary:hover{background:#2EA841}
+  .cmd-btn .ico{width:13px;height:13px}
+
+  /* ---------- NEW badge ---------- */
+  .new-pin{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;background:var(--signal);color:#0B2E15;border-radius:4px;
+    padding:2px 5px;margin-left:5px;vertical-align:middle;animation:rise .35s ease both}
+
+  /* ---------- Modal (manual lead entry) ---------- */
+  .modal-back{position:fixed;inset:0;background:rgba(16,32,46,.45);display:none;
+    align-items:center;justify-content:center;z-index:50;padding:20px;backdrop-filter:blur(2px)}
+  .modal-back.show{display:flex}
+  .modal{background:var(--card);border-radius:var(--r);box-shadow:0 16px 40px rgba(16,32,46,.18);
+    width:100%;max-width:560px;padding:22px;border:1px solid var(--line)}
+  .modal h2{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .modal p.sub{font-size:12px;color:var(--muted);margin-bottom:16px}
+  .modal label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--muted);margin:10px 0 4px}
+  .modal input,.modal select,.modal textarea{width:100%;font-family:var(--sans);font-size:13px;
+    color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:8px 10px;background:var(--field-bg)}
+  .modal textarea{resize:vertical;min-height:60px}
+  .modal-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .modal-act{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+
+  /* alert banner */
+  .alert-banner{background:#FBEFD8;color:var(--amber-ink);border:1px solid #E4C683;
+    border-radius:var(--r);padding:10px 14px;margin-bottom:14px;font-size:12.5px;
+    display:flex;align-items:center;gap:10px}
+  .alert-banner .x{margin-left:auto;cursor:pointer;color:var(--amber-ink);font-weight:700;
+    border:0;background:transparent;font-size:16px;line-height:1}
+
   @media (max-width:980px){
     .kpis{grid-template-columns:repeat(3,1fr)}
     .work{grid-template-columns:1fr}
@@ -197,6 +254,16 @@
     *{animation:none!important;transition:none!important}
   }
 </style>
+<script>
+  /* Apply saved theme before paint to avoid a flash of the wrong theme. */
+  (function(){
+    try{
+      var t = localStorage.getItem('bub_theme');
+      if(!t){ t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      if(t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+    }catch(e){}
+  })();
+</script>
 </head>
 <body>
 <div class="app">
@@ -215,10 +282,26 @@
       <h1>B. U. Bhandari Energy<small>Opportunity Intelligence</small></h1>
     </div>
     <div class="cmd-spacer"></div>
-    <span class="demo">Demo data</span>
+    <button class="cmd-btn" id="btnTheme" title="Toggle dark / light theme">
+      <svg class="ico" id="themeIco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span id="btnThemeLabel">Dark</span>
+    </button>
+    <button class="cmd-btn" id="btnAlerts" title="Enable browser notifications for new opportunities">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span id="btnAlertsLabel">Enable alerts</span>
+    </button>
+    <button class="cmd-btn primary" id="btnAddLead">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      Add LinkedIn lead
+    </button>
     <div class="live"><span class="live-dot"></span>Live feed</div>
     <div class="stamp" id="stamp"></div>
   </header>
+
+  <div id="alertBanner" class="alert-banner" style="display:none">
+    <span id="alertBannerMsg"></span>
+    <button class="x" onclick="document.getElementById('alertBanner').style.display='none'">×</button>
+  </div>
 
   <section class="kpis" id="kpis"></section>
 
@@ -285,15 +368,74 @@
   </div>
 
   <p class="foot">
-    Prototype interface for the combined Tender Alert + LinkedIn Opportunity Intelligence systems (Deliverables 3 + 4).<br>
-    Sample data shown. In production, the feed is populated by the tender-alert ingestion service and the LinkedIn signal pipeline via <code>POST /api/ingest</code>.
+    Tender + LinkedIn Opportunity Intelligence — auto-refreshed from <code>data/feed.json</code>.<br>
+    Scraper runs hourly via GitHub Actions (see <code>scripts/fetch_feed.py</code>). Manually-added LinkedIn leads persist locally in this browser.
   </p>
 </div>
 
+<!-- Manual LinkedIn lead entry modal -->
+<div class="modal-back" id="leadModal" role="dialog" aria-labelledby="leadModalTitle">
+  <div class="modal">
+    <h2 id="leadModalTitle">Log a LinkedIn / market signal</h2>
+    <p class="sub">For posts you spot on LinkedIn or industrial news that you want the dashboard to track.</p>
+
+    <label for="lmKind">Type</label>
+    <select id="lmKind">
+      <option value="signal">Market signal (capex / expansion / EPC requirement)</option>
+      <option value="tender">Tender RFQ / RFP</option>
+    </select>
+
+    <label for="lmTitle">Title</label>
+    <input id="lmTitle" type="text" placeholder="e.g. 5 MW rooftop EPC partner sought">
+
+    <div class="modal-row">
+      <div>
+        <label for="lmOrg">Company / authority</label>
+        <input id="lmOrg" type="text" placeholder="e.g. Tata Steel">
+      </div>
+      <div>
+        <label for="lmState">State</label>
+        <input id="lmState" type="text" placeholder="e.g. Maharashtra" list="lmStateList">
+        <datalist id="lmStateList"></datalist>
+      </div>
+    </div>
+
+    <div class="modal-row">
+      <div>
+        <label for="lmCapacity">Capacity (MWp, optional)</label>
+        <input id="lmCapacity" type="number" min="0" step="0.1">
+      </div>
+      <div>
+        <label for="lmValue">Value (₹ Cr, optional)</label>
+        <input id="lmValue" type="number" min="0" step="0.1">
+      </div>
+    </div>
+
+    <label for="lmDeadline">Deadline (tenders only, optional)</label>
+    <input id="lmDeadline" type="date">
+
+    <label for="lmUrl">LinkedIn / source URL</label>
+    <input id="lmUrl" type="url" placeholder="https://www.linkedin.com/posts/…">
+
+    <label for="lmNote">Notes / next action</label>
+    <textarea id="lmNote" placeholder="What's the angle, who's the decision-maker, what to do next…"></textarea>
+
+    <div class="modal-act">
+      <button class="btn" id="lmCancel">Cancel</button>
+      <button class="btn primary" id="lmSave">Save lead</button>
+    </div>
+  </div>
+</div>
+
 <script>
-/* ---------------- Data (sample — mirrors BUBEPL live pipeline) ---------------- */
-const NOW = new Date('2026-06-19T09:00:00');
-const DATA = [
+/* ---------------- Data ---------------- */
+let NOW = new Date();
+let DATA = [];
+let FEED_UPDATED_AT = null;
+
+/* Embedded fallback — used when data/feed.json can't be fetched
+   (e.g. when index.html is opened via file:// instead of a web server). */
+const FALLBACK_DATA = [
   // ---- Tenders ----
   {id:'BUB-T001',kind:'tender',title:'700 MW Solar EPC',org:'GUVNL / Patel Infrastructure',source:'GUVNL Portal',state:'Gujarat',value:2100,capacity:700,deadline:'2026-07-15',detected:'2026-06-05',priority:78,owner:'P. Sharma',note:'Large EPC, PQR criteria met. Finalise bid + ₹105 Cr bank guarantee. Watch LD exposure clause.'},
   {id:'BUB-T002',kind:'tender',title:'1.7 MWp Rooftop Solar',org:'Shree Sai Baba Sansthan, Shirdi',source:'Tender Tiger',state:'Maharashtra',value:1.1,capacity:1.7,deadline:'2026-06-28',detected:'2026-06-04',priority:81,owner:'A. Deshmukh',note:'Close and highly winnable. Submit pre-bid query on CUF clause, then bid. Strong local fit.'},
@@ -329,6 +471,25 @@ function fmtCr(v){
 }
 function tierOf(p){ return p>=75 ? 'hi' : p>=50 ? 'md' : 'lo'; }
 const tierColor = {hi:'var(--tier-hi)', md:'var(--tier-md)', lo:'var(--tier-lo)'};
+function escapeHtml(s){
+  if(s==null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+/* An item is "new" if first_seen is within the last 48h, OR newer than the last time
+   the user viewed the dashboard (whichever is broader). */
+const LAST_SEEN_KEY = 'bub_last_seen_ts';
+let lastSeenTs = parseInt(localStorage.getItem(LAST_SEEN_KEY) || '0', 10);
+function itemTs(o){
+  const t = o.first_seen ? Date.parse(o.first_seen) : (o.detected ? Date.parse(o.detected) : 0);
+  return isNaN(t) ? 0 : t;
+}
+function isItemNew(o){
+  const ts = itemTs(o);
+  if(!ts) return false;
+  const within48h = (Date.now() - ts) <= 48*3600*1000;
+  const sinceLastVisit = lastSeenTs > 0 && ts > lastSeenTs;
+  return within48h || sinceLastVisit;
+}
 
 let filters = {kind:'all', state:'all', tier:'all', q:'', sort:'priority'};
 
@@ -399,16 +560,25 @@ function renderFeed(rows){
     const t = tierOf(o.priority);
     const isT = o.kind==='tender';
     const valU = isT ? 'tender value' : 'announced capex';
+    const isNew = isItemNew(o);
+    const srcUrl = o.source_url && o.source_url !== '#' ? o.source_url : '';
+    const openBtn = srcUrl
+      ? `<a class="btn" href="${escapeHtml(srcUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Open source ↗</a>`
+      : `<button class="btn" disabled style="opacity:.5;cursor:not-allowed">No source URL</button>`;
+    const isManual = o.source === 'Manual / LinkedIn';
+    const delBtn = isManual
+      ? `<button class="btn" data-del="${o.id}" style="color:#D64545;border-color:#F2C5C5">Remove</button>`
+      : '';
     return `
     <div class="opp" data-kind="${o.kind}" data-id="${o.id}">
       <div class="opp-row" tabindex="0" role="button" aria-expanded="false">
         <div class="c-meta">
-          <span class="badge ${o.kind}">${isT?'Tender':(o.source==='LinkedIn'?'LinkedIn':'Signal')}</span>
+          <span class="badge ${o.kind}">${isT?'Tender':(o.source && o.source.includes('LinkedIn')?'LinkedIn':'Signal')}</span>
           <div class="opp-id">${o.id}</div>
         </div>
         <div class="c-main">
-          <div class="opp-title">${o.title}</div>
-          <div class="opp-org">${o.org} · ${o.source}${o.state!=='Multi-State'?' · '+o.state:''}</div>
+          <div class="opp-title">${escapeHtml(o.title)}${isNew?'<span class="new-pin">New</span>':''}</div>
+          <div class="opp-org">${escapeHtml(o.org)} · ${escapeHtml(o.source)}${o.state && o.state!=='Multi-State'?' · '+escapeHtml(o.state):''}</div>
         </div>
         <div class="c-vals col-r">${fmtCr(o.value)}<span class="u">${valU}</span></div>
         <div class="col-r">${o.capacity?o.capacity+' <span class="u" style="display:inline">MWp</span>':'—'}</div>
@@ -417,20 +587,20 @@ function renderFeed(rows){
       </div>
       <div class="opp-detail">
         <div class="dgrid">
-          <div><span class="dl">${isT?'Authority':'Company'}</span><span class="dv">${o.org}</span></div>
-          <div><span class="dl">Source</span><span class="dv">${o.source}</span></div>
-          <div><span class="dl">State</span><span class="dv">${o.state}</span></div>
-          <div><span class="dl">${isT?'Submission':'Detected'}</span><span class="dv">${isT?new Date(o.deadline).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):daysAgo(o.detected)+' days ago'}</span></div>
+          <div><span class="dl">${isT?'Authority':'Company'}</span><span class="dv">${escapeHtml(o.org)}</span></div>
+          <div><span class="dl">Source</span><span class="dv">${escapeHtml(o.source)}</span></div>
+          <div><span class="dl">State</span><span class="dv">${escapeHtml(o.state||'—')}</span></div>
+          <div><span class="dl">${isT?'Submission':'Detected'}</span><span class="dv">${isT&&o.deadline?new Date(o.deadline).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):daysAgo(o.detected)+' days ago'}</span></div>
           <div><span class="dl">${isT?'Tender value':'Announced investment'}</span><span class="dv">${fmtCr(o.value)}</span></div>
           <div><span class="dl">Capacity</span><span class="dv">${o.capacity?o.capacity+' MWp':'—'}</span></div>
           <div><span class="dl">Priority score</span><span class="dv">${o.priority} / 100 · ${t==='hi'?'High':t==='md'?'Medium':'Low'}</span></div>
-          <div><span class="dl">Suggested owner</span><span class="dv">${o.owner}</span></div>
+          <div><span class="dl">Suggested owner</span><span class="dv">${escapeHtml(o.owner||'—')}</span></div>
         </div>
-        <div class="dnote"><b>Next action — </b>${o.note}</div>
+        <div class="dnote"><b>Next action — </b>${escapeHtml(o.note||'')}</div>
         <div class="dact">
           <button class="btn primary">${isT?'Assign & start bid':'Assign for outreach'}</button>
-          <button class="btn">Open source</button>
-          <button class="btn">Add to CRM</button>
+          ${openBtn}
+          ${delBtn}
         </div>
       </div>
     </div>`;
@@ -446,6 +616,10 @@ function renderFeed(rows){
     row.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();} });
   });
   body.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',e=>e.stopPropagation()));
+  body.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',e=>{
+    e.stopPropagation();
+    removeManualLead(b.dataset.del);
+  }));
 }
 
 /* ---------------- Donut: tenders vs signals ---------------- */
@@ -458,16 +632,16 @@ function renderDonut(rows){
   const C = 2*Math.PI*15.9155;
   const tLen = C*(t/total);
   svg.innerHTML = `
-    <circle cx="21" cy="21" r="15.9155" fill="none" stroke="#EDF1F5" stroke-width="6"/>
-    <circle cx="21" cy="21" r="15.9155" fill="none" stroke="#13294B" stroke-width="6"
+    <circle cx="21" cy="21" r="15.9155" fill="none" style="stroke:var(--chart-track)" stroke-width="6"/>
+    <circle cx="21" cy="21" r="15.9155" fill="none" style="stroke:var(--chart-tender)" stroke-width="6"
        stroke-dasharray="${tLen} ${C-tLen}" stroke-dashoffset="${C*0.25}" transform="rotate(0 21 21)"/>
-    <circle cx="21" cy="21" r="15.9155" fill="none" stroke="#35B449" stroke-width="6"
+    <circle cx="21" cy="21" r="15.9155" fill="none" style="stroke:var(--signal)" stroke-width="6"
        stroke-dasharray="${C-tLen} ${tLen}" stroke-dashoffset="${C*0.25 - tLen}"/>
-    <text x="21" y="20.5" text-anchor="middle" font-size="9" font-weight="700" fill="#13294B" font-family="ui-monospace,monospace">${total}</text>
-    <text x="21" y="26" text-anchor="middle" font-size="3.4" fill="#8A94A6" letter-spacing=".1" font-family="sans-serif">IN VIEW</text>`;
+    <text x="21" y="20.5" text-anchor="middle" font-size="9" font-weight="700" style="fill:var(--ink)" font-family="ui-monospace,monospace">${total}</text>
+    <text x="21" y="26" text-anchor="middle" font-size="3.4" style="fill:var(--faint)" letter-spacing=".1" font-family="sans-serif">IN VIEW</text>`;
   $('#donutLegend').innerHTML = `
-    <div class="li"><span class="sw" style="background:#13294B"></span><span class="ln">Tenders</span><span class="lv">${t}</span></div>
-    <div class="li"><span class="sw" style="background:#35B449"></span><span class="ln">Market signals</span><span class="lv">${s}</span></div>`;
+    <div class="li"><span class="sw" style="background:var(--chart-tender)"></span><span class="ln">Tenders</span><span class="lv">${t}</span></div>
+    <div class="li"><span class="sw" style="background:var(--signal)"></span><span class="ln">Market signals</span><span class="lv">${s}</span></div>`;
 }
 
 /* ---------------- State bars ---------------- */
@@ -491,13 +665,13 @@ function renderUrgency(rows){
   const sched = tenders.filter(o=>daysFrom(o.deadline)>15).length;
   const tot = urgent+soon+sched || 1;
   $('#urgSeg').innerHTML = `
-    <i style="width:${urgent/tot*100}%;background:#D64545"></i>
-    <i style="width:${soon/tot*100}%;background:#E0942B"></i>
-    <i style="width:${sched/tot*100}%;background:#13294B"></i>`;
+    <i style="width:${urgent/tot*100}%;background:var(--urgent)"></i>
+    <i style="width:${soon/tot*100}%;background:var(--soon)"></i>
+    <i style="width:${sched/tot*100}%;background:var(--chart-tender)"></i>`;
   $('#urgLegend').innerHTML = `
-    <div class="ui"><span class="ud" style="background:#D64545"></span>≤7d <b>${urgent}</b></div>
-    <div class="ui"><span class="ud" style="background:#E0942B"></span>8–15d <b>${soon}</b></div>
-    <div class="ui"><span class="ud" style="background:#13294B"></span>15d+ <b>${sched}</b></div>`;
+    <div class="ui"><span class="ud" style="background:var(--urgent)"></span>≤7d <b>${urgent}</b></div>
+    <div class="ui"><span class="ud" style="background:var(--soon)"></span>8–15d <b>${soon}</b></div>
+    <div class="ui"><span class="ud" style="background:var(--chart-tender)"></span>15d+ <b>${sched}</b></div>`;
 }
 
 /* ---------------- Daily brief ---------------- */
@@ -532,12 +706,175 @@ function render(){
   renderDigest(rows);
 }
 
-function initControls(){
-  // state options
-  const states = [...new Set(DATA.map(o=>o.state))].sort();
+function refreshStateOptions(){
+  const cur = $('#stateSel').value || 'all';
+  const states = [...new Set(DATA.map(o=>o.state).filter(Boolean))].sort();
   $('#stateSel').innerHTML = '<option value="all">All states</option>' +
-    states.map(s=>`<option value="${s}">${s}</option>`).join('');
-  // segmented kind
+    states.map(s=>`<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+  if([...$('#stateSel').options].some(o=>o.value===cur)) $('#stateSel').value = cur;
+  // datalist for manual-entry modal
+  $('#lmStateList').innerHTML = states.map(s=>`<option value="${escapeHtml(s)}">`).join('');
+}
+
+function setStamp(){
+  const when = FEED_UPDATED_AT || NOW;
+  $('#stamp').textContent = 'Feed updated ' + when.toLocaleString('en-IN',
+    {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hour12:true});
+}
+
+/* ---------- Manual LinkedIn leads (persisted in this browser) ---------- */
+const MANUAL_KEY = 'bub_manual_leads';
+function loadManualLeads(){
+  try { return JSON.parse(localStorage.getItem(MANUAL_KEY) || '[]'); }
+  catch { return []; }
+}
+function saveManualLeads(arr){ localStorage.setItem(MANUAL_KEY, JSON.stringify(arr)); }
+function removeManualLead(id){
+  const arr = loadManualLeads().filter(l=>l.id!==id);
+  saveManualLeads(arr);
+  rebuildData();
+}
+function scoreManual(lead){
+  // mirror the Python scorer roughly so manual entries rank sensibly
+  if(lead.kind==='tender'){
+    let s = 50;
+    if(lead.capacity) s += lead.capacity*0.05;
+    if(lead.deadline){
+      const d = Math.ceil((new Date(lead.deadline)-new Date())/86400000);
+      if(d>=0&&d<=7) s+=25; else if(d<=15) s+=12;
+    }
+    return Math.max(0,Math.min(100,Math.round(s)));
+  }
+  let s = 60;
+  const text = (lead.title+' '+(lead.note||'')).toLowerCase();
+  const bonus = {'data center':15,'fab':15,'semiconductor':15,'manufacturing':10,'warehouse':8,'logistics':8,'expansion':6,'greenfield':10};
+  for(const k in bonus){ if(text.includes(k)) s+=bonus[k]; }
+  return Math.max(0,Math.min(100,Math.round(s)));
+}
+
+/* ---------- Compose DATA from feed + manual leads ---------- */
+let FEED_ITEMS = [];
+function rebuildData(){
+  const manual = loadManualLeads();
+  DATA = [...FEED_ITEMS, ...manual];
+  refreshStateOptions();
+  renderKpis();
+  render();
+}
+
+/* ---------- Load the live feed ---------- */
+async function loadFeed(){
+  try{
+    const res = await fetch('data/feed.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const json = await res.json();
+    FEED_ITEMS = json.items || [];
+    FEED_UPDATED_AT = json.updated_at ? new Date(json.updated_at) : new Date();
+    NOW = new Date();              // live clock once we have a real feed
+  }catch(err){
+    // file:// or no server — fall back to the embedded sample
+    FEED_ITEMS = FALLBACK_DATA;
+    FEED_UPDATED_AT = new Date('2026-06-19T09:00:00');
+    NOW = new Date('2026-06-19T09:00:00');
+    showBanner('Showing bundled sample data — run from a web server (or GitHub Pages) to load the live feed.', false);
+  }
+  setStamp();
+  rebuildData();
+  maybeNotify();
+  // mark everything seen *after* this render so NEW badges reflect the prior visit
+  lastSeenTs = Date.now();
+  localStorage.setItem(LAST_SEEN_KEY, String(lastSeenTs));
+}
+
+/* ---------- Banner ---------- */
+function showBanner(msg, isAlert){
+  const b = $('#alertBanner');
+  $('#alertBannerMsg').textContent = msg;
+  b.style.background = isAlert ? '#FBE3E3' : '#FBEFD8';
+  b.style.borderColor = isAlert ? '#E4A0A0' : '#E4C683';
+  b.style.color = isAlert ? '#8A2B2B' : '#7A5310';
+  b.style.display = 'flex';
+}
+
+/* ---------- Theme toggle ---------- */
+const SUN_PATH = '<circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="7" y2="7"/><line x1="17" y1="17" x2="18.8" y2="18.8"/><line x1="18.8" y1="5.2" x2="17" y2="7"/><line x1="7" y1="17" x2="5.2" y2="18.8"/>';
+const MOON_PATH = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(theme){
+  if(theme==='dark') document.documentElement.setAttribute('data-theme','dark');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('bub_theme', theme);
+  // button shows the theme you'll switch TO
+  $('#btnThemeLabel').textContent = theme==='dark' ? 'Light' : 'Dark';
+  $('#themeIco').innerHTML = theme==='dark' ? SUN_PATH : MOON_PATH;
+}
+function currentTheme(){ return document.documentElement.getAttribute('data-theme')==='dark' ? 'dark' : 'light'; }
+
+/* ---------- Browser notifications ---------- */
+const NOTIFIED_KEY = 'bub_notified_ids';
+function notifiedIds(){ try{ return new Set(JSON.parse(localStorage.getItem(NOTIFIED_KEY)||'[]')); }catch{ return new Set(); } }
+function rememberNotified(ids){ localStorage.setItem(NOTIFIED_KEY, JSON.stringify([...ids])); }
+
+function updateAlertBtn(){
+  const lbl = $('#btnAlertsLabel');
+  if(!('Notification' in window)){ lbl.textContent='Alerts N/A'; $('#btnAlerts').disabled=true; return; }
+  lbl.textContent = Notification.permission==='granted' ? 'Alerts on'
+    : Notification.permission==='denied' ? 'Alerts blocked' : 'Enable alerts';
+}
+function maybeNotify(){
+  if(!('Notification' in window) || Notification.permission!=='granted') return;
+  const seen = notifiedIds();
+  const fresh = FEED_ITEMS.filter(o=>isItemNew(o) && !seen.has(o.id));
+  if(!fresh.length) return;
+  const top = [...fresh].sort((a,b)=>b.priority-a.priority).slice(0,1)[0];
+  const body = fresh.length===1
+    ? `${top.org} — ${top.title}`
+    : `${top.org} — ${top.title} (+${fresh.length-1} more)`;
+  try{
+    new Notification('BUB Energy — new opportunity', {body, tag:'bub-feed'});
+  }catch{}
+  fresh.forEach(o=>seen.add(o.id));
+  rememberNotified(seen);
+}
+
+/* ---------- Modal (manual lead entry) ---------- */
+function openModal(){ $('#leadModal').classList.add('show'); $('#lmTitle').focus(); }
+function closeModal(){ $('#leadModal').classList.remove('show'); }
+function clearModal(){
+  ['lmTitle','lmOrg','lmState','lmCapacity','lmValue','lmDeadline','lmUrl','lmNote'].forEach(id=>$('#'+id).value='');
+  $('#lmKind').value='signal';
+}
+function saveLead(){
+  const title = $('#lmTitle').value.trim();
+  if(!title){ $('#lmTitle').focus(); return; }
+  const kind = $('#lmKind').value;
+  const now = new Date();
+  const lead = {
+    id: 'MAN-' + now.getTime().toString(36),
+    kind,
+    title,
+    org: $('#lmOrg').value.trim() || '—',
+    source: 'Manual / LinkedIn',
+    source_url: $('#lmUrl').value.trim() || '',
+    state: $('#lmState').value.trim() || 'Pan-India',
+    value: parseFloat($('#lmValue').value) || (kind==='signal'?0:null),
+    capacity: parseFloat($('#lmCapacity').value) || null,
+    deadline: kind==='tender' ? ($('#lmDeadline').value || null) : null,
+    detected: now.toISOString().slice(0,10),
+    first_seen: now.toISOString(),
+    owner: 'Unassigned',
+    note: $('#lmNote').value.trim() || 'Manually logged lead.',
+    sigtype: kind==='signal' ? 'Manual signal' : undefined
+  };
+  lead.priority = scoreManual(lead);
+  const arr = loadManualLeads();
+  arr.unshift(lead);
+  saveManualLeads(arr);
+  clearModal();
+  closeModal();
+  rebuildData();
+}
+
+function initControls(){
   $('#kindSeg').querySelectorAll('button').forEach(b=>{
     b.addEventListener('click',()=>{
       $('#kindSeg').querySelector('.on').classList.remove('on');
@@ -549,13 +886,36 @@ function initControls(){
   $('#tierSel').addEventListener('change',e=>{filters.tier=e.target.value;render();});
   $('#sortSel').addEventListener('change',e=>{filters.sort=e.target.value;render();});
   $('#searchInp').addEventListener('input',e=>{filters.q=e.target.value;render();});
-  $('#stamp').textContent = 'Updated ' + NOW.toLocaleString('en-IN',
-    {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hour12:true});
+
+  // Theme toggle (icon/label already reflect the pre-paint theme set in <head>)
+  applyTheme(currentTheme());
+  $('#btnTheme').addEventListener('click', ()=> applyTheme(currentTheme()==='dark' ? 'light' : 'dark'));
+
+  // Add-lead modal
+  $('#btnAddLead').addEventListener('click', openModal);
+  $('#lmCancel').addEventListener('click', closeModal);
+  $('#lmSave').addEventListener('click', saveLead);
+  $('#leadModal').addEventListener('click', e=>{ if(e.target===$('#leadModal')) closeModal(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+  // Notifications
+  updateAlertBtn();
+  $('#btnAlerts').addEventListener('click', async ()=>{
+    if(!('Notification' in window)) return;
+    if(Notification.permission==='granted'){ maybeNotify(); return; }
+    const perm = await Notification.requestPermission();
+    updateAlertBtn();
+    if(perm==='granted'){
+      new Notification('BUB Energy alerts enabled', {body:'You\'ll be notified of new tenders & signals while this tab is open.'});
+      maybeNotify();
+    }
+  });
 }
 
 initControls();
-renderKpis();
-render();
+loadFeed();
+// Re-pull the feed every 30 min while the tab stays open
+setInterval(loadFeed, 30*60*1000);
 </script>
 </body>
 </html>

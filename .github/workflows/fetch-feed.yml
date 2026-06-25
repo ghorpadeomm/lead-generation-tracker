@@ -1,0 +1,40 @@
+name: Fetch tender + signal feed
+
+on:
+  schedule:
+    # Twice a day — 07:00 and 19:00 IST (01:30 and 13:30 UTC)
+    - cron: "30 1 * * *"
+    - cron: "30 13 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run scraper
+        run: python scripts/fetch_feed.py
+
+      - name: Commit feed.json if changed
+        run: |
+          git config user.name  "feed-bot"
+          git config user.email "feed-bot@users.noreply.github.com"
+          git add data/feed.json
+          if git diff --cached --quiet; then
+            echo "No changes to feed.json"
+          else
+            git commit -m "feed: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

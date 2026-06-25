@@ -1,0 +1,55 @@
+{
+  "_comment": "Edit this file to tune what the scraper pulls. After editing, the next GitHub Action run picks up the changes.",
+
+  "google_alerts_feeds": [
+    {
+      "name": "Solar EPC tender India",
+      "kind": "tender",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Create at google.com/alerts with query: solar EPC tender India OR \"turnkey solar\" India. Delivery: RSS feed. Copy the RSS URL here."
+    },
+    {
+      "name": "LinkedIn EPC posts",
+      "kind": "signal",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Create at google.com/alerts with query: site:linkedin.com (\"solar EPC\" OR \"EPC contractor\" OR \"turnkey solar\") India. Delivery: RSS feed."
+    },
+    {
+      "name": "Industrial capex India",
+      "kind": "signal",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Create at google.com/alerts with query: India (\"new plant\" OR \"capacity expansion\" OR \"greenfield\" OR \"data center\") investment crore. Delivery: RSS feed."
+    }
+  ],
+
+  "tender_scrapers": {
+    "seci": { "enabled": true, "url": "https://www.seci.co.in/tenders" },
+    "ntpc": { "enabled": true, "url": "https://www.ntpctender.com/tenders/tendersearch.asp" },
+    "cppp": { "enabled": true, "url": "https://etenders.gov.in/eprocure/app?service=page&Page=FrontEndAdvancedSearch&searchKeyword=solar+EPC" }
+  },
+
+  "priority_rules": {
+    "_comment": "Auto-priority scoring. Higher = more urgent.",
+    "tender_base": 50,
+    "tender_capacity_bonus_per_mw": 0.05,
+    "tender_deadline_under_7d_bonus": 25,
+    "tender_deadline_under_15d_bonus": 12,
+    "signal_base": 60,
+    "signal_keyword_bonuses": {
+      "data center": 15,
+      "fab": 15,
+      "semiconductor": 15,
+      "manufacturing": 10,
+      "warehouse": 8,
+      "logistics": 8,
+      "expansion": 6,
+      "greenfield": 10
+    }
+  },
+
+  "email": {
+    "_comment": "Filled by GitHub Action secrets. Edit recipients only here.",
+    "recipients": ["bd.intern@bubhandari.com"],
+    "send_only_if_new_items": true
+  }
+}
