@@ -203,12 +203,15 @@ def score_item(item: dict[str, Any], rules: dict[str, Any]) -> int:
 
 # --------------------------- sources ---------------------------
 
-def from_google_alerts(feed: dict[str, Any]) -> list[dict[str, Any]]:
+def from_rss(feed: dict[str, Any]) -> list[dict[str, Any]]:
+    """Generic RSS reader. Works for Google Alerts, tender-aggregator feeds, and
+    email-to-RSS bridges (e.g. Kill-the-Newsletter for BidAssist / TenderTiger alerts).
+    The displayed source comes from the feed's optional 'source_label'."""
     url = feed.get("url", "")
     if not url or "PASTE" in url:
         log(f"  skipping '{feed['name']}' — no RSS URL configured")
         return []
-    log(f"  Google Alerts: {feed['name']}")
+    log(f"  RSS: {feed['name']}")
     parsed = feedparser.parse(url)
     items = []
     for entry in parsed.entries[:60]:
@@ -224,12 +227,16 @@ def from_google_alerts(feed: dict[str, Any]) -> list[dict[str, Any]]:
             else datetime.now(timezone.utc).strftime("%Y-%m-%d")
         )
         text = raw_title + " " + summary
+        if "linkedin.com" in link:
+            src = "LinkedIn"
+        else:
+            src = feed.get("source_label") or "Google Alerts"
         item = {
-            "id": f"GA-{sha8(link or raw_title)}",
+            "id": f"RSS-{sha8(link or raw_title)}",
             "kind": feed.get("kind", "signal"),
             "title": raw_title[:140],
             "org": _guess_org(raw_title, summary),
-            "source": "LinkedIn" if "linkedin.com" in link else "Google Alerts",
+            "source": src,
             "source_url": link,
             "state": detect_state(text),
             "value": parse_value_cr(text),
@@ -414,11 +421,12 @@ def main() -> int:
 
     collected: list[dict[str, Any]] = []
 
-    for feed in config.get("google_alerts_feeds", []):
+    rss_feeds = config.get("rss_feeds", config.get("google_alerts_feeds", []))
+    for feed in rss_feeds:
         try:
-            collected.extend(from_google_alerts(feed))
+            collected.extend(from_rss(feed))
         except Exception:
-            log(f"  Google Alerts source '{feed.get('name')}' failed:\n{traceback.format_exc()}")
+            log(f"  RSS source '{feed.get('name')}' failed:\n{traceback.format_exc()}")
 
     scrapers = config.get("tender_scrapers", {})
     if scrapers.get("seci", {}).get("enabled"):

@@ -51,9 +51,21 @@ After deploying (see below): `https://<your-username>.github.io/<repo-name>/`
    - `site:linkedin.com ("solar EPC" OR "EPC contractor" OR "turnkey solar") India`
    - `India ("new plant" OR "capacity expansion" OR "greenfield" OR "data center") investment crore`
 3. After creating each, click the **RSS** icon next to it and copy the feed URL.
-4. Paste each URL into the matching slot in [`data/config.json`](data/config.json) (replace `PASTE_GOOGLE_ALERTS_RSS_URL_HERE`). Commit the change.
+4. Paste each URL into the matching slot in [`data/config.json`](data/config.json) → `rss_feeds` (replace `PASTE_GOOGLE_ALERTS_RSS_URL_HERE`). Commit the change.
 
 > Until you add real RSS URLs, those feeds are skipped — the tender-portal scrapers still run.
+
+### 1b. Aggregator feeds (widest tender coverage)
+
+Government portals like CPPP block bots, so instead of fighting them we read **tender aggregators** that already scrape them. Two ways, both flow into the same `rss_feeds` list:
+
+- **No signup (easy):** add Google Alerts with a site filter, e.g. `site:bidassist.com ("solar EPC" OR "rooftop solar")` and `site:tendertiger.com ("solar EPC")`, delivered as RSS. Slots for these are already in `config.json`.
+- **Real aggregator email alerts (best coverage):** sign up on **BidAssist** / **TenderTiger**, create a saved search for solar EPC, and have it email you alerts. To turn those emails into a feed the scraper can read, use a free **email-to-RSS bridge**:
+  1. Go to [kill-the-newsletter.com](https://kill-the-newsletter.com) → create a feed → it gives you an **email address** + an **RSS URL**.
+  2. Set the aggregator's alert to send to that email address.
+  3. Paste the RSS URL into the matching `config.json` slot.
+
+This is the recommended way to cover portals that block direct scraping — the aggregator does the scraping, you just consume the alerts.
 
 ### 2. Turn on the hourly scraper
 
@@ -105,15 +117,18 @@ py scripts/fetch_feed.py        # rewrites data/feed.json
 ## Tuning
 
 Everything tunable lives in [`data/config.json`](data/config.json):
-- `google_alerts_feeds` — your RSS URLs and whether each is a tender or signal
+- `rss_feeds` — your RSS URLs (Google Alerts, aggregators, email-bridge); each tagged tender/signal with a `source_label`
 - `tender_scrapers` — enable/disable SECI, NTPC, CPPP and change their URLs
 - `priority_rules` — how items are scored (deadline urgency, capacity, keyword bonuses)
 - `email.recipients` — digest recipients
 
-## Honest limitations
+## Source status & limitations (honest)
 
-- **LinkedIn can't be scraped directly** — it blocks bots and bans accounts. We rely on Google's index of *public* LinkedIn posts via Alerts, plus manual entry. Private/connection-only posts won't appear.
-- **Scrapers are fragile** — when a tender portal changes its HTML, that source may return nothing until the selector in `scripts/fetch_feed.py` is updated. Each source is isolated in try/except so one breaking won't stop the others.
+- **SECI** — ✅ scraped directly.
+- **NTPC** — ✅ scraped from `ntpctender.ntpc.co.in` (the old `www.ntpctender.com` domain is dead). Returns large solar/BESS EPC packages.
+- **CPPP / eProcure** — ⚠️ disabled. The government portal loads via JavaScript behind anti-bot protection. Rather than fight it (proxies/CAPTCHA-solving — fragile and against its terms), cover those tenders via **BidAssist / TenderTiger aggregator feeds** (see §1b).
+- **LinkedIn** — can't be scraped directly (it blocks bots and bans accounts). We rely on Google's index of *public* LinkedIn posts via Alerts, plus manual entry. Private/connection-only posts won't appear.
+- **Scrapers are fragile** — when a portal changes its HTML, that source may return nothing until its selector in `scripts/fetch_feed.py` is updated. Each source is isolated in try/except so one breaking won't stop the others.
 - **Browser notifications** fire only while the dashboard tab is open. True background push needs a push service (future enhancement).
 
 ## Tech

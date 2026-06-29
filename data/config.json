@@ -1,31 +1,57 @@
 {
   "_comment": "Edit this file to tune what the scraper pulls. After editing, the next GitHub Action run picks up the changes.",
 
-  "google_alerts_feeds": [
+  "rss_feeds": [
     {
       "name": "Solar EPC tender India",
       "kind": "tender",
+      "source_label": "Google Alerts",
       "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
       "note": "Create at google.com/alerts with query: solar EPC tender India OR \"turnkey solar\" India. Delivery: RSS feed. Copy the RSS URL here."
     },
     {
       "name": "LinkedIn EPC posts",
       "kind": "signal",
+      "source_label": "LinkedIn",
       "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
       "note": "Create at google.com/alerts with query: site:linkedin.com (\"solar EPC\" OR \"EPC contractor\" OR \"turnkey solar\") India. Delivery: RSS feed."
     },
     {
       "name": "Industrial capex India",
       "kind": "signal",
+      "source_label": "Industrial News",
       "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
       "note": "Create at google.com/alerts with query: India (\"new plant\" OR \"capacity expansion\" OR \"greenfield\" OR \"data center\") investment crore. Delivery: RSS feed."
+    },
+    {
+      "name": "BidAssist solar (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "BidAssist",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "No signup needed: create a Google Alert with query  site:bidassist.com (\"solar EPC\" OR \"rooftop solar\" OR \"turnkey solar\")  and deliver as RSS. Catches aggregator-listed tenders."
+    },
+    {
+      "name": "TenderTiger solar (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "TenderTiger",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Google Alert query  site:tendertiger.com (\"solar EPC\" OR \"rooftop solar\")  delivered as RSS."
+    },
+    {
+      "name": "BidAssist email alert (via email-to-RSS bridge)",
+      "kind": "tender",
+      "source_label": "BidAssist",
+      "url": "PASTE_KILL_THE_NEWSLETTER_RSS_URL_HERE",
+      "note": "For real aggregator email alerts: go to kill-the-newsletter.com, create a feed, it gives you an email address + an RSS URL. Set your BidAssist/TenderTiger saved-search alert to send to that email address, then paste the RSS URL here. Each alert email becomes a feed item."
     }
   ],
 
   "tender_scrapers": {
     "seci": { "enabled": true, "url": "https://www.seci.co.in/tenders" },
-    "ntpc": { "enabled": true, "url": "https://www.ntpctender.com/tenders/tendersearch.asp" },
-    "cppp": { "enabled": true, "url": "https://etenders.gov.in/eprocure/app?service=page&Page=FrontEndAdvancedSearch&searchKeyword=solar+EPC" }
+    "ntpc": { "enabled": true, "url": "https://ntpctender.ntpc.co.in/Index/Search?Type=Reg&Region=10",
+              "note": "Old www.ntpctender.com is dead. This NIC endpoint returns tender rows as HTML (incl. solar EPC packages)." },
+    "cppp": { "enabled": false, "url": "https://etenders.gov.in/eprocure/app?service=page&Page=FrontEndAdvancedSearch&searchKeyword=solar+EPC",
+              "note": "Disabled: government portal loads via JavaScript + anti-bot. Use BidAssist/TenderTiger aggregator feeds for this coverage instead." }
   },
 
   "priority_rules": {
