@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T05:33:34+00:00",
+  "updated_at": "2026-06-29T14:58:39+00:00",
   "items": [
     {
       "id": "NTPC-eaadfba6",
@@ -31,7 +31,7 @@
       "deadline": "2026-06-29",
       "detected": "2026-06-29",
       "owner": "Unassigned",
-      "note": " | NREL-CS-5823-004(BESS1)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 550 MW/ 2200 MWH ISTS CONNECTED BESS AT NTPC REL SHIMBOO KA BURJ SOLAR PLANT | Renewable Energy | 29/06/2026 6 Hours to go | ",
+      "note": " | NREL-CS-5823-004(BESS1)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 550 MW/ 2200 MWH ISTS CONNECTED BESS AT NTPC REL SHIMBOO KA BURJ SOLAR PLANT | Renewable Energy | 29/06/2026 (Closed) | ",
       "priority": 100,
       "first_seen": "2026-06-29T05:25:39+00:00"
     },
@@ -48,7 +48,7 @@
       "deadline": "2026-06-29",
       "detected": "2026-06-29",
       "owner": "Unassigned",
-      "note": " | NREL-CS-5826-004(BESS1)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 300MW / 1200MWH ISTS CONNECTED BESS AT\r\nNTPC REL NOKHRA SOLAR PLANT | Renewable Energy | 29/06/2026 6 Hours to go | ",
+      "note": " | NREL-CS-5826-004(BESS1)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 300MW / 1200MWH ISTS CONNECTED BESS AT\r\nNTPC REL NOKHRA SOLAR PLANT | Renewable Energy | 29/06/2026 (Closed) | ",
       "priority": 90,
       "first_seen": "2026-06-29T05:25:39+00:00"
     },
