@@ -147,22 +147,29 @@ def parse_value_cr(text: str) -> float | None:
 
 
 def parse_deadline(text: str) -> str | None:
-    """Find a date and return YYYY-MM-DD."""
+    """Return the LATEST plausible date in the text as YYYY-MM-DD.
+
+    Tender rows usually carry an issue date AND a (later) submission/closing date,
+    e.g. "29/05/2026 | 10/07/2026". We want the closing date — the latest one —
+    while ignoring absurd far-future dates (e.g. 25-year PPA terms)."""
     patterns = [
-        (r"(\d{1,2})[-/\s](\d{1,2})[-/\s](20\d{2})", "%d-%m-%Y"),
-        (r"(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(20\d{2})", "%d-%b-%Y"),
-        (r"(20\d{2})-(\d{1,2})-(\d{1,2})", "%Y-%m-%d"),
+        (r"\b(\d{1,2})[-/](\d{1,2})[-/](20\d{2})\b", "%d-%m-%Y"),
+        (r"\b(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(20\d{2})\b", "%d-%b-%Y"),
+        (r"\b(20\d{2})-(\d{1,2})-(\d{1,2})\b", "%Y-%m-%d"),
     ]
+    today = datetime.now(timezone.utc).date()
+    lo = today.replace(year=today.year - 1)
+    hi = today.replace(year=today.year + 2)
+    found = []
     for pat, fmt in patterns:
-        m = re.search(pat, text, re.IGNORECASE)
-        if not m:
-            continue
-        try:
-            raw = "-".join(m.groups())
-            return datetime.strptime(raw.title(), fmt).strftime("%Y-%m-%d")
-        except ValueError:
-            continue
-    return None
+        for m in re.finditer(pat, text, re.IGNORECASE):
+            try:
+                d = datetime.strptime("-".join(m.groups()).title(), fmt).date()
+            except ValueError:
+                continue
+            if lo <= d <= hi:
+                found.append(d)
+    return max(found).strftime("%Y-%m-%d") if found else None
 
 
 def best_title(cells: list[str]) -> str:

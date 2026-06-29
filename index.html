@@ -331,7 +331,7 @@
           <input id="searchInp" type="search" placeholder="Search company, authority, project…">
         </div>
         <div class="fb-spacer"></div>
-        <span class="count-tag"><b id="shownCount">0</b> shown</span>
+        <span class="count-tag"><b id="shownCount">0</b> shown <span id="closedNote" style="color:var(--faint);font-weight:600"></span></span>
       </div>
 
       <div class="feed">
@@ -754,12 +754,19 @@ function scoreManual(lead){
 
 /* ---------- Compose DATA from feed + manual leads ---------- */
 let FEED_ITEMS = [];
+let closedHidden = 0;
+// A tender is "closed" once its submission deadline is in the past.
+function isClosedTender(o){ return o.kind==='tender' && o.deadline && daysFrom(o.deadline) < 0; }
 function rebuildData(){
   const manual = loadManualLeads();
-  DATA = [...FEED_ITEMS, ...manual];
+  const all = [...FEED_ITEMS, ...manual];
+  DATA = all.filter(o => !isClosedTender(o));   // drop past-deadline tenders everywhere
+  closedHidden = all.length - DATA.length;
   refreshStateOptions();
   renderKpis();
   render();
+  const note = $('#closedNote');
+  if(note) note.textContent = closedHidden ? `· ${closedHidden} closed hidden` : '';
 }
 
 /* ---------- Load the live feed ---------- */
