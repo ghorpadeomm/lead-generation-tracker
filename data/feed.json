@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T14:58:39+00:00",
+  "updated_at": "2026-06-29T19:28:11+00:00",
   "items": [
     {
       "id": "NTPC-eaadfba6",
@@ -16,40 +16,6 @@
       "owner": "Unassigned",
       "note": " | NRE-CS-5820-004(EPC)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 600MW (2x300MW) GRID CONNECTED SOLAR PV PROJECTS AT DHULE, MAHARASHTRA | Renewable Energy | 03/07/2026 | ",
       "priority": 100,
-      "first_seen": "2026-06-29T05:25:39+00:00"
-    },
-    {
-      "id": "NTPC-4ba63888",
-      "kind": "tender",
-      "title": "EPC PACKAGE FOR DEVELOPMENT OF 550 MW/ 2200 MWH ISTS CONNECTED BESS AT NTPC REL SHIMBOO KA BURJ SOLAR PLANT",
-      "org": "NTPC Ltd",
-      "source": "NTPC Portal",
-      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/29969",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 550.0,
-      "deadline": "2026-06-29",
-      "detected": "2026-06-29",
-      "owner": "Unassigned",
-      "note": " | NREL-CS-5823-004(BESS1)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 550 MW/ 2200 MWH ISTS CONNECTED BESS AT NTPC REL SHIMBOO KA BURJ SOLAR PLANT | Renewable Energy | 29/06/2026 (Closed) | ",
-      "priority": 100,
-      "first_seen": "2026-06-29T05:25:39+00:00"
-    },
-    {
-      "id": "NTPC-4116181a",
-      "kind": "tender",
-      "title": "EPC PACKAGE FOR DEVELOPMENT OF 300MW / 1200MWH ISTS CONNECTED BESS AT\r\nNTPC REL NOKHRA SOLAR PLANT",
-      "org": "NTPC Ltd",
-      "source": "NTPC Portal",
-      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/29964",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 300.0,
-      "deadline": "2026-06-29",
-      "detected": "2026-06-29",
-      "owner": "Unassigned",
-      "note": " | NREL-CS-5826-004(BESS1)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 300MW / 1200MWH ISTS CONNECTED BESS AT\r\nNTPC REL NOKHRA SOLAR PLANT | Renewable Energy | 29/06/2026 (Closed) | ",
-      "priority": 90,
       "first_seen": "2026-06-29T05:25:39+00:00"
     },
     {
