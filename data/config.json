@@ -43,16 +43,57 @@
       "source_label": "BidAssist",
       "url": "PASTE_KILL_THE_NEWSLETTER_RSS_URL_HERE",
       "note": "For real aggregator email alerts: go to kill-the-newsletter.com, create a feed, it gives you an email address + an RSS URL. Set your BidAssist/TenderTiger saved-search alert to send to that email address, then paste the RSS URL here. Each alert email becomes a feed item."
+    },
+    {
+      "name": "MSEDCL solar (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "MSEDCL",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "State DISCOM. Direct scraping mahatenders.gov.in faces the same JS/anti-bot wall as CPPP, so cover it via a Google Alert: site:mahatenders.gov.in solar OR (\"MSEDCL\" solar tender). Deliver as RSS."
+    },
+    {
+      "name": "GUVNL/GSECL solar (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "GUVNL",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Gujarat DISCOM. Google Alert: (\"GUVNL\" OR \"GSECL\" OR \"GEDA\") solar tender. Deliver as RSS."
+    },
+    {
+      "name": "GeM solar (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "GeM",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Government e-Marketplace bids. Direct scraping bidplus.gem.gov.in is JS/anti-bot protected; cover via Google Alert: site:gem.gov.in solar EPC OR rooftop solar. Deliver as RSS."
     }
   ],
 
-  "tender_scrapers": {
-    "seci": { "enabled": true, "url": "https://www.seci.co.in/tenders" },
-    "ntpc": { "enabled": true, "url": "https://ntpctender.ntpc.co.in/Index/Search?Type=Reg&Region=10",
-              "note": "Old www.ntpctender.com is dead. This NIC endpoint returns tender rows as HTML (incl. solar EPC packages)." },
-    "cppp": { "enabled": false, "url": "https://etenders.gov.in/eprocure/app?service=page&Page=FrontEndAdvancedSearch&searchKeyword=solar+EPC",
-              "note": "Disabled: government portal loads via JavaScript + anti-bot. Use BidAssist/TenderTiger aggregator feeds for this coverage instead." }
-  },
+  "exclude_keywords": [
+    "internet leased line", "leased line", "manpower", "housekeeping",
+    "security service", "security guard", "insurance", "vehicle hire",
+    "catering", "stationery", "annual maintenance contract for air"
+  ],
+
+  "tender_scrapers": [
+    { "name": "SECI", "enabled": true,
+      "url": "https://www.seci.co.in/tenders",
+      "org": "SECI", "source": "SECI Portal", "id_prefix": "SECI",
+      "keywords": ["solar", "rooftop", "epc"], "min_cells": 3 },
+    { "name": "NTPC", "enabled": true,
+      "url": "https://ntpctender.ntpc.co.in/Index/Search?Type=Reg&Region=10",
+      "org": "NTPC Ltd", "source": "NTPC Portal", "id_prefix": "NTPC",
+      "keywords": ["solar"], "min_cells": 3,
+      "note": "Old www.ntpctender.com is dead; this NIC endpoint returns rows as HTML." },
+    { "name": "GeM (direct)", "enabled": false,
+      "url": "https://bidplus.gem.gov.in/all-bids",
+      "org": "GeM", "source": "GeM", "id_prefix": "GEM",
+      "keywords": ["solar"], "min_cells": 3,
+      "note": "Disabled: bidplus is JS + anti-bot. Covered via the GeM Google Alert above instead. To add any NEW server-rendered portal, copy this block, set the url/org/source, and flip enabled:true." },
+    { "name": "CPPP", "enabled": false,
+      "url": "https://etenders.gov.in/eprocure/app?service=page&Page=FrontEndAdvancedSearch&searchKeyword=solar+EPC",
+      "org": "Central Govt (CPPP)", "source": "CPPP / eProcure", "id_prefix": "CPPP",
+      "keywords": ["solar"], "min_cells": 4,
+      "note": "Disabled: JS + anti-bot. Use aggregator feeds for this coverage." }
+  ],
 
   "priority_rules": {
     "_comment": "Auto-priority scoring. Higher = more urgent.",

@@ -114,6 +114,17 @@ py -m pip install -r scripts/requirements.txt
 py scripts/fetch_feed.py        # rewrites data/feed.json
 ```
 
+## AI Tender Analyzer
+
+Click **AI Analyzer** in the header to turn a tender PDF into a summary spreadsheet:
+
+1. Paste your **Anthropic API key** (from [console.anthropic.com](https://console.anthropic.com/settings/keys)) — it's stored only in your browser's local storage, never committed.
+2. Drop in a tender **PDF** (or paste the text) and click **Analyze tender**.
+3. Claude extracts the key fields (authority, capacity, EMD, PBG, deadline, PQR, penalties, go/no-go…) into an editable table.
+4. **Download spreadsheet (CSV)** — opens directly in Excel / Google Sheets.
+
+Notes: the API is pay-as-you-go (~₹5–20 per document, separate from a Claude.ai subscription). Choose the model in the dialog — Sonnet (balanced), Opus (most accurate), or Haiku (cheapest). Nothing is sent anywhere except directly from your browser to Anthropic.
+
 ## Tuning
 
 Everything tunable lives in [`data/config.json`](data/config.json):

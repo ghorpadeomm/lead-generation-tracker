@@ -290,6 +290,10 @@
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
       <span id="btnAlertsLabel">Enable alerts</span>
     </button>
+    <button class="cmd-btn" id="btnAI" title="AI Tender Analyzer — upload a tender PDF, get a summary spreadsheet">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>
+      AI Analyzer
+    </button>
     <button class="cmd-btn primary" id="btnAddLead">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
       Add LinkedIn lead
@@ -423,6 +427,70 @@
     <div class="modal-act">
       <button class="btn" id="lmCancel">Cancel</button>
       <button class="btn primary" id="lmSave">Save lead</button>
+    </div>
+  </div>
+</div>
+
+<!-- AI Tender Analyzer modal -->
+<style>
+  .modal.ai{max-width:760px;max-height:90vh;overflow:auto}
+  .ai-drop{border:2px dashed var(--line);border-radius:9px;padding:22px;text-align:center;
+    color:var(--muted);font-size:13px;cursor:pointer;background:var(--inset);transition:border-color .15s}
+  .ai-drop:hover{border-color:var(--signal)}
+  .ai-drop.on{border-color:var(--signal);background:var(--c-sched-bg)}
+  .ai-drop b{color:var(--navy)}
+  .ai-file{font-size:12px;color:var(--forest);font-weight:600;margin-top:8px}
+  .ai-key-row{display:grid;grid-template-columns:1fr 150px;gap:10px}
+  .ai-status{font-size:12.5px;margin:12px 0;padding:9px 12px;border-radius:7px;display:none}
+  .ai-status.show{display:block}
+  .ai-status.info{background:var(--c-sched-bg);color:var(--navy)}
+  .ai-status.err{background:#FBE3E3;color:var(--urgent)}
+  .ai-status.ok{background:var(--b-signal-bg);color:var(--b-signal-fg)}
+  .ai-spin{display:inline-block;width:13px;height:13px;border:2px solid currentColor;border-right-color:transparent;
+    border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-right:7px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  table.ai-tbl{width:100%;border-collapse:collapse;margin-top:6px;font-size:12.5px}
+  table.ai-tbl td{border:1px solid var(--line);padding:7px 10px;vertical-align:top}
+  table.ai-tbl td.k{width:38%;font-weight:600;color:var(--navy);background:var(--inset)}
+  table.ai-tbl td.v{color:var(--ink)}
+  .ai-hint{font-size:11px;color:var(--faint);margin-top:4px}
+  .ai-hint a{color:var(--forest)}
+</style>
+<div class="modal-back" id="aiModal" role="dialog" aria-labelledby="aiTitle">
+  <div class="modal ai">
+    <h2 id="aiTitle">AI Tender Analyzer</h2>
+    <p class="sub">Upload a tender PDF — Claude reads it and returns a summary spreadsheet of the key fields.</p>
+
+    <label>Anthropic API key <span style="font-weight:400;text-transform:none;color:var(--faint)">· stored only in this browser</span></label>
+    <div class="ai-key-row">
+      <input id="aiKey" type="password" placeholder="sk-ant-…" autocomplete="off">
+      <select id="aiModelSel" aria-label="Model">
+        <option value="claude-sonnet-5">Sonnet 5 (balanced)</option>
+        <option value="claude-opus-4-8">Opus 4.8 (most accurate)</option>
+        <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
+      </select>
+    </div>
+    <div class="ai-hint">Get a key at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a> (pay-as-you-go, ~₹5–20 per document). The key never leaves your browser or gets committed.</div>
+
+    <label for="aiDrop" style="margin-top:14px">Tender document (PDF)</label>
+    <div class="ai-drop" id="aiDrop">
+      <b>Click to choose</b> or drop a tender PDF here
+      <div class="ai-file" id="aiFileName"></div>
+    </div>
+    <input id="aiFile" type="file" accept="application/pdf" style="display:none">
+
+    <details style="margin-top:10px">
+      <summary style="font-size:12px;color:var(--muted);cursor:pointer">…or paste tender text instead</summary>
+      <textarea id="aiText" placeholder="Paste the tender text here if you don't have a PDF" style="margin-top:8px"></textarea>
+    </details>
+
+    <div class="ai-status" id="aiStatus"></div>
+    <div id="aiResult"></div>
+
+    <div class="modal-act">
+      <button class="btn" id="aiCsv" style="display:none">⬇ Download spreadsheet (CSV)</button>
+      <button class="btn" id="aiClose">Close</button>
+      <button class="btn primary" id="aiRun">Analyze tender</button>
     </div>
   </div>
 </div>
@@ -881,6 +949,86 @@ function saveLead(){
   rebuildData();
 }
 
+/* ---------- AI Tender Analyzer ---------- */
+const AI_KEY_LS='bub_anthropic_key', AI_MODEL_LS='bub_anthropic_model';
+let aiFields=null, aiFileB64=null;
+const AI_PROMPT = `You are a solar-EPC bid analyst. Read the attached tender document and extract a concise summary for a bidding team.
+Return ONLY a JSON object (no markdown fences, no commentary) with EXACTLY these keys. Use "Not specified" when the document does not state it. Keep each value short (a phrase or one sentence).
+{
+ "Tender Title":"", "Tender / NIT Reference No.":"", "Issuing Authority / Client":"",
+ "Scope of Work":"", "Project Capacity":"", "Location / State":"", "Estimated Value":"",
+ "EMD / Bid Security":"", "Performance Bank Guarantee":"", "Pre-bid Meeting Date":"",
+ "Bid Submission Deadline":"", "Completion / Execution Period":"", "Technical Eligibility (PQR)":"",
+ "Financial Eligibility":"", "Payment Terms":"", "Key Risks / Penalties (LD)":"",
+ "Contact":"", "Go / No-Go Observation":""
+}`;
+function openAI(){
+  $('#aiKey').value = localStorage.getItem(AI_KEY_LS)||'';
+  const m = localStorage.getItem(AI_MODEL_LS); if(m) $('#aiModelSel').value=m;
+  $('#aiModal').classList.add('show'); $('#aiKey').focus();
+}
+function closeAI(){ $('#aiModal').classList.remove('show'); }
+function aiStatus(msg, kind){ const s=$('#aiStatus'); s.className='ai-status show '+(kind||'info'); s.innerHTML=msg; }
+function aiHandleFile(f){
+  if(!f) return;
+  if(f.type!=='application/pdf'){ aiStatus('Please choose a PDF file.','err'); return; }
+  const rd=new FileReader();
+  rd.onload=()=>{ aiFileB64=String(rd.result).split(',')[1]; $('#aiFileName').textContent='✓ '+f.name; };
+  rd.readAsDataURL(f);
+}
+async function aiRun(){
+  const key=$('#aiKey').value.trim();
+  if(!key){ aiStatus('Enter your Anthropic API key first.','err'); $('#aiKey').focus(); return; }
+  const model=$('#aiModelSel').value;
+  localStorage.setItem(AI_KEY_LS,key); localStorage.setItem(AI_MODEL_LS,model);
+  const pasted=$('#aiText').value.trim();
+  if(!aiFileB64 && !pasted){ aiStatus('Add a PDF or paste the tender text first.','err'); return; }
+  const content=[];
+  if(aiFileB64) content.push({type:'document',source:{type:'base64',media_type:'application/pdf',data:aiFileB64}});
+  if(pasted) content.push({type:'text',text:'Tender text:\n'+pasted});
+  content.push({type:'text',text:AI_PROMPT});
+  aiStatus('<span class="ai-spin"></span>Reading the tender with '+model+'… (this can take 10–30s)','info');
+  $('#aiRun').disabled=true; $('#aiCsv').style.display='none'; $('#aiResult').innerHTML='';
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':key,
+        'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model,max_tokens:1500,messages:[{role:'user',content}]})
+    });
+    if(!res.ok){
+      let m='HTTP '+res.status; try{ const e=await res.json(); m=(e.error&&e.error.message)||m; }catch{}
+      throw new Error(m);
+    }
+    const data=await res.json();
+    let txt=(data.content||[]).filter(c=>c.type==='text').map(c=>c.text).join('\n').trim();
+    txt=txt.replace(/^```(?:json)?/i,'').replace(/```$/,'').trim();
+    let obj; try{ obj=JSON.parse(txt); }
+    catch{ obj=JSON.parse(txt.slice(txt.indexOf('{'), txt.lastIndexOf('}')+1)); }
+    aiRenderTable(obj);
+    aiStatus('✓ Done. Review below (cells are editable), then download the spreadsheet.','ok');
+  }catch(err){
+    aiStatus('Analysis failed: '+escapeHtml(err.message),'err');
+  }finally{ $('#aiRun').disabled=false; }
+}
+function aiRenderTable(obj){
+  aiFields=obj;
+  const rows=Object.keys(obj).map(k=>
+    `<tr><td class="k">${escapeHtml(k)}</td><td class="v" contenteditable="true" data-k="${escapeHtml(k)}">${escapeHtml(String(obj[k]??''))}</td></tr>`).join('');
+  const r=$('#aiResult'); r.innerHTML=`<table class="ai-tbl"><tbody>${rows}</tbody></table>`;
+  r.querySelectorAll('td.v').forEach(td=>td.addEventListener('input',()=>{ aiFields[td.dataset.k]=td.textContent; }));
+  $('#aiCsv').style.display='';
+}
+function aiDownloadCsv(){
+  if(!aiFields) return;
+  const esc=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+  const lines=['Field,Value',...Object.keys(aiFields).map(k=>esc(k)+','+esc(aiFields[k]))];
+  const nm=(aiFields['Tender / NIT Reference No.']||aiFields['Tender Title']||'tender').toString().replace(/[^\w-]+/g,'_').slice(0,40);
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob(['﻿'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'}));
+  a.download='tender_'+nm+'.csv'; a.click();
+}
+
 function initControls(){
   $('#kindSeg').querySelectorAll('button').forEach(b=>{
     b.addEventListener('click',()=>{
@@ -903,7 +1051,20 @@ function initControls(){
   $('#lmCancel').addEventListener('click', closeModal);
   $('#lmSave').addEventListener('click', saveLead);
   $('#leadModal').addEventListener('click', e=>{ if(e.target===$('#leadModal')) closeModal(); });
-  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeAI(); } });
+
+  // AI Tender Analyzer
+  $('#btnAI').addEventListener('click', openAI);
+  $('#aiClose').addEventListener('click', closeAI);
+  $('#aiRun').addEventListener('click', aiRun);
+  $('#aiCsv').addEventListener('click', aiDownloadCsv);
+  $('#aiDrop').addEventListener('click', ()=>$('#aiFile').click());
+  $('#aiFile').addEventListener('change', e=>aiHandleFile(e.target.files[0]));
+  const dz=$('#aiDrop');
+  dz.addEventListener('dragover', e=>{e.preventDefault();dz.classList.add('on');});
+  dz.addEventListener('dragleave', ()=>dz.classList.remove('on'));
+  dz.addEventListener('drop', e=>{e.preventDefault();dz.classList.remove('on');aiHandleFile(e.dataTransfer.files[0]);});
+  $('#aiModal').addEventListener('click', e=>{ if(e.target===$('#aiModal')) closeAI(); });
 
   // Notifications
   updateAlertBtn();

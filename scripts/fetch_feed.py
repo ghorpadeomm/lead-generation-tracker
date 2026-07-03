@@ -271,102 +271,42 @@ def _guess_org(title: str, summary: str) -> str:
     return title.split(" - ")[0].split(" | ")[0][:60]
 
 
-def from_seci(url: str) -> list[dict[str, Any]]:
-    log(f"  SECI: {url}")
+def from_html_table(cfg: dict[str, Any]) -> list[dict[str, Any]]:
+    """Generic HTML-table tender scraper, driven entirely by a config entry:
+        name, url, org, source, id_prefix, keywords[], min_cells
+    Works for any portal that renders its tender list as a server-side <table>
+    (SECI, NTPC's Search endpoint, etc.). JS-only portals return nothing here."""
+    name = cfg.get("name", "source")
+    url = cfg.get("url", "")
+    if not url:
+        return []
+    log(f"  {name}: {url}")
     r = fetch(url)
     if not r:
         return []
     soup = BeautifulSoup(r.text, "lxml")
+    kws = [k.lower() for k in cfg.get("keywords", ["solar"])]
+    min_cells = cfg.get("min_cells", 3)
+    prefix = cfg.get("id_prefix", name[:4].upper())
+    org = cfg.get("org", name)
+    source = cfg.get("source", name)
     items = []
     for row in soup.select("table tr"):
         cells = [c.get_text(" ", strip=True) for c in row.find_all(["td", "th"])]
-        if len(cells) < 3:
+        if len(cells) < min_cells:
             continue
         text = " | ".join(cells)
-        if "solar" not in text.lower() and "rooftop" not in text.lower() and "epc" not in text.lower():
+        if not any(k in text.lower() for k in kws):
             continue
         title = best_title(cells)
         link_el = row.find("a", href=True)
         link = urljoin(url, link_el["href"]) if link_el else url
         items.append({
-            "id": f"SECI-{sha8(link if link != url else title)}",
+            "id": f"{prefix}-{sha8(link if link != url else title)}",
             "kind": "tender",
             "title": title,
-            "org": "SECI",
-            "source": "SECI Portal",
-            "source_url": link,
-            "state": detect_state(text),
-            "value": parse_value_cr(text),
-            "capacity": parse_capacity_mw(text),
-            "deadline": parse_deadline(text),
-            "detected": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "owner": "Unassigned",
-            "note": text[:280],
-        })
-    log(f"    → {len(items)} items")
-    return items
-
-
-def from_ntpc(url: str) -> list[dict[str, Any]]:
-    log(f"  NTPC: {url}")
-    r = fetch(url)
-    if not r:
-        return []
-    soup = BeautifulSoup(r.text, "lxml")
-    items = []
-    for row in soup.select("table tr"):
-        cells = [c.get_text(" ", strip=True) for c in row.find_all(["td", "th"])]
-        if len(cells) < 3:
-            continue
-        text = " | ".join(cells)
-        if "solar" not in text.lower():
-            continue
-        title = best_title(cells)
-        link_el = row.find("a", href=True)
-        link = urljoin(url, link_el["href"]) if link_el else url
-        items.append({
-            "id": f"NTPC-{sha8(link if link != url else title)}",
-            "kind": "tender",
-            "title": title,
-            "org": "NTPC Ltd",
-            "source": "NTPC Portal",
-            "source_url": link,
-            "state": detect_state(text),
-            "value": parse_value_cr(text),
-            "capacity": parse_capacity_mw(text),
-            "deadline": parse_deadline(text),
-            "detected": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "owner": "Unassigned",
-            "note": text[:280],
-        })
-    log(f"    → {len(items)} items")
-    return items
-
-
-def from_cppp(url: str) -> list[dict[str, Any]]:
-    """CPPP eProcure has anti-bot protections; this is a best-effort fetch."""
-    log(f"  CPPP: {url}")
-    r = fetch(url)
-    if not r:
-        return []
-    soup = BeautifulSoup(r.text, "lxml")
-    items = []
-    for row in soup.select("table tr"):
-        cells = [c.get_text(" ", strip=True) for c in row.find_all(["td", "th"])]
-        if len(cells) < 4:
-            continue
-        text = " | ".join(cells)
-        if "solar" not in text.lower():
-            continue
-        title = best_title(cells)
-        link_el = row.find("a", href=True)
-        link = urljoin(url, link_el["href"]) if link_el else url
-        items.append({
-            "id": f"CPPP-{sha8(link if link != url else title)}",
-            "kind": "tender",
-            "title": title,
-            "org": "Central Govt (CPPP)",
-            "source": "CPPP / eProcure",
+            "org": org,
+            "source": source,
             "source_url": link,
             "state": detect_state(text),
             "value": parse_value_cr(text),
@@ -435,22 +375,38 @@ def main() -> int:
         except Exception:
             log(f"  RSS source '{feed.get('name')}' failed:\n{traceback.format_exc()}")
 
-    scrapers = config.get("tender_scrapers", {})
-    if scrapers.get("seci", {}).get("enabled"):
+    scrapers = config.get("tender_scrapers", [])
+    if isinstance(scrapers, dict):           # tolerate the old dict shape
+        scrapers = list(scrapers.values())
+    for cfg in scrapers:
+        if not cfg.get("enabled"):
+            continue
         try:
-            collected.extend(from_seci(scrapers["seci"]["url"]))
+            collected.extend(from_html_table(cfg))
         except Exception:
-            log(f"  SECI scraper failed:\n{traceback.format_exc()}")
-    if scrapers.get("ntpc", {}).get("enabled"):
-        try:
-            collected.extend(from_ntpc(scrapers["ntpc"]["url"]))
-        except Exception:
-            log(f"  NTPC scraper failed:\n{traceback.format_exc()}")
-    if scrapers.get("cppp", {}).get("enabled"):
-        try:
-            collected.extend(from_cppp(scrapers["cppp"]["url"]))
-        except Exception:
-            log(f"  CPPP scraper failed:\n{traceback.format_exc()}")
+            log(f"  scraper '{cfg.get('name')}' failed:\n{traceback.format_exc()}")
+
+    # Drop non-EPC false positives (e.g. "internet leased line", "manpower")
+    exclude = [k.lower() for k in config.get("exclude_keywords", [])]
+    if exclude:
+        before = len(collected)
+        collected = [it for it in collected
+                     if not any(k in (it.get("title", "") + " " + it.get("note", "")).lower() for k in exclude)]
+        if before - len(collected):
+            log(f"  excluded {before - len(collected)} non-EPC item(s)")
+
+    # De-duplicate the same tender appearing across sources (by normalized title)
+    seen: set[str] = set()
+    deduped = []
+    for it in collected:
+        key = re.sub(r"[^a-z0-9]", "", it.get("title", "").lower())[:60]
+        if key and key in seen:
+            continue
+        seen.add(key)
+        deduped.append(it)
+    if len(collected) - len(deduped):
+        log(f"  merged {len(collected) - len(deduped)} duplicate(s)")
+    collected = deduped
 
     for it in collected:
         it["priority"] = score_item(it, rules)
