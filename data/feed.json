@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T11:16:58+00:00",
+  "updated_at": "2026-07-03T18:04:18+00:00",
   "items": [
     {
       "id": "NTPC-8e840bf0",
@@ -31,7 +31,7 @@
       "deadline": "2026-07-03",
       "detected": "2026-07-03",
       "owner": "Unassigned",
-      "note": " | NRE-CS-5820-004(EPC)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 600MW (2x300MW) GRID CONNECTED SOLAR PV PROJECTS AT DHULE, MAHARASHTRA | Renewable Energy | 03/07/2026 0 Hours 5 Minuets to go | ",
+      "note": " | NRE-CS-5820-004(EPC)-9 |  | EPC PACKAGE FOR DEVELOPMENT OF 600MW (2x300MW) GRID CONNECTED SOLAR PV PROJECTS AT DHULE, MAHARASHTRA | Renewable Energy | 03/07/2026 (Closed) | ",
       "priority": 100,
       "first_seen": "2026-07-03T06:59:45+00:00"
     },
