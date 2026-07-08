@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T09:59:36+00:00",
+  "updated_at": "2026-07-08T18:53:22+00:00",
   "items": [
     {
       "id": "NTPC-8e840bf0",
@@ -17,23 +17,6 @@
       "note": " | NRE-CS-5816-004(SS)-9 |  | 400KV SUB STATION PACKAGE FOR 900 MW SOLAR PROJECTS AT MANDSAUR MADHYA PRADESH | Renewable Energy | 13/07/2026 | ",
       "priority": 100,
       "first_seen": "2026-07-03T11:16:58+00:00"
-    },
-    {
-      "id": "NTPC-7cbde78e",
-      "kind": "tender",
-      "title": "EPC PACKAGE FOR DEVELOPMENT OF 240 MW/ 960 MWH ISTS CONNECTED BESS AT NTPC REL DEVIKOT SOLAR PLANT",
-      "org": "NTPC Ltd",
-      "source": "NTPC Portal",
-      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/29973",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 240.0,
-      "deadline": "2026-07-08",
-      "detected": "2026-07-08",
-      "owner": "Unassigned",
-      "note": " | NREL-CS-5824-004(BESS1)-9 | Corrigendum Available | EPC PACKAGE FOR DEVELOPMENT OF 240 MW/ 960 MWH ISTS CONNECTED BESS AT NTPC REL DEVIKOT SOLAR PLANT | Renewable Energy | 08/07/2026 5 Hours to go | ",
-      "priority": 87,
-      "first_seen": "2026-07-06T14:36:37+00:00"
     },
     {
       "id": "SECI-a1de225e",
