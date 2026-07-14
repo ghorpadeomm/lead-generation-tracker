@@ -1,40 +1,6 @@
 {
-  "updated_at": "2026-07-14T12:06:24+00:00",
+  "updated_at": "2026-07-14T17:44:39+00:00",
   "items": [
-    {
-      "id": "NLC-ded1a7a1",
-      "kind": "tender",
-      "title": "Procurement of 579.74MWp Solar PV Modules for 810MW SPP in RVUN Solar Park at Pugal, Bikaner, Raj. Download&nbsp",
-      "org": "NLC India Ltd",
-      "source": "NLC Portal",
-      "source_url": "https://web.nlcindia.in/tender/tenderview.php?&tendid=43828&type=D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 579.74,
-      "deadline": null,
-      "detected": "2026-07-14",
-      "owner": "Unassigned",
-      "note": "35 | 2526000231 | Procurement of 579.74MWp Solar PV Modules for 810MW SPP in RVUN Solar Park at Pugal, Bikaner, Raj. Download&nbsp | NIT | Corrig - 1 Download Corrig - 2 Download Corrig - 3 Download Corrig - 4 Download Corrig - 5 Download Corrig - 6 Download Corrig - 7 Download C",
-      "priority": 79,
-      "first_seen": "2026-07-14T12:06:24+00:00"
-    },
-    {
-      "id": "NLC-85efbfe3",
-      "kind": "tender",
-      "title": "Procurement of 565.6MWp Solar PV Modules for 810MW SPP in RVUN Solar Park at Pugal, Bikaner, Rajas. Download&nbsp",
-      "org": "NLC India Ltd",
-      "source": "NLC Portal",
-      "source_url": "https://web.nlcindia.in/tender/tenderview.php?&tendid=43849&type=D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 565.6,
-      "deadline": null,
-      "detected": "2026-07-14",
-      "owner": "Unassigned",
-      "note": "34 | 2526000233 | Procurement of 565.6MWp Solar PV Modules for 810MW SPP in RVUN Solar Park at Pugal, Bikaner, Rajas. Download&nbsp | NIT | Corrig - 1 Download Corrig - 2 Download Corrig - 3 Download Corrig - 4 Download Corrig - 5 Download Corrig - 6 Download Corrig - 7 Download ",
-      "priority": 78,
-      "first_seen": "2026-07-14T12:06:24+00:00"
-    },
     {
       "id": "SECI-6e18f6ae",
       "kind": "tender",
@@ -87,23 +53,6 @@
       "first_seen": "2026-07-14T12:06:24+00:00"
     },
     {
-      "id": "NLC-979b811b",
-      "kind": "tender",
-      "title": "Setting up of 110 MW STU Connected SPP in Sareni Mustakil, Jalaun District, UP with 3 year O&M Download&nbsp",
-      "org": "NLC India Ltd",
-      "source": "NLC Portal",
-      "source_url": "https://web.nlcindia.in/tender/tenderview.php?&tendid=46908&type=D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 110.0,
-      "deadline": null,
-      "detected": "2026-07-14",
-      "owner": "Unassigned",
-      "note": "1 | 2627000080 | Setting up of 110 MW STU Connected SPP in Sareni Mustakil, Jalaun District, UP with 3 year O&M Download&nbsp | NIT | N/A | 10/AUG/26",
-      "priority": 56,
-      "first_seen": "2026-07-14T12:06:24+00:00"
-    },
-    {
       "id": "SECI-a1de225e",
       "kind": "tender",
       "title": "BoS Tender for Setting up of grid-connected 88 MW Ground mounted Solar PV plant at Chitradurga, Karnataka",
@@ -118,40 +67,6 @@
       "owner": "Unassigned",
       "note": " | SECI000252 | SECI-2026-TN000009 | SECI/C&P/OP/11/0001/26-27 | BoS Tender for Setting up of grid-connected 88 MW Ground mounted Solar PV plant at Chitradurga, Karnataka | 08/05/2026 | 10/08/2026 | View Details",
       "priority": 54,
-      "first_seen": "2026-07-14T12:06:24+00:00"
-    },
-    {
-      "id": "NLC-3a50d21b",
-      "kind": "tender",
-      "title": "Arrangement of 3000 Acres Land Through Lease for Development of Solar PV Projects in State of RJ Download&nbsp",
-      "org": "NLC India Ltd",
-      "source": "NLC Portal",
-      "source_url": "https://web.nlcindia.in/tender/tenderview.php?&tendid=46848&type=D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-14",
-      "owner": "Unassigned",
-      "note": "8 | 2627000071 | Arrangement of 3000 Acres Land Through Lease for Development of Solar PV Projects in State of RJ Download&nbsp | NIT | N/A | 01/AUG/26",
-      "priority": 50,
-      "first_seen": "2026-07-14T12:06:24+00:00"
-    },
-    {
-      "id": "NLC-d9606e1b",
-      "kind": "tender",
-      "title": "ARRANGEMENT OF LAND PARCELS FOR DEVELOPMENT OF SOLAR PV PROJECTS IN THE STATE OF GUJARAT Download&nbsp",
-      "org": "NLC India Ltd",
-      "source": "NLC Portal",
-      "source_url": "https://web.nlcindia.in/tender/tenderview.php?&tendid=46048&type=D",
-      "state": "Gujarat",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-14",
-      "owner": "Unassigned",
-      "note": "32 | 2627000034 | ARRANGEMENT OF LAND PARCELS FOR DEVELOPMENT OF SOLAR PV PROJECTS IN THE STATE OF GUJARAT Download&nbsp | NIT | Corrig - 1 Download Corrig - 2 Download | 17/JUL/26",
-      "priority": 50,
       "first_seen": "2026-07-14T12:06:24+00:00"
     }
   ]
