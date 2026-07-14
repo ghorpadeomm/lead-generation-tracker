@@ -135,10 +135,19 @@ Everything tunable lives in [`data/config.json`](data/config.json):
 
 ## Source status & limitations (honest)
 
+Sources fall into two camps — **directly crawled** (server-rendered HTML) and **covered via Google Alerts / aggregators** (JS/anti-bot portals we don't scrape directly).
+
+**Directly crawled (live):**
 - **SECI** — ✅ scraped directly.
-- **NTPC** — ✅ scraped from `ntpctender.ntpc.co.in` (the old `www.ntpctender.com` domain is dead). Returns large solar/BESS EPC packages.
-- **CPPP / eProcure** — ⚠️ disabled. The government portal loads via JavaScript behind anti-bot protection. Rather than fight it (proxies/CAPTCHA-solving — fragile and against its terms), cover those tenders via **BidAssist / TenderTiger aggregator feeds** (see §1b).
-- **LinkedIn** — can't be scraped directly (it blocks bots and bans accounts). We rely on Google's index of *public* LinkedIn posts via Alerts, plus manual entry. Private/connection-only posts won't appear.
+- **NTPC + NTPC Renewable (REL)** — ✅ from `ntpctender.ntpc.co.in`. Large solar/BESS EPC packages. (Listing rotates, so a run may return 0 when nothing solar is currently open.)
+- **NLC India** — ✅ from `web.nlcindia.in` tender report. Solar SPP / module / land tenders.
+- **MahaTenders (Maharashtra)** — ⚠️ best-effort: only the landing-page "latest tenders" list is HTML; the deep search is JS/anti-bot, so it's a partial catch. Backed up by the MSEDCL/MSKVY alerts.
+
+**Covered via Google Alerts + aggregators** (create the alerts, paste the RSS — see §1/§1b):
+- **All state DISCOMs, MAHATENDER deep search, GeM, CPPP, NTPC eProc, PM-KUSUM, MSKVY** — these run on NIC eProcurement (JavaScript + anti-bot/CAPTCHA). We do **not** scrape them directly (that needs proxies/CAPTCHA-farms — fragile and against their terms). Instead, `site:` Google Alerts + BidAssist/TenderTiger aggregators surface their published tenders reliably.
+- **LinkedIn** — can't be scraped directly (it blocks bots). We rely on Google's index of *public* LinkedIn posts via Alerts, plus manual entry.
+
+Config slots for every source above already exist in [`data/config.json`](data/config.json) — the alert-based ones just need you to create the Google Alert and paste its RSS URL.
 - **Scrapers are fragile** — when a portal changes its HTML, that source may return nothing until its selector in `scripts/fetch_feed.py` is updated. Each source is isolated in try/except so one breaking won't stop the others.
 - **Browser notifications** fire only while the dashboard tab is open. True background push needs a push service (future enhancement).
 

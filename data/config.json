@@ -64,6 +64,41 @@
       "source_label": "GeM",
       "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
       "note": "Government e-Marketplace bids. Direct scraping bidplus.gem.gov.in is JS/anti-bot protected; cover via Google Alert: site:gem.gov.in solar EPC OR rooftop solar. Deliver as RSS."
+    },
+    {
+      "name": "NTPC Renewable (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "NTPC REL",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Backstop for NTPC REL (also covered by the NTPC direct scraper). Google Alert: (\"NTPC REL\" OR \"NTPC Renewable\") (solar OR BESS OR EPC) tender. Deliver as RSS."
+    },
+    {
+      "name": "NTPC eProcurement (via Google Alerts)",
+      "kind": "tender",
+      "source_label": "NTPC",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "eprocurentpc.nic.in is JS/anti-bot. Google Alert: (site:eprocurentpc.nic.in OR \"NTPC\") solar EPC tender. Deliver as RSS."
+    },
+    {
+      "name": "State DISCOM solar tenders (all states)",
+      "kind": "tender",
+      "source_label": "State DISCOM",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Most state DISCOM portals are JS/anti-bot NIC eProcurement — not directly crawlable. One broad Google Alert covers them: (DISCOM OR MSEDCL OR GUVNL OR TANGEDCO OR BESCOM OR UPPCL OR PSPCL OR APSPDCL OR TSSPDCL OR WBSEDCL OR MPPKVVCL OR JVVNL OR PUVVNL) (solar OR rooftop OR KUSUM) tender. Deliver as RSS."
+    },
+    {
+      "name": "PM-KUSUM tenders",
+      "kind": "tender",
+      "source_label": "PM-KUSUM",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "PM-KUSUM (Component A/B/C) tenders are floated by state agencies. Google Alert: \"PM-KUSUM\" (tender OR RfS OR EPC OR feeder OR \"Component C\"). Deliver as RSS."
+    },
+    {
+      "name": "MSKVY 2.0 tenders (Maharashtra)",
+      "kind": "tender",
+      "source_label": "MSKVY",
+      "url": "PASTE_GOOGLE_ALERTS_RSS_URL_HERE",
+      "note": "Mukhyamantri Saur Krishi Vahini Yojana. Google Alert: (\"MSKVY\" OR \"Mukhyamantri Saur Krishi Vahini\") (tender OR EPC OR solar). Deliver as RSS."
     }
   ],
 
@@ -82,7 +117,17 @@
       "url": "https://ntpctender.ntpc.co.in/Index/Search?Type=Reg&Region=10",
       "org": "NTPC Ltd", "source": "NTPC Portal", "id_prefix": "NTPC",
       "keywords": ["solar"], "min_cells": 3,
-      "note": "Old www.ntpctender.com is dead; this NIC endpoint returns rows as HTML." },
+      "note": "Old www.ntpctender.com is dead; this NIC endpoint returns rows as HTML. Covers NTPC + NTPC Renewable (REL) tenders." },
+    { "name": "NLC India", "enabled": true,
+      "url": "https://web.nlcindia.in/tender/tenderreport.php?type=D",
+      "org": "NLC India Ltd", "source": "NLC Portal", "id_prefix": "NLC",
+      "keywords": ["solar", "rooftop", "pv", "kusum", "spp"], "min_cells": 3,
+      "note": "Server-rendered PHP tender report; returns solar SPP / module / land tenders." },
+    { "name": "MahaTenders", "enabled": true,
+      "url": "https://mahatenders.gov.in/nicgep/app",
+      "org": "Maharashtra (MahaTenders)", "source": "MahaTenders", "id_prefix": "MHT",
+      "keywords": ["solar", "kusum", "mskvy", "rooftop", "pv"], "min_cells": 3,
+      "note": "Maharashtra state e-procurement. Landing page lists latest tenders as HTML; deep search is JS/anti-bot, so this only catches the latest-tenders list. Backstop via the MSEDCL/MSKVY Google Alerts below." },
     { "name": "GeM (direct)", "enabled": false,
       "url": "https://bidplus.gem.gov.in/all-bids",
       "org": "GeM", "source": "GeM", "id_prefix": "GEM",
