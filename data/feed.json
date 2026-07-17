@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T09:24:12+00:00",
+  "updated_at": "2026-07-17T17:41:49+00:00",
   "items": [
     {
       "id": "NTPC-8e840bf0",
@@ -14,7 +14,7 @@
       "deadline": "2026-07-17",
       "detected": "2026-07-17",
       "owner": "Unassigned",
-      "note": " | NRE-CS-5816-004(SS)-9 | Corrigendum Available | 400KV SUB STATION PACKAGE FOR 900 MW SOLAR PROJECTS AT MANDSAUR MADHYA PRADESH | Renewable Energy | 17/07/2026 2 Hours to go | ",
+      "note": " | NRE-CS-5816-004(SS)-9 | Corrigendum Available | 400KV SUB STATION PACKAGE FOR 900 MW SOLAR PROJECTS AT MANDSAUR MADHYA PRADESH | Renewable Energy | 17/07/2026 (Closed) | ",
       "priority": 100,
       "first_seen": "2026-07-15T09:24:51+00:00"
     },
@@ -48,7 +48,7 @@
       "deadline": "2026-07-17",
       "detected": "2026-07-17",
       "owner": "Unassigned",
-      "note": " | NREL-CS-5826-004(BESS1)-9 | Corrigendum Available | EPC PACKAGE FOR DEVELOPMENT OF 300MW / 1200MWH ISTS CONNECTED BESS AT\r\nNTPC REL NOKHRA SOLAR PLANT | Renewable Energy | 17/07/2026 2 Hours to go | ",
+      "note": " | NREL-CS-5826-004(BESS1)-9 | Corrigendum Available | EPC PACKAGE FOR DEVELOPMENT OF 300MW / 1200MWH ISTS CONNECTED BESS AT\r\nNTPC REL NOKHRA SOLAR PLANT | Renewable Energy | 17/07/2026 (Closed) | ",
       "priority": 90,
       "first_seen": "2026-07-17T09:24:12+00:00"
     },
