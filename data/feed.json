@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T09:18:05+00:00",
+  "updated_at": "2026-07-19T16:36:41+00:00",
   "items": [
     {
       "id": "NTPC-eaadfba6",
@@ -14,7 +14,7 @@
       "deadline": "2026-07-19",
       "detected": "2026-07-19",
       "owner": "Unassigned",
-      "note": " | NRE-CS-5820-004(EPC)-9 | Corrigendum Available | EPC PACKAGE FOR DEVELOPMENT OF 600MW (2x300MW) GRID CONNECTED SOLAR PV PROJECTS AT DHULE, MAHARASHTRA | Renewable Energy | 19/07/2026 3 Hours to go | ",
+      "note": " | NRE-CS-5820-004(EPC)-9 | Corrigendum Available | EPC PACKAGE FOR DEVELOPMENT OF 600MW (2x300MW) GRID CONNECTED SOLAR PV PROJECTS AT DHULE, MAHARASHTRA | Renewable Energy | 19/07/2026 (Closed) | ",
       "priority": 100,
       "first_seen": "2026-07-15T09:24:51+00:00"
     },
@@ -53,23 +53,6 @@
       "first_seen": "2026-07-14T12:06:24+00:00"
     },
     {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-07-07",
-      "detected": "2026-07-19",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 62,
-      "first_seen": "2026-07-19T09:18:05+00:00"
-    },
-    {
       "id": "SECI-a1de225e",
       "kind": "tender",
       "title": "BoS Tender for Setting up of grid-connected 88 MW Ground mounted Solar PV plant at Chitradurga, Karnataka",
@@ -87,26 +70,43 @@
       "first_seen": "2026-07-14T12:06:24+00:00"
     },
     {
-      "id": "MHT-5fdf4604",
+      "id": "MHT-63344a71",
       "kind": "tender",
-      "title": "1.  Maitenance in Umte  RRPWS and Labour provision for year 2026-27 2nd call RAIGAD/RWSS/40/2026-27 24-Jul-2026 05:00 PM 27-Jul-2026 10:00 A",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SA3sL0vjJymRfjYpSTR7tBg%3D%3D",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-07-19",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-07-19T09:18:05+00:00"
+    },
+    {
+      "id": "MHT-b82d6041",
+      "kind": "tender",
+      "title": "1. Construction of Protoection Wall for River Side at Gavanwadi in V.P.Khandas Tal.Karjat Dist.Raigad RAIGAD/RWSS/41/2026-27 31-Jul-2026 05:",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SzfNAyvLmHjij7p5akfTNtQ%3D%3D",
       "state": "Pan-India",
       "value": null,
       "capacity": null,
       "deadline": null,
       "detected": "2026-07-19",
       "owner": "Unassigned",
-      "note": "1.  Maitenance in Umte  RRPWS and Labour provision for year 2026-27 2nd call RAIGAD/RWSS/40/2026-27 24-Jul-2026 05:00 PM 27-Jul-2026 10:00 AM 2. Maitenance in Rewas Zone - 1  RRPWS and Labour provision for year 2026-27 2nd call RAIGAD/RWSS/40/2026-27 24-Jul-2026 05:00 PM 27-Jul-2",
+      "note": "1. Construction of Protoection Wall for River Side at Gavanwadi in V.P.Khandas Tal.Karjat Dist.Raigad RAIGAD/RWSS/41/2026-27 31-Jul-2026 05:00 PM 03-Aug-2026 10:00 AM 2.  Maitenance in Umte  RRPWS and Labour provision for year 2026-27 2nd call RAIGAD/RWSS/40/2026-27 24-Jul-2026 0",
       "priority": 50,
-      "first_seen": "2026-07-19T09:18:05+00:00"
+      "first_seen": "2026-07-19T16:36:41+00:00"
     },
     {
       "id": "MHT-572cfcd1",
       "kind": "tender",
-      "title": "3. Maitenance in kusumbale RRPWS and Labour provision for year 2026-27 2nd call",
+      "title": "5. Maitenance in kusumbale RRPWS and Labour provision for year 2026-27 2nd call",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
       "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SQCYa8wZFvNZYCz2Vhob1PQ%3D%3D",
@@ -116,7 +116,7 @@
       "deadline": null,
       "detected": "2026-07-19",
       "owner": "Unassigned",
-      "note": "3. Maitenance in kusumbale RRPWS and Labour provision for year 2026-27 2nd call | RAIGAD/RWSS/40/2026-27 | 24-Jul-2026 05:00 PM | 27-Jul-2026 10:00 AM",
+      "note": "5. Maitenance in kusumbale RRPWS and Labour provision for year 2026-27 2nd call | RAIGAD/RWSS/40/2026-27 | 24-Jul-2026 05:00 PM | 27-Jul-2026 10:00 AM",
       "priority": 50,
       "first_seen": "2026-07-19T09:18:05+00:00"
     }
