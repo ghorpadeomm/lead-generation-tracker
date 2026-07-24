@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T10:01:04+00:00",
+  "updated_at": "2026-07-24T18:08:09+00:00",
   "items": [
     {
       "id": "SECI-9ceb29c4",
@@ -51,57 +51,6 @@
       "note": " | SECI000262 | SECI-2026-TN000016 | SECI/C&P/OP/11/0002/26-27 | Tender for Design, Engineering, Supply, Construction, Erection, Testing, Commissioning and Maintenance of 70 MW ISTS Connected Solar PV Power Project paired with 25MW/ 50MWh BESS at Ramagiri, Sri Sathya Sai District",
       "priority": 54,
       "first_seen": "2026-07-14T12:06:24+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-24",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-07-24T10:01:04+00:00"
-    },
-    {
-      "id": "MHT-43594adc",
-      "kind": "tender",
-      "title": "1. Procurement of Roof Light Assembly, Plastic Domes and LED Type Conductor Light assy Procurement of Roof  Light Assembly, Plastic Domes an",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S8Xx%2F2J%2BCCZhVa0HXQPCXAQ%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-24",
-      "owner": "Unassigned",
-      "note": "1. Procurement of Roof Light Assembly, Plastic Domes and LED Type Conductor Light assy Procurement of Roof  Light Assembly, Plastic Domes and LED Type Conductor Light  assy 07-Aug-2026 03:00 PM 11-Aug-2026 03:00 PM 2. Construction of Mahila Bachat Gat Bhavan at Villege Chahardi T",
-      "priority": 50,
-      "first_seen": "2026-07-24T10:01:04+00:00"
-    },
-    {
-      "id": "MHT-990df770",
-      "kind": "tender",
-      "title": "8. Providing Road Safety Measures by providing Traffic Signages and gantries under SPV Nanded",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S2l9zXEjVpQvvFNGz2PnQ9A%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-24",
-      "owner": "Unassigned",
-      "note": "8. Providing Road Safety Measures by providing Traffic Signages and gantries under SPV Nanded | 11 Nanded Traffic | 05-Aug-2026 05:00 PM | 07-Aug-2026 11:00 AM",
-      "priority": 50,
-      "first_seen": "2026-07-24T10:01:04+00:00"
     }
   ]
 }
