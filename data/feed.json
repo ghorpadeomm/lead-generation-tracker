@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28T04:39:15+00:00",
+  "updated_at": "2026-07-28T15:43:20+00:00",
   "items": [
     {
       "id": "SECI-a1de225e",
@@ -51,57 +51,6 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-28",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-07-28T04:39:15+00:00"
-    },
-    {
-      "id": "MHT-2b77cca0",
-      "kind": "tender",
-      "title": "1. MAPMC MNI Invites tender for item rate for providing necessary impression services for office work for economical year 2026-27 and 2027-2",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SKaHQ1ty1ZWT%2FtKrWR9cPPA%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-28",
-      "owner": "Unassigned",
-      "note": "1. MAPMC MNI Invites tender for item rate for providing necessary impression services for office work for economical year 2026-27 and 2027-28 MAPMCMNI/2026/02 11-Aug-2026 05:00 PM 14-Aug-2026 03:00 PM 2. Attending Short Supply of Water and Heavy Leakage on MHADAS 150mm dia CI Lin",
-      "priority": 50,
-      "first_seen": "2026-07-28T04:39:15+00:00"
-    },
-    {
-      "id": "MHT-23896921",
-      "kind": "tender",
-      "title": "9. At Patnur Taluka Ardhapur Dist. Nanded Providing and erecting Solar Street Light With Pole in the Premises Ward No.3",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SaR1FrkzDo0iWXj%2FdIRnAAQ%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-07-28",
-      "owner": "Unassigned",
-      "note": "9. At Patnur Taluka Ardhapur Dist. Nanded Providing and erecting Solar Street Light With Pole in the Premises Ward No.3 | ZPN/WD/NED/E.TEN22/OP-EL/25-26 | 05-Aug-2026 05:00 PM | 06-Aug-2026 05:00 PM",
-      "priority": 50,
-      "first_seen": "2026-07-28T04:39:15+00:00"
     }
   ]
 }
