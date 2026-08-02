@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T04:50:23+00:00",
+  "updated_at": "2026-08-02T14:47:56+00:00",
   "items": [
     {
       "id": "SECI-a1de225e",
@@ -51,6 +51,57 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
+    },
+    {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": 0.03,
+      "deadline": null,
+      "detected": "2026-08-02",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-08-02T14:47:56+00:00"
+    },
+    {
+      "id": "MHT-03ca4944",
+      "kind": "tender",
+      "title": "1. Supply, Installation, Testing and Commissioning of Fully Automatic Cleaning and Grading Machine 2 TPH SMART/GAPCL/Goods/01/2026 11-Aug-20",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SPMYVTwk4jXif3MU0F9wErw%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.03,
+      "deadline": null,
+      "detected": "2026-08-02",
+      "owner": "Unassigned",
+      "note": "1. Supply, Installation, Testing and Commissioning of Fully Automatic Cleaning and Grading Machine 2 TPH SMART/GAPCL/Goods/01/2026 11-Aug-2026 03:00 PM 12-Aug-2026 03:00 PM 2. Supply and Testing of Tractor and Implements SMART/GAPCL/Goods/02/2026 11-Aug-2026 03:00 PM 12-Aug-2026 ",
+      "priority": 50,
+      "first_seen": "2026-08-02T14:47:56+00:00"
+    },
+    {
+      "id": "MHT-8234921c",
+      "kind": "tender",
+      "title": "3. Survey Design Fabrication Supply Installation Testing and Commissioning of Total 25.00 kWp On Grid Connected Rooftop Solar PV Power Plant",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SU75YWTgXsZ0cvKpMfO9AAQ%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.03,
+      "deadline": null,
+      "detected": "2026-08-02",
+      "owner": "Unassigned",
+      "note": "3. Survey Design Fabrication Supply Installation Testing and Commissioning of Total 25.00 kWp On Grid Connected Rooftop Solar PV Power Plant Including Comprehensive Maintenance Contract CMC For 3 Years | SMART/KAPCL/Goods/02/2026 | 11-Aug-2026 03:00 PM | 12-Aug-2026 03:00 PM",
+      "priority": 50,
+      "first_seen": "2026-08-02T14:47:56+00:00"
     }
   ]
 }
