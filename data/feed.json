@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T04:59:35+00:00",
+  "updated_at": "2026-08-03T16:02:39+00:00",
   "items": [
     {
       "id": "SECI-a1de225e",
@@ -51,57 +51,6 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-03",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-08-02T14:47:56+00:00"
-    },
-    {
-      "id": "MHT-e949a0d8",
-      "kind": "tender",
-      "title": "1. CONSTRUCTION OF PAVERS BLOCK TO ROAD AT VYALA TQ BALAPUR DIST AKOLA UNDER 15 TH FIN COMMISION 2025-26 GP/VYALA/15/26-27 08-Aug-2026 06:00",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SyQkJl7RoS33lXntIIsNRmA%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-03",
-      "owner": "Unassigned",
-      "note": "1. CONSTRUCTION OF PAVERS BLOCK TO ROAD AT VYALA TQ BALAPUR DIST AKOLA UNDER 15 TH FIN COMMISION 2025-26 GP/VYALA/15/26-27 08-Aug-2026 06:00 PM 10-Aug-2026 06:00 PM 2. CONSTRUCTION OF CEMENT CONCRETE DRAIN AT VYALA TQ BALAPUR DIST AKOLA UNDER 15 TH FIN COMMISION 2025-26 GP/VYALA/",
-      "priority": 50,
-      "first_seen": "2026-08-03T04:59:35+00:00"
-    },
-    {
-      "id": "MHT-d24c60d1",
-      "kind": "tender",
-      "title": "5. ET /solar Light in Kotling Mandir  Indira nagar and annabhusathe nagar AT chikhalthan",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Si%2B0BG%2FfqCNm6acVUYhmcmg%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-03",
-      "owner": "Unassigned",
-      "note": "5. ET /solar Light in Kotling Mandir  Indira nagar and annabhusathe nagar AT chikhalthan | ET/Anushucitjativikas/01/2026 | 08-Aug-2026 06:00 PM | 10-Aug-2026 10:00 AM",
-      "priority": 50,
-      "first_seen": "2026-08-03T04:59:35+00:00"
     }
   ]
 }
