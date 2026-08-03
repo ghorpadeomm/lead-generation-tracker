@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T14:47:56+00:00",
+  "updated_at": "2026-08-03T04:59:35+00:00",
   "items": [
     {
       "id": "SECI-a1de225e",
@@ -12,10 +12,10 @@
       "value": null,
       "capacity": 88.0,
       "deadline": "2026-08-10",
-      "detected": "2026-08-02",
+      "detected": "2026-08-03",
       "owner": "Unassigned",
       "note": " | SECI000252 | SECI-2026-TN000009 | SECI/C&P/OP/11/0001/26-27 | BoS Tender for Setting up of grid-connected 88 MW Ground mounted Solar PV plant at Chitradurga, Karnataka | 08/05/2026 | 10/08/2026 | View Details",
-      "priority": 66,
+      "priority": 79,
       "first_seen": "2026-07-14T12:06:24+00:00"
     },
     {
@@ -29,10 +29,10 @@
       "value": null,
       "capacity": 70.0,
       "deadline": "2026-08-10",
-      "detected": "2026-08-02",
+      "detected": "2026-08-03",
       "owner": "Unassigned",
       "note": " | SECI000262 | SECI-2026-TN000016 | SECI/C&P/OP/11/0002/26-27 | Tender for Design, Engineering, Supply, Construction, Erection, Testing, Commissioning and Maintenance of 70 MW ISTS Connected Solar PV Power Project paired with 25MW/ 50MWh BESS at Ramagiri, Sri Sathya Sai District",
-      "priority": 66,
+      "priority": 78,
       "first_seen": "2026-07-14T12:06:24+00:00"
     },
     {
@@ -46,7 +46,7 @@
       "value": null,
       "capacity": 5.29,
       "deadline": "2026-08-31",
-      "detected": "2026-08-02",
+      "detected": "2026-08-03",
       "owner": "Unassigned",
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
@@ -61,47 +61,47 @@
       "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
       "state": "Maharashtra",
       "value": null,
-      "capacity": 0.03,
+      "capacity": null,
       "deadline": null,
-      "detected": "2026-08-02",
+      "detected": "2026-08-03",
       "owner": "Unassigned",
       "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
       "priority": 50,
       "first_seen": "2026-08-02T14:47:56+00:00"
     },
     {
-      "id": "MHT-03ca4944",
+      "id": "MHT-e949a0d8",
       "kind": "tender",
-      "title": "1. Supply, Installation, Testing and Commissioning of Fully Automatic Cleaning and Grading Machine 2 TPH SMART/GAPCL/Goods/01/2026 11-Aug-20",
+      "title": "1. CONSTRUCTION OF PAVERS BLOCK TO ROAD AT VYALA TQ BALAPUR DIST AKOLA UNDER 15 TH FIN COMMISION 2025-26 GP/VYALA/15/26-27 08-Aug-2026 06:00",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SPMYVTwk4jXif3MU0F9wErw%3D%3D",
-      "state": "Pan-India",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SyQkJl7RoS33lXntIIsNRmA%3D%3D",
+      "state": "Maharashtra",
       "value": null,
-      "capacity": 0.03,
+      "capacity": null,
       "deadline": null,
-      "detected": "2026-08-02",
+      "detected": "2026-08-03",
       "owner": "Unassigned",
-      "note": "1. Supply, Installation, Testing and Commissioning of Fully Automatic Cleaning and Grading Machine 2 TPH SMART/GAPCL/Goods/01/2026 11-Aug-2026 03:00 PM 12-Aug-2026 03:00 PM 2. Supply and Testing of Tractor and Implements SMART/GAPCL/Goods/02/2026 11-Aug-2026 03:00 PM 12-Aug-2026 ",
+      "note": "1. CONSTRUCTION OF PAVERS BLOCK TO ROAD AT VYALA TQ BALAPUR DIST AKOLA UNDER 15 TH FIN COMMISION 2025-26 GP/VYALA/15/26-27 08-Aug-2026 06:00 PM 10-Aug-2026 06:00 PM 2. CONSTRUCTION OF CEMENT CONCRETE DRAIN AT VYALA TQ BALAPUR DIST AKOLA UNDER 15 TH FIN COMMISION 2025-26 GP/VYALA/",
       "priority": 50,
-      "first_seen": "2026-08-02T14:47:56+00:00"
+      "first_seen": "2026-08-03T04:59:35+00:00"
     },
     {
-      "id": "MHT-8234921c",
+      "id": "MHT-d24c60d1",
       "kind": "tender",
-      "title": "3. Survey Design Fabrication Supply Installation Testing and Commissioning of Total 25.00 kWp On Grid Connected Rooftop Solar PV Power Plant",
+      "title": "5. ET /solar Light in Kotling Mandir  Indira nagar and annabhusathe nagar AT chikhalthan",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SU75YWTgXsZ0cvKpMfO9AAQ%3D%3D",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Si%2B0BG%2FfqCNm6acVUYhmcmg%3D%3D",
       "state": "Pan-India",
       "value": null,
-      "capacity": 0.03,
+      "capacity": null,
       "deadline": null,
-      "detected": "2026-08-02",
+      "detected": "2026-08-03",
       "owner": "Unassigned",
-      "note": "3. Survey Design Fabrication Supply Installation Testing and Commissioning of Total 25.00 kWp On Grid Connected Rooftop Solar PV Power Plant Including Comprehensive Maintenance Contract CMC For 3 Years | SMART/KAPCL/Goods/02/2026 | 11-Aug-2026 03:00 PM | 12-Aug-2026 03:00 PM",
+      "note": "5. ET /solar Light in Kotling Mandir  Indira nagar and annabhusathe nagar AT chikhalthan | ET/Anushucitjativikas/01/2026 | 08-Aug-2026 06:00 PM | 10-Aug-2026 10:00 AM",
       "priority": 50,
-      "first_seen": "2026-08-02T14:47:56+00:00"
+      "first_seen": "2026-08-03T04:59:35+00:00"
     }
   ]
 }
