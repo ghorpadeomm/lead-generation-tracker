@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T03:06:28+00:00",
+  "updated_at": "2026-08-08T14:06:34+00:00",
   "items": [
     {
       "id": "SECI-a1de225e",
@@ -68,6 +68,57 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
+    },
+    {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-08-08",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-08-08T14:06:34+00:00"
+    },
+    {
+      "id": "MHT-a007251c",
+      "kind": "tender",
+      "title": "1. DRILLING OF BOREWELL AND ERECTING OF SOLAR PUMP SYATEM IN VILLAGE AT. HAPSAPUR TQ. BASMATH DIST.HINGOLI GP/HAPSAPUR/15TH/2025-26 14-Aug-2",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SeIXHTBssbeu7qb4gimmjzQ%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-08-08",
+      "owner": "Unassigned",
+      "note": "1. DRILLING OF BOREWELL AND ERECTING OF SOLAR PUMP SYATEM IN VILLAGE AT. HAPSAPUR TQ. BASMATH DIST.HINGOLI GP/HAPSAPUR/15TH/2025-26 14-Aug-2026 03:00 PM 15-Aug-2026 03:00 PM 2. VP/GP/WORK/2026-27/1 VP/GP/WORK/2026-27/1 12-Aug-2026 06:55 PM 13-Aug-2026 06:55 PM 3. Est no 1112048 2",
+      "priority": 50,
+      "first_seen": "2026-08-08T14:06:34+00:00"
+    },
+    {
+      "id": "MHT-22db6dc9",
+      "kind": "tender",
+      "title": "3. Est no 1112048 2026 27 Providing Internal Electrification Decorative Light CCTV and Lan DG Set Fire Fighting System Water Pump Street Lig",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SI5iGmgN%2B730gbVGRwGxMlA%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-08-08",
+      "owner": "Unassigned",
+      "note": "3. Est no 1112048 2026 27 Providing Internal Electrification Decorative Light CCTV and Lan DG Set Fire Fighting System Water Pump Street Light and  100 KVA DTC HT and 15Kwp Solar System to Newly Constructed Community Centre Samaj Mandir and Dr Babasaheb | etender notice no 5 of 2",
+      "priority": 50,
+      "first_seen": "2026-08-08T14:06:34+00:00"
     }
   ]
 }
