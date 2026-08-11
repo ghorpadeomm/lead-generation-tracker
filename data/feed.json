@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T03:16:53+00:00",
+  "updated_at": "2026-08-11T14:35:57+00:00",
   "items": [
     {
       "id": "SECI-6e18f6ae",
@@ -68,57 +68,6 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-11",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-08-11T03:16:53+00:00"
-    },
-    {
-      "id": "MHT-e54d1b0a",
-      "kind": "tender",
-      "title": "1. A) Anganwadi Sushobhikaran At Vadshivane  B) Construction Of Cement Concrete Road At Vadshivane E-Tender/2026-27/03 15-Aug-2026 06:55 PM ",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S4hCPmnWoxrMd9oACsq%2BPUQ%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-11",
-      "owner": "Unassigned",
-      "note": "1. A) Anganwadi Sushobhikaran At Vadshivane  B) Construction Of Cement Concrete Road At Vadshivane E-Tender/2026-27/03 15-Aug-2026 06:55 PM 17-Aug-2026 09:00 AM 2. Proposed work of Improvement of Passage and Drainge System  Near Priya Hair cuting Shop, Jai Maharashtra Nagar  in B",
-      "priority": 50,
-      "first_seen": "2026-08-11T03:16:53+00:00"
-    },
-    {
-      "id": "MHT-1f61d2b7",
-      "kind": "tender",
-      "title": "8. Replacement of CPVC Pipe Line at Bldg. No 22 at Sahakar Nagar Municipal Colony in Beat No 178 F/north Ward",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=STmVN8X4W%2FsVt5qWHc2G7dA%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-11",
-      "owner": "Unassigned",
-      "note": "8. Replacement of CPVC Pipe Line at Bldg. No 22 at Sahakar Nagar Municipal Colony in Beat No 178 F/north Ward | MDF/2249 DT/06.08.2026 | 19-Aug-2026 09:00 AM | 20-Aug-2026 09:00 AM",
-      "priority": 50,
-      "first_seen": "2026-08-11T03:16:53+00:00"
     }
   ]
 }
