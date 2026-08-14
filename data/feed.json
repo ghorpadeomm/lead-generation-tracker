@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T03:35:42+00:00",
+  "updated_at": "2026-08-14T14:30:50+00:00",
   "items": [
     {
       "id": "SECI-6e18f6ae",
@@ -68,57 +68,6 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-14",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-08-14T03:35:42+00:00"
-    },
-    {
-      "id": "MHT-e24a6c9d",
-      "kind": "tender",
-      "title": "1. CNB_MALUNJA ZPCS/IRRI/CNB/24-25 22-Aug-2026 05:00 PM 24-Aug-2026 10:00 AM 2. Refurbishment of main office toilet at GTBH No.Ho/1761/GTB/D",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SvU1lIwxMqZRvx%2FbviNnBBw%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-14",
-      "owner": "Unassigned",
-      "note": "1. CNB_MALUNJA ZPCS/IRRI/CNB/24-25 22-Aug-2026 05:00 PM 24-Aug-2026 10:00 AM 2. Refurbishment of main office toilet at GTBH No.Ho/1761/GTB/Dt.21.05.2026 19-Aug-2026 04:00 PM 20-Aug-2026 04:10 PM 3. REPAIRS_TO_KTW_WADALI ZPCS/IRRI/KTW/24-25 22-Aug-2026 05:00 PM 24-Aug-2026 10:00 A",
-      "priority": 50,
-      "first_seen": "2026-08-14T03:35:42+00:00"
-    },
-    {
-      "id": "MHT-fcc88792",
-      "kind": "tender",
-      "title": "6. Constructing Under Ground Closed PVC Pipe Gutter At Babhalaj Tal.Shirpur Dist.Dhule",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SkTcWEZ%2BS2sZEpIKXGc9fJQ%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-14",
-      "owner": "Unassigned",
-      "note": "6. Constructing Under Ground Closed PVC Pipe Gutter At Babhalaj Tal.Shirpur Dist.Dhule | GP/BABHALAJ/04/2025-26 | 19-Aug-2026 09:00 AM | 20-Aug-2026 09:00 AM",
-      "priority": 50,
-      "first_seen": "2026-08-14T03:35:42+00:00"
     }
   ]
 }
