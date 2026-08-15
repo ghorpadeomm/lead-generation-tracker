@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T02:31:15+00:00",
+  "updated_at": "2026-08-15T13:51:55+00:00",
   "items": [
     {
       "id": "SECI-6e18f6ae",
@@ -68,6 +68,74 @@
       "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-07-27T05:06:04+00:00"
+    },
+    {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-08-15",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-08-15T13:51:55+00:00"
+    },
+    {
+      "id": "MHT-28eb7eda",
+      "kind": "tender",
+      "title": "1. Cleaning Grading Plant 2 TPH Capacity and 300 kg platform Scale SMART DIUAKOLA  navidisha clg grading msrlm 70 26-27 25-Aug-2026 05:30 PM",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SIhoaV93drxf%2FiKDcnR6NwQ%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-08-15",
+      "owner": "Unassigned",
+      "note": "1. Cleaning Grading Plant 2 TPH Capacity and 300 kg platform Scale SMART DIUAKOLA  navidisha clg grading msrlm 70 26-27 25-Aug-2026 05:30 PM 26-Aug-2026 01:00 PM 2. Construction Of Drain At Mairaldoh Tq.Malegaon, Dist.Washim MALEGAON/MAIRADOH/2026-27-01 20-Aug-2026 06:55 PM 21-Au",
+      "priority": 50,
+      "first_seen": "2026-08-15T13:51:55+00:00"
+    },
+    {
+      "id": "MHT-0c5a907f",
+      "kind": "tender",
+      "title": "8. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Susdi8aGQ3cnyCNSADVoWmA%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-08-15",
+      "owner": "Unassigned",
+      "note": "8. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon | YAV/MAH/HIWARAS/2025-26/9 | 21-Aug-2026 06:00 PM | 22-Aug-2026 06:00 PM",
+      "priority": 50,
+      "first_seen": "2026-08-15T13:51:55+00:00"
+    },
+    {
+      "id": "MHT-4c2b3d11",
+      "kind": "tender",
+      "title": "9. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SuNTEmyS4D7R%2FztdYf0fDJA%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-08-15",
+      "owner": "Unassigned",
+      "note": "9. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon | YAV/MAH/HIWARAS/2025-26/9 | 21-Aug-2026 06:00 PM | 22-Aug-2026 06:00 PM",
+      "priority": 50,
+      "first_seen": "2026-08-15T13:51:55+00:00"
     }
   ]
 }
