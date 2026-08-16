@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T02:39:39+00:00",
+  "updated_at": "2026-08-16T13:53:05+00:00",
   "items": [
     {
       "id": "SECI-6e18f6ae",
@@ -36,6 +36,23 @@
       "first_seen": "2026-07-27T05:06:04+00:00"
     },
     {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": "2026-07-05",
+      "detected": "2026-08-16",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 62,
+      "first_seen": "2026-08-15T13:51:55+00:00"
+    },
+    {
       "id": "SECI-a1de225e",
       "kind": "tender",
       "title": "BoS Tender for Setting up of grid-connected 88 MW Ground mounted Solar PV plant at Chitradurga, Karnataka",
@@ -70,72 +87,55 @@
       "first_seen": "2026-08-07T14:32:14+00:00"
     },
     {
-      "id": "MHT-63344a71",
+      "id": "MHT-e9ac5019",
       "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "title": "1. Supply Installation Testing and Commissioning Fully automatic Cleaning grading Plant 2 TPH Capacity along with weighing scale SMART DIUAK",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-08-16",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-08-15T13:51:55+00:00"
-    },
-    {
-      "id": "MHT-e33f22d9",
-      "kind": "tender",
-      "title": "1. Vyala Mahila Farmer Producer Company Vyala SMART DIUAKOLA  vyala fpc clg grading msrlm 74 26-27 25-Aug-2026 03:00 PM 26-Aug-2026 03:00 PM",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SSfQrqJRc87I5DaLC8H2tVA%3D%3D",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Sx1i3gr6o%2BR4iExOJCvURpQ%3D%3D",
       "state": "Pan-India",
       "value": null,
-      "capacity": null,
+      "capacity": 0.01,
       "deadline": null,
       "detected": "2026-08-16",
       "owner": "Unassigned",
-      "note": "1. Vyala Mahila Farmer Producer Company Vyala SMART DIUAKOLA  vyala fpc clg grading msrlm 74 26-27 25-Aug-2026 03:00 PM 26-Aug-2026 03:00 PM 2. Cleaning Grading Plant 2 TPH Capacity and 300 kg platform Scale SMART DIUAKOLA  navidisha clg grading msrlm 70 26-27 25-Aug-2026 05:30 P",
+      "note": "1. Supply Installation Testing and Commissioning Fully automatic Cleaning grading Plant 2 TPH Capacity along with weighing scale SMART DIUAKOLA  bhagyoday clg grading msrlm 73 26-27 25-Aug-2026 05:30 PM 26-Aug-2026 01:00 PM 2. Fully automatic Cleaning Garding Plant 2 TPH Capacity",
       "priority": 50,
-      "first_seen": "2026-08-16T02:39:39+00:00"
+      "first_seen": "2026-08-16T13:53:05+00:00"
     },
     {
-      "id": "MHT-0c5a907f",
+      "id": "MHT-ca848a74",
       "kind": "tender",
-      "title": "9. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon",
+      "title": "6. Survey, Design, Fabrication, Supply, Installation, Testing and Commissioning of Total 5.00 Kw Of On Grid Connected Rooftop Solar Pv Power",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Susdi8aGQ3cnyCNSADVoWmA%3D%3D",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S43PKCjp4fFnHgtnqo0jnHA%3D%3D",
       "state": "Pan-India",
       "value": null,
-      "capacity": null,
+      "capacity": 0.01,
       "deadline": null,
       "detected": "2026-08-16",
       "owner": "Unassigned",
-      "note": "9. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon | YAV/MAH/HIWARAS/2025-26/9 | 21-Aug-2026 06:00 PM | 22-Aug-2026 06:00 PM",
+      "note": "6. Survey, Design, Fabrication, Supply, Installation, Testing and Commissioning of Total 5.00 Kw Of On Grid Connected Rooftop Solar Pv Power Plant Including Comprehensive Maintenance Contract (Cmc) For 3 Years | SMART/JFPCL/Goods/04/2026 | 26-Aug-2026 03:00 PM | 27-Aug-2026 03:00",
       "priority": 50,
-      "first_seen": "2026-08-15T13:51:55+00:00"
+      "first_seen": "2026-08-16T13:53:05+00:00"
     },
     {
-      "id": "MHT-4c2b3d11",
+      "id": "MHT-bc336b29",
       "kind": "tender",
-      "title": "10. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon",
+      "title": "9. SURVEY DESIGN FABRICATION SUPPLY INSTALLATION TESTING COMMISSIONING OF TOTAL 45 KWP OF ON GRID CONNECTED ROOFTOP SOLAR PV POWER PLANT INC",
       "org": "Maharashtra (MahaTenders)",
       "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SuNTEmyS4D7R%2FztdYf0fDJA%3D%3D",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S%2FZgYIbteFzcMeuUmE%2B7wXQ%3D%3D",
       "state": "Pan-India",
       "value": null,
-      "capacity": null,
+      "capacity": 0.04,
       "deadline": null,
       "detected": "2026-08-16",
       "owner": "Unassigned",
-      "note": "10. Providing and Installation of 1 HP Solar Based Dual Pump on Existing Bore Well/Well Village Hiwara Tq Mahagaon | YAV/MAH/HIWARAS/2025-26/9 | 21-Aug-2026 06:00 PM | 22-Aug-2026 06:00 PM",
+      "note": "9. SURVEY DESIGN FABRICATION SUPPLY INSTALLATION TESTING COMMISSIONING OF TOTAL 45 KWP OF ON GRID CONNECTED ROOFTOP SOLAR PV POWER PLANT INCLUDING COMPREHENSIVE MAINTENANCE CONTRACT CMC FOR 5 YEARS | SMART/KOP/KDFP/GOODS/125/2026 | 27-Aug-2026 03:00 PM | 28-Aug-2026 04:00 PM",
       "priority": 50,
-      "first_seen": "2026-08-15T13:51:55+00:00"
+      "first_seen": "2026-08-16T13:53:05+00:00"
     }
   ]
 }
