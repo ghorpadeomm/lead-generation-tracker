@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T02:33:53+00:00",
+  "updated_at": "2026-08-18T14:06:07+00:00",
   "items": [
     {
       "id": "SECI-6e18f6ae",
@@ -21,17 +21,17 @@
     {
       "id": "SECI-abd81e45",
       "kind": "tender",
-      "title": "RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII)",
+      "title": "RfS for setting up 5320 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII)",
       "org": "SECI",
       "source": "SECI Portal",
       "source_url": "https://www.seci.co.in/tender-details/YmRy",
       "state": "Pan-India",
       "value": null,
-      "capacity": 5.29,
+      "capacity": 5.32,
       "deadline": "2026-08-31",
       "detected": "2026-08-18",
       "owner": "Unassigned",
-      "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5290 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
+      "note": " | SECI000265 | SECI-2026-TN000018 | SECI/C&P/IPP/11/0007/26-27 | RfS for setting up 5320 kW Grid-Connected Rooftop Solar PV Project under RESCO mode (RTSPV-Tranche-XII) | 27/07/2026 | 31/08/2026 | View Details",
       "priority": 62,
       "first_seen": "2026-07-27T05:06:04+00:00"
     },
