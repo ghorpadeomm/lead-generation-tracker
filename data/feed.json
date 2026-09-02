@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T06:05:48+00:00",
+  "updated_at": "2026-09-02T17:15:27+00:00",
   "items": [
     {
       "id": "NTPC-74b66ddd",
@@ -85,57 +85,6 @@
       "note": " | SECI000276 | SECI-2026-TN000026 | SECI/C&P/OP/15/0006/25-26 | Request for Proposals for Selection of Project Developer for setting up of 100 kW Rooftop Solar PV Power Project at NIWE Campus in CAPEX mode (RTSPV-C-T-II) | 28/08/2026 | 30/09/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-08-30T17:41:37+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": 0.03,
-      "deadline": null,
-      "detected": "2026-09-02",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-09-02T06:05:48+00:00"
-    },
-    {
-      "id": "MHT-132e1936",
-      "kind": "tender",
-      "title": "1. Supply of bleaching powder, PAC powder, and alum required for the Water Supply Department for the financial year 2026-27 MCJ_NIT_07_2026-",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S2m7WOqFP0eDHnX%2BEa1Ys%2FA%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": 0.03,
-      "deadline": null,
-      "detected": "2026-09-02",
-      "owner": "Unassigned",
-      "note": "1. Supply of bleaching powder, PAC powder, and alum required for the Water Supply Department for the financial year 2026-27 MCJ_NIT_07_2026-27_RT_2ndCall 09-Sep-2026 05:00 PM 10-Sep-2026 05:00 PM 2. Supply of Different Size of R.C.C. Pipe For Municipal Council Gadchiroli RCC PIPE",
-      "priority": 50,
-      "first_seen": "2026-09-02T06:05:48+00:00"
-    },
-    {
-      "id": "MHT-90b0aa76",
-      "kind": "tender",
-      "title": "10. SURVEY DESIGN FABRICATION SUPPLY INSTALLATION TESTING and COMMISSIONING OF TOTAL 26 KWP OF ON GRID CONNECTED ROOFTOP SOLAR PV POWER PLAN",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SAhWqhz4QRZvIblC1g6wt3A%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 0.03,
-      "deadline": null,
-      "detected": "2026-09-02",
-      "owner": "Unassigned",
-      "note": "10. SURVEY DESIGN FABRICATION SUPPLY INSTALLATION TESTING and COMMISSIONING OF TOTAL 26 KWP OF ON GRID CONNECTED ROOFTOP SOLAR PV POWER PLANT INCLUDING COMPREHENSIVE MAINTENANCE CONTRACT CMC FOR 5 YEARS | SMART/KOP/GGL/GOODS/128/2026 | 13-Sep-2026 03:00 PM | 15-Sep-2026 02:00 PM",
-      "priority": 50,
-      "first_seen": "2026-09-02T06:05:48+00:00"
     }
   ]
 }
