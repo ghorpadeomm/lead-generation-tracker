@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T06:09:35+00:00",
+  "updated_at": "2026-09-08T17:21:16+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -85,6 +85,91 @@
       "note": " | SECI000276 | SECI-2026-TN000026 | SECI/C&P/OP/15/0006/25-26 | Request for Proposals for Selection of Project Developer for setting up of 100 kW Rooftop Solar PV Power Project at NIWE Campus in CAPEX mode (RTSPV-C-T-II) | 28/08/2026 | 30/09/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-08-30T17:41:37+00:00"
+    },
+    {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-09-08",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-09-08T17:21:16+00:00"
+    },
+    {
+      "id": "MHT-344c9384",
+      "kind": "tender",
+      "title": "1. Beat No 178 Councillor Fund MDF/3152  Dt.07.09.2026 15-Sep-2026 09:00 AM 16-Sep-2026 09:00 AM 2. Construction of Dustbin at Banjartanda M",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SXWbVJeL9Kn0Waf1uVRxlfQ%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-09-08",
+      "owner": "Unassigned",
+      "note": "1. Beat No 178 Councillor Fund MDF/3152  Dt.07.09.2026 15-Sep-2026 09:00 AM 16-Sep-2026 09:00 AM 2. Construction of Dustbin at Banjartanda MDM / P / 2700  Dtd.-04.09.2026 15-Sep-2026 06:55 PM 16-Sep-2026 06:55 PM 3. 1)Construction Of Cc Road In Bhim Nagar 25-11-184 2)Construction",
+      "priority": 50,
+      "first_seen": "2026-09-08T17:21:16+00:00"
+    },
+    {
+      "id": "MHT-8e64932f",
+      "kind": "tender",
+      "title": "4. 4. Supplying And Installing 10 KWP ON-GRID Solar PV System or Plant and Alied Works at Khandala Nagarpanchayat Proposed Cafe Building",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S6gACDhIQBw9DYpciwkir2A%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-09-08",
+      "owner": "Unassigned",
+      "note": "4. 4. Supplying And Installing 10 KWP ON-GRID Solar PV System or Plant and Alied Works at Khandala Nagarpanchayat Proposed Cafe Building | NPK/6/2026-27 | 15-Sep-2026 05:00 PM | 17-Sep-2026 05:00 PM",
+      "priority": 50,
+      "first_seen": "2026-09-08T17:21:16+00:00"
+    },
+    {
+      "id": "MHT-dae11875",
+      "kind": "tender",
+      "title": "6. 2. Supplying And Installing 5 KWP ON-GRID Solar PV System or Plant and Alied Works at Khandala Nagarpanchayat Office",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Sy6TM9IhrscVx4RJqastRMw%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.01,
+      "deadline": null,
+      "detected": "2026-09-08",
+      "owner": "Unassigned",
+      "note": "6. 2. Supplying And Installing 5 KWP ON-GRID Solar PV System or Plant and Alied Works at Khandala Nagarpanchayat Office | NPK/6/2026-27 | 15-Sep-2026 05:00 PM | 17-Sep-2026 05:00 PM",
+      "priority": 50,
+      "first_seen": "2026-09-08T17:21:16+00:00"
+    },
+    {
+      "id": "MHT-4352a693",
+      "kind": "tender",
+      "title": "8. 3. Supplying And Installing 25 KWP ON-GRID Solar PV System or Plant and Alied Works at Khandala Nagarpanchayat Solid Waste Management Pro",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S0V4MmUC9nvOHmbQQSSG5nQ%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 0.03,
+      "deadline": null,
+      "detected": "2026-09-08",
+      "owner": "Unassigned",
+      "note": "8. 3. Supplying And Installing 25 KWP ON-GRID Solar PV System or Plant and Alied Works at Khandala Nagarpanchayat Solid Waste Management Project | NPK/6/2026-27 | 15-Sep-2026 05:00 PM | 17-Sep-2026 05:00 PM",
+      "priority": 50,
+      "first_seen": "2026-09-08T17:21:16+00:00"
     }
   ]
 }
