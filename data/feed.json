@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T06:04:35+00:00",
+  "updated_at": "2026-09-12T16:25:49+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -102,57 +102,6 @@
       "note": " | SECI000276 | SECI-2026-TN000026 | SECI/C&P/OP/15/0006/25-26 | Request for Proposals for Selection of Project Developer for setting up of 100 kW Rooftop Solar PV Power Project at NIWE Campus in CAPEX mode (RTSPV-C-T-II) | 28/08/2026 | 30/09/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-08-30T17:41:37+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-09-12",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-09-12T06:04:35+00:00"
-    },
-    {
-      "id": "MHT-89823e14",
-      "kind": "tender",
-      "title": "1. Scholarships, competitive exam preparation, and supply of study materials under the Zilla Parishad Cess Grades 4 and 7 RZP/EDU/SchShip/25",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SiMPpQ%2B28Ha03Bu9wYiVVBQ%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-09-12",
-      "owner": "Unassigned",
-      "note": "1. Scholarships, competitive exam preparation, and supply of study materials under the Zilla Parishad Cess Grades 4 and 7 RZP/EDU/SchShip/2503/2026-27 24-Sep-2026 05:00 PM 28-Sep-2026 09:00 AM 2. Repair to small drain at 51/53,Dr.Maheshwari road,Poddar bldg.2 in B ward 223 MDB/31",
-      "priority": 50,
-      "first_seen": "2026-09-12T06:04:35+00:00"
-    },
-    {
-      "id": "MHT-b591c27c",
-      "kind": "tender",
-      "title": "3. E Tender for providing GI Pipe, PVC Pipe and other fitting material and also material for hand pump repairing water supply department M C",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SVJnOw%2FNtpUh%2Bv%2F6KHP9%2BOQ%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-09-12",
-      "owner": "Unassigned",
-      "note": "3. E Tender for providing GI Pipe, PVC Pipe and other fitting material and also material for hand pump repairing water supply department M C Geroai Tq. Georai Dist.  Beed | E-Tender /W. S/2026-27 | 21-Sep-2026 05:00 PM | 22-Sep-2026 05:00 PM",
-      "priority": 50,
-      "first_seen": "2026-09-12T06:04:35+00:00"
     }
   ]
 }
