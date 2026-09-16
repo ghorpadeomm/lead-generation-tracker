@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T06:19:54+00:00",
+  "updated_at": "2026-09-16T17:41:51+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -85,6 +85,74 @@
       "note": " | SECI000270 | SECI-2026-TN000023 | SECI/C&P/OP/15/0005/26-27 | Request for Proposals for Selection of Project Developer for setting up of Grid connected 922.635 kW Rooftop Solar PV Power Project in CAPEX mode for various Client Organizations (CAPEX-I) | 06/08/2026 | 04/10/2026 ",
       "priority": 50,
       "first_seen": "2026-09-15T17:44:23+00:00"
+    },
+    {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-09-16",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-09-16T17:41:51+00:00"
+    },
+    {
+      "id": "MHT-678dbee1",
+      "kind": "tender",
+      "title": "Tender Title Reference No Closing Date Bid Opening Date 1. SEED PROCESSING PLANT CAPACITY 2 TPH SRO/STRU/NFSM/531/2026 30-Sep-2026 05:00 PM ",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SQaG0bOrpB8vPKlD%2Bkh0MSQ%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-09-16",
+      "owner": "Unassigned",
+      "note": "Tender Title Reference No Closing Date Bid Opening Date 1. SEED PROCESSING PLANT CAPACITY 2 TPH SRO/STRU/NFSM/531/2026 30-Sep-2026 05:00 PM 01-Oct-2026 05:00 PM 2. CONSTRACTION OF SABHAMANDAP IN FRONT OF GADGEBABA MANDIR IN GRAM PANCHAYAT OPEN LAND AT. ARALI TQ.BILOLI. ZPN/WD/DEG",
+      "priority": 50,
+      "first_seen": "2026-09-16T17:41:51+00:00"
+    },
+    {
+      "id": "MHT-3eb32023",
+      "kind": "tender",
+      "title": "1. corrigendumanswersheet No.SB./Store-5/Answersheet /3737 dt 0409226 30-Sep-2026 01:00 PM 01-Oct-2026 01:00 PM 2. Date No/MCK/Arogy.Dt./166",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink_0&page=Home&service=direct&session=T&sp=SukEXG1ZRW%2BqGCg2w3ld4UA%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-09-16",
+      "owner": "Unassigned",
+      "note": "1. corrigendumanswersheet No.SB./Store-5/Answersheet /3737 dt 0409226 30-Sep-2026 01:00 PM 01-Oct-2026 01:00 PM 2. Date No/MCK/Arogy.Dt./1662/2026 17-Sep-2026 04:00 PM 18-Sep-2026 04:00 PM 3. Date No/MCK/Arogy.Dt./1662/2026 17-Sep-2026 04:00 PM 19-Sep-2026 04:00 PM 4. Date No/MCK",
+      "priority": 50,
+      "first_seen": "2026-09-16T17:41:51+00:00"
+    },
+    {
+      "id": "MHT-19ec94e6",
+      "kind": "tender",
+      "title": "8. Change in one Solar Location",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink_0&page=Home&service=direct&session=T&sp=S0KfStV6e%2FQLnVgdAECgJAA%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-09-16",
+      "owner": "Unassigned",
+      "note": "8. Change in one Solar Location | BNP/KARYA18/ETENDER/375/26-27 | 18-Sep-2026 03:00 PM | 21-Sep-2026 03:00 PM",
+      "priority": 50,
+      "first_seen": "2026-09-16T17:41:51+00:00"
     }
   ]
 }
