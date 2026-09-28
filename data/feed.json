@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T07:12:30+00:00",
+  "updated_at": "2026-09-28T20:11:53+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -102,40 +102,6 @@
       "note": " | SECI000281 | SECI-2026-TN000028 | SECI/C&P/IPP/11/0008/26-27 | RfS for setting up of 4083.75 kW Grid-Connected Rooftop Solar PV Projects under RESCO mode at Constituent Colleges/Institutions of Central Agricultural University (CAU), Imphal - North Eastern Region (RTSPV T-XIII)",
       "priority": 50,
       "first_seen": "2026-09-18T17:09:29+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-09-28",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-09-28T07:12:30+00:00"
-    },
-    {
-      "id": "MHT-e15857c3",
-      "kind": "tender",
-      "title": "1. SUPPLY INSTALLATION AND COMMISSIONING OF SOLAR STREET LIGHTS",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SIiE31qnNq%2BnJK2qT3HK5jg%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-09-28",
-      "owner": "Unassigned",
-      "note": "1. SUPPLY INSTALLATION AND COMMISSIONING OF SOLAR STREET LIGHTS | THN/KLYN/MHRL/OPEN/03/26-27 | 06-Oct-2026 06:00 PM | 08-Oct-2026 10:00 AM",
-      "priority": 50,
-      "first_seen": "2026-09-28T07:12:30+00:00"
     }
   ]
 }
