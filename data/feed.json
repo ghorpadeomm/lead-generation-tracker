@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T07:47:02+00:00",
+  "updated_at": "2026-10-06T18:59:40+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -119,74 +119,6 @@
       "note": " | SECI000281 | SECI-2026-TN000028 | SECI/C&P/IPP/11/0008/26-27 | RfS for setting up of 4083.75 kW Grid-Connected Rooftop Solar PV Projects under RESCO mode at Constituent Colleges/Institutions of Central Agricultural University (CAU), Imphal - North Eastern Region (RTSPV T-XIII)",
       "priority": 50,
       "first_seen": "2026-09-18T17:09:29+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-10-06",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-10-06T07:47:02+00:00"
-    },
-    {
-      "id": "MHT-31f7c77e",
-      "kind": "tender",
-      "title": "Tender Title Reference No Closing Date Bid Opening Date 1. Plantation Of Trees Various Open Space In 14 Villeges in Navi Mumbai Node. Tender",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S1byDhFW9SvzWoWFqN0R6PA%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-10-06",
-      "owner": "Unassigned",
-      "note": "Tender Title Reference No Closing Date Bid Opening Date 1. Plantation Of Trees Various Open Space In 14 Villeges in Navi Mumbai Node. Tender no. NMMC/GARDEN/B-1/51/2026-27 13-Oct-2026 03:00 PM 14-Oct-2026 04:00 PM 2. e Tender Notice No 2 for 2026-27 e Tender Notice No 2 for 2026-",
-      "priority": 50,
-      "first_seen": "2026-10-06T07:47:02+00:00"
-    },
-    {
-      "id": "MHT-3c8e8afb",
-      "kind": "tender",
-      "title": "1. date extention to this e tender SZP/DHO/DRUGS/2026 10-Oct-2026 03:00 PM 12-Oct-2026 03:00 PM 2. Corrigendum 16760/MLS/C-1 08-Oct-2026 01:",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink_0&page=Home&service=direct&session=T&sp=Smbc3xiV14h8gvxtJgcOaFw%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-10-06",
-      "owner": "Unassigned",
-      "note": "1. date extention to this e tender SZP/DHO/DRUGS/2026 10-Oct-2026 03:00 PM 12-Oct-2026 03:00 PM 2. Corrigendum 16760/MLS/C-1 08-Oct-2026 01:00 PM 09-Oct-2026 03:30 PM 3. DATE EXTENSION FOR 2 ND CALL EE WORKS/ZP/CIVIL WORKS/TN-12/2026-27 12-Oct-2026 05:00 PM 14-Oct-2026 01:00 PM 4",
-      "priority": 50,
-      "first_seen": "2026-10-06T07:47:02+00:00"
-    },
-    {
-      "id": "MHT-54fbe429",
-      "kind": "tender",
-      "title": "8. Pressure Sensitive Adhesive PVC Tapes (Blue)",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink_0&page=Home&service=direct&session=T&sp=SNevIG%2BfeAND1dv8kDR4knA%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-10-06",
-      "owner": "Unassigned",
-      "note": "8. Pressure Sensitive Adhesive PVC Tapes (Blue) | DMM(SB)/08/82143/2026-27/Advt. | 19-Oct-2026 04:00 PM | 22-Oct-2026 10:00 AM",
-      "priority": 50,
-      "first_seen": "2026-10-06T07:47:02+00:00"
     }
   ]
 }
