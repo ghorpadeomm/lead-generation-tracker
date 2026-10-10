@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T07:26:04+00:00",
+  "updated_at": "2026-10-10T17:56:54+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -87,40 +87,6 @@
       "first_seen": "2026-09-10T06:15:00+00:00"
     },
     {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-09-15",
-      "detected": "2026-10-10",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Debarment List Announcements Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 62,
-      "first_seen": "2026-10-10T07:26:04+00:00"
-    },
-    {
-      "id": "MHT-32635beb",
-      "kind": "tender",
-      "title": "1. Repairs Of Mini Water Supply Scheme At Khedi B-1/02/2026-27 19-Oct-2026 06:00 PM 20-Oct-2026 06:00 PM 2. Proposed Estimate for Developmen",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SOs8p8yh1iacZhE11yrr8rg%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-02-01",
-      "detected": "2026-10-10",
-      "owner": "Unassigned",
-      "note": "1. Repairs Of Mini Water Supply Scheme At Khedi B-1/02/2026-27 19-Oct-2026 06:00 PM 20-Oct-2026 06:00 PM 2. Proposed Estimate for Development  Garden ( DP site No-11 ) in Sr.No.1/p  for Shirdi Municipal Council. 2026_Shirdi MC E-Tender for Civil Deptt 21-Oct-2026 05:00 PM 23-Oct-",
-      "priority": 62,
-      "first_seen": "2026-10-10T07:26:04+00:00"
-    },
-    {
       "id": "SECI-be29e2c6",
       "kind": "tender",
       "title": "Tender for Design, Engineering, Supply, Construction, Erection, Testing, Commissioning and O&M of ISTS-Connected 60 MW (AC) Solar PV Power P",
@@ -187,23 +153,6 @@
       "note": " | SECI000281 | SECI-2026-TN000028 | SECI/C&P/IPP/11/0008/26-27 | RfS for setting up of 4083.75 kW Grid-Connected Rooftop Solar PV Projects under RESCO mode at Constituent Colleges/Institutions of Central Agricultural University (CAU), Imphal - North Eastern Region (RTSPV T-XIII)",
       "priority": 50,
       "first_seen": "2026-09-18T17:09:29+00:00"
-    },
-    {
-      "id": "MHT-9c343575",
-      "kind": "tender",
-      "title": "4. Providing Under Ground PVC Pipe GutterIn (InternalVillage At Village Mhasale TA Tal. Sakri Dist Dhule gram nidhi fund",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SH0PBIjlGKPu3VtRch%2FDKYg%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-10-10",
-      "owner": "Unassigned",
-      "note": "4. Providing Under Ground PVC Pipe GutterIn (InternalVillage At Village Mhasale TA Tal. Sakri Dist Dhule gram nidhi fund | tender | 15-Oct-2026 03:00 PM | 16-Oct-2026 10:00 AM",
-      "priority": 50,
-      "first_seen": "2026-10-10T07:26:04+00:00"
     }
   ]
 }
