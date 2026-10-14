@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-10-14T06:24:21+00:00",
+  "updated_at": "2026-10-14T18:07:17+00:00",
   "items": [
     {
-      "id": "SECI-4ac07ea4",
+      "id": "NTPC-8d0fd816",
       "kind": "tender",
-      "title": "700 MW ISTS-Connected Solar PV Power Projects in India under TBCB (C&I-1)",
-      "org": "SECI",
-      "source": "SECI Portal",
-      "source_url": "https://www.seci.co.in/tender-details/YmV_",
-      "state": "Pan-India",
+      "title": "SUPPLY OF SOLAR PV MODULES FOR 2100MW SOLAR PV PROJECT OF NTPC REL AT FATEHGARH AND BIKANER, RAJASTHAN",
+      "org": "NTPC Ltd",
+      "source": "NTPC Portal",
+      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30370",
+      "state": "Rajasthan",
       "value": null,
-      "capacity": 700.0,
-      "deadline": "2026-10-15",
+      "capacity": 2100.0,
+      "deadline": "2026-10-24",
       "detected": "2026-10-14",
       "owner": "Unassigned",
-      "note": " | SECI000278 | SECI-2026-TN000027 | SECI/C&P/IPP/15/0009/26-27 | 700 MW ISTS-Connected Solar PV Power Projects in India under TBCB (C&I-1) | 03/09/2026 | 15/10/2026 | View Details",
+      "note": " | NRE-CS-5800-004(MOD-01)-9 |  | SUPPLY OF SOLAR PV MODULES FOR 2100MW SOLAR PV PROJECT OF NTPC REL AT FATEHGARH AND BIKANER, RAJASTHAN | Renewable Energy | 24/10/2026 | ",
       "priority": 100,
-      "first_seen": "2026-09-03T17:07:03+00:00"
+      "first_seen": "2026-10-14T18:07:17+00:00"
     },
     {
       "id": "NTPC-978e7e17",
@@ -34,6 +34,23 @@
       "note": " | GEM/2026/B/8127645 |  | Hiring of One No. Vehicle for NTPC REL Anta 300 MW Solar PV Project. | Renewable Energy | 17/10/2026 | ",
       "priority": 90,
       "first_seen": "2026-10-07T19:27:35+00:00"
+    },
+    {
+      "id": "SECI-4ac07ea4",
+      "kind": "tender",
+      "title": "700 MW ISTS-Connected Solar PV Power Projects in India under TBCB (C&I-1)",
+      "org": "SECI",
+      "source": "SECI Portal",
+      "source_url": "https://www.seci.co.in/tender-details/YmV_",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": 700.0,
+      "deadline": "2026-10-30",
+      "detected": "2026-10-14",
+      "owner": "Unassigned",
+      "note": " | SECI000278 | SECI-2026-TN000027 | SECI/C&P/IPP/15/0009/26-27 | 700 MW ISTS-Connected Solar PV Power Projects in India under TBCB (C&I-1) | 03/09/2026 | 30/10/2026 | View Details",
+      "priority": 85,
+      "first_seen": "2026-09-03T17:07:03+00:00"
     },
     {
       "id": "SECI-ce2ed2db",
