@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T07:01:17+00:00",
+  "updated_at": "2026-10-28T18:59:25+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -19,6 +19,23 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
+      "id": "NTPC-8d0fd816",
+      "kind": "tender",
+      "title": "SUPPLY OF SOLAR PV MODULES FOR 2100MW SOLAR PV PROJECT OF NTPC REL AT FATEHGARH AND BIKANER, RAJASTHAN (opens in a new tab) Renewable Energy",
+      "org": "NTPC Ltd",
+      "source": "NTPC Portal",
+      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30370",
+      "state": "Rajasthan",
+      "value": null,
+      "capacity": 2100.0,
+      "deadline": "2026-10-29",
+      "detected": "2026-10-28",
+      "owner": "Unassigned",
+      "note": "3 | NRE-CS-5800-004(MOD-01)-9 Corrigendum | SUPPLY OF SOLAR PV MODULES FOR 2100MW SOLAR PV PROJECT OF NTPC REL AT FATEHGARH AND BIKANER, RAJASTHAN (opens in a new tab) Renewable Energy | Renewable Energy | 29 Oct 2026 5:00 PM | View tender NRE-CS-5800-004(MOD-01)-9 (opens in a ne",
+      "priority": 100,
+      "first_seen": "2026-10-28T18:59:25+00:00"
+    },
+    {
       "id": "NTPC-25807c06",
       "kind": "tender",
       "title": "EPC PACKAGE FOR 2X500 MW GROUND MOUNTED SOLAR PV PROJECT AT KAMBADUR, ANANTAPUR, AP (opens in a new tab) Renewable Energy",
@@ -31,7 +48,7 @@
       "deadline": "2026-10-30",
       "detected": "2026-10-28",
       "owner": "Unassigned",
-      "note": "3 | NRE-CS-5852-004(EPC)-9 | EPC PACKAGE FOR 2X500 MW GROUND MOUNTED SOLAR PV PROJECT AT KAMBADUR, ANANTAPUR, AP (opens in a new tab) Renewable Energy | Renewable Energy | 30 Oct 2026 5:00 PM | View tender NRE-CS-5852-004(EPC)-9 (opens in a new tab)",
+      "note": "4 | NRE-CS-5852-004(EPC)-9 | EPC PACKAGE FOR 2X500 MW GROUND MOUNTED SOLAR PV PROJECT AT KAMBADUR, ANANTAPUR, AP (opens in a new tab) Renewable Energy | Renewable Energy | 30 Oct 2026 5:00 PM | View tender NRE-CS-5852-004(EPC)-9 (opens in a new tab)",
       "priority": 100,
       "first_seen": "2026-10-23T17:56:35+00:00"
     },
@@ -119,6 +136,23 @@
       "note": " | SECI000270 | SECI-2026-TN000023 | SECI/C&P/OP/15/0005/26-27 | Request for Proposals for Selection of Project Developer for setting up of Grid connected 922.635 kW Rooftop Solar PV Power Project in CAPEX mode for various Client Organizations (CAPEX-I) | 06/08/2026 | 19/10/2026 ",
       "priority": 62,
       "first_seen": "2026-10-25T06:27:57+00:00"
+    },
+    {
+      "id": "SECI-d2c77583",
+      "kind": "tender",
+      "title": "RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding",
+      "org": "SECI",
+      "source": "SECI Portal",
+      "source_url": "https://www.seci.co.in/tender-details/Ymty",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": "2026-12-14",
+      "detected": "2026-10-28",
+      "owner": "Unassigned",
+      "note": " | SECI000295 | SECI-2026-TN000036 | SECI/C&P/PMC/11/07/2025-26 | RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding | 28/10/2026 | 14/12/2026 | View Details",
+      "priority": 50,
+      "first_seen": "2026-10-28T18:59:25+00:00"
     },
     {
       "id": "SECI-a56334b6",
