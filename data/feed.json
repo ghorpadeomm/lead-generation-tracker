@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T07:23:50+00:00",
+  "updated_at": "2026-10-29T19:06:52+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -19,21 +19,21 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
-      "id": "NTPC-8d0fd816",
+      "id": "NTPC-7d662678",
       "kind": "tender",
-      "title": "SUPPLY OF SOLAR PV MODULES FOR 2100MW SOLAR PV PROJECT OF NTPC REL AT FATEHGARH AND BIKANER, RAJASTHAN (opens in a new tab) Renewable Energy",
+      "title": "EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 1200MW (900MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR ANANTAPUR SOLAR PRO",
       "org": "NTPC Ltd",
       "source": "NTPC Portal",
-      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30370",
-      "state": "Rajasthan",
+      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30428",
+      "state": "Pan-India",
       "value": null,
-      "capacity": 2100.0,
-      "deadline": "2026-10-29",
+      "capacity": 1200.0,
+      "deadline": "2026-11-11",
       "detected": "2026-10-29",
       "owner": "Unassigned",
-      "note": "3 | NRE-CS-5800-004(MOD-01)-9 Corrigendum | SUPPLY OF SOLAR PV MODULES FOR 2100MW SOLAR PV PROJECT OF NTPC REL AT FATEHGARH AND BIKANER, RAJASTHAN (opens in a new tab) Renewable Energy | Renewable Energy | 29 Oct 2026 5:00 PM | View tender NRE-CS-5800-004(MOD-01)-9 (opens in a ne",
+      "note": "1 | NRE-CS-5847-004(EPC)-9 | EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 1200MW (900MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR ANANTAPUR SOLAR PROJECT\r\n(A.P.) OF NTPC REL (opens in a new tab) Renewable Energy | Renewable Energy | 11 Nov 2026 5:00 PM | View ",
       "priority": 100,
-      "first_seen": "2026-10-28T18:59:25+00:00"
+      "first_seen": "2026-10-29T19:06:52+00:00"
     },
     {
       "id": "NTPC-25807c06",
