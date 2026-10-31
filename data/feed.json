@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T07:14:12+00:00",
+  "updated_at": "2026-10-31T17:52:20+00:00",
   "items": [
     {
       "id": "NTPC-7d662678",
@@ -138,40 +138,6 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-10-14",
-      "detected": "2026-10-31",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Announcements Debarment List Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 62,
-      "first_seen": "2026-10-31T07:14:12+00:00"
-    },
-    {
-      "id": "MHT-e7366b43",
-      "kind": "tender",
-      "title": "1. Design Development Supply Installation and Maintenance of 16000 Interactive Fiber Statues with AI based Voice Assistant Functionality and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SLBVgYNkM%2F7GJjjvImGHxRw%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-10-02",
-      "detected": "2026-10-31",
-      "owner": "Unassigned",
-      "note": "1. Design Development Supply Installation and Maintenance of 16000 Interactive Fiber Statues with AI based Voice Assistant Functionality and Backend Server Infrastructure 1091 25-Nov-2026 06:00 PM 27-Nov-2026 11:30 AM 2. Collection Transportation Processing and sweeping of road ,",
-      "priority": 62,
-      "first_seen": "2026-10-31T07:14:12+00:00"
-    },
-    {
       "id": "SECI-d2c77583",
       "kind": "tender",
       "title": "RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding",
@@ -204,23 +170,6 @@
       "note": " | SECI000287 | SECI-2026-TN000033 | SECI/C&P/IPP/11/0010/26-27 | Request for Selection (RfS) of Solar Power Developer for setting up of 3680 kW Grid-Connected Rooftop Solar PV Projects on NDMC Buildings under RESCO Mode through Tariff-based Competitive Bidding (RTSPV T-XV) | 07/",
       "priority": 50,
       "first_seen": "2026-10-25T06:27:57+00:00"
-    },
-    {
-      "id": "MHT-12bbf514",
-      "kind": "tender",
-      "title": "9. Repairing Replacement And Reconditioning of Powerpump Cable Wire GI Pipe HDPE Pipe Nylone Rope PVC Pipeline Sluice Valve, Kitkat Fuses UN",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S%2BuZ5J0Gn%2FaIBNuuN4KvUAw%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-10-31",
-      "owner": "Unassigned",
-      "note": "9. Repairing Replacement And Reconditioning of Powerpump Cable Wire GI Pipe HDPE Pipe Nylone Rope PVC Pipeline Sluice Valve, Kitkat Fuses UNDER 15 th Finance Commission  G P Level At WADIWADGAON Tq Lohara Dist Dharashiv | WADIWADGAON/E-TENDER/2026-27/1 | 06-Nov-2026 05:00 PM | 07",
-      "priority": 50,
-      "first_seen": "2026-10-31T07:14:12+00:00"
     }
   ]
 }
