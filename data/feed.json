@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T08:17:57+00:00",
+  "updated_at": "2026-11-09T23:06:08+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -19,23 +19,6 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
-      "id": "NTPC-ecbb56ed",
-      "kind": "tender",
-      "title": "Hiring of One Vehicle on Regular Contract Basis for NT PC REL Dhule 600 MW ISTS Solar PV\r\nProject for a period of 12 months (Extendable by a",
-      "org": "NTPC Ltd",
-      "source": "NTPC Portal",
-      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30433",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": 600.0,
-      "deadline": "2026-11-09",
-      "detected": "2026-11-09",
-      "owner": "Unassigned",
-      "note": "2 | GEM/2026/B/8220433 | Hiring of One Vehicle on Regular Contract Basis for NT PC REL Dhule 600 MW ISTS Solar PV\r\nProject for a period of 12 months (Extendable by an additional 12 months same rate, terms & conditions) (opens in a new tab) Renewable Energy | Renewable Energy | 09",
-      "priority": 100,
-      "first_seen": "2026-10-30T18:44:35+00:00"
-    },
-    {
       "id": "NTPC-7d662678",
       "kind": "tender",
       "title": "EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 1200MW (900MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR ANANTAPUR SOLAR PRO",
@@ -48,7 +31,7 @@
       "deadline": "2026-11-11",
       "detected": "2026-11-09",
       "owner": "Unassigned",
-      "note": "3 | NRE-CS-5847-004(EPC)-9 | EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 1200MW (900MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR ANANTAPUR SOLAR PROJECT\r\n(A.P.) OF NTPC REL (opens in a new tab) Renewable Energy | Renewable Energy | 11 Nov 2026 5:00 PM | View ",
+      "note": "2 | NRE-CS-5847-004(EPC)-9 | EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 1200MW (900MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR ANANTAPUR SOLAR PROJECT\r\n(A.P.) OF NTPC REL (opens in a new tab) Renewable Energy | Renewable Energy | 11 Nov 2026 5:00 PM | View ",
       "priority": 100,
       "first_seen": "2026-10-29T19:06:52+00:00"
     },
@@ -170,57 +153,6 @@
       "note": " | SECI000295 | SECI-2026-TN000036 | SECI/C&P/PMC/11/07/2025-26 | RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding | 28/10/2026 | 14/12/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-10-28T18:59:25+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-11-09",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Announcements Debarment List Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-11-09T08:17:57+00:00"
-    },
-    {
-      "id": "MHT-d1b77b66",
-      "kind": "tender",
-      "title": "1. Work to be done on the remaining road from Chintamani Jnanpith to Highway PMC/ROAD/2026/30 16-Nov-2026 02:30 PM 17-Nov-2026 03:00 PM 2. C",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SYANvyECkozTSUZvNCb6bsA%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-11-09",
-      "owner": "Unassigned",
-      "note": "1. Work to be done on the remaining road from Chintamani Jnanpith to Highway PMC/ROAD/2026/30 16-Nov-2026 02:30 PM 17-Nov-2026 03:00 PM 2. City Water Supply Scheme -Supply of Liquid Chlorine in 100 kg capacity cyliner for Harsul WTP and Siddarth Swimming Pool CSMC/WW/JACKWADI/202",
-      "priority": 50,
-      "first_seen": "2026-11-09T08:17:57+00:00"
-    },
-    {
-      "id": "MHT-f0e6d95c",
-      "kind": "tender",
-      "title": "4. PROVIDING AND FIXING PVC CEILING AND CHANNEL GATE FOR HEALTH CENTER IN WARD NO.16, BNCMC.",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Sq83tQGPyFrKRb%2BFdx2mjWw%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-11-09",
-      "owner": "Unassigned",
-      "note": "4. PROVIDING AND FIXING PVC CEILING AND CHANNEL GATE FOR HEALTH CENTER IN WARD NO.16, BNCMC. | BNCMC/PWD 66/2026_1 | 16-Nov-2026 04:00 PM | 17-Nov-2026 04:00 PM",
-      "priority": 50,
-      "first_seen": "2026-11-09T08:17:57+00:00"
     }
   ]
 }
