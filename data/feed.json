@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T08:36:42+00:00",
+  "updated_at": "2026-11-10T20:32:51+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -70,23 +70,6 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
-      "id": "SECI-3f27750c",
-      "kind": "tender",
-      "title": "RfP for Selection of Land Parcels: Lease of 02 Agricultural Land Sites (Minimum 10 Acres Each) for Setting Up Agri-PV Solar Power Projects i",
-      "org": "SECI",
-      "source": "SECI Portal",
-      "source_url": "https://www.seci.co.in/tender-details/YmV-",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-10-26",
-      "detected": "2026-11-10",
-      "owner": "Unassigned",
-      "note": " | SECI000279 |  | SECI/C&P/MI/00/05/2026-27 | RfP for Selection of Land Parcels: Lease of 02 Agricultural Land Sites (Minimum 10 Acres Each) for Setting Up Agri-PV Solar Power Projects in Issapur and Dhansa Village in Najafgarh, Delhi | 09/09/2026 | 26/10/2026 | View Details",
-      "priority": 62,
-      "first_seen": "2026-10-25T06:27:57+00:00"
-    },
-    {
       "id": "NTPC-0f015f41",
       "kind": "tender",
       "title": "Deployment of Two (2) no. of Commercial Vehicle (4WD) for a Period of Two (02) Years at Fatehgarh NTPC REL, Jaisalmer Solar Project (opens i",
@@ -153,6 +136,57 @@
       "note": " | SECI000287 | SECI-2026-TN000033 | SECI/C&P/IPP/11/0010/26-27 | Request for Selection (RfS) of Solar Power Developer for setting up of 3680 kW Grid-Connected Rooftop Solar PV Projects on NDMC Buildings under RESCO Mode through Tariff-based Competitive Bidding (RTSPV T-XV) | 07/",
       "priority": 50,
       "first_seen": "2026-10-25T06:27:57+00:00"
+    },
+    {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-11-10",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Announcements Debarment List Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 50,
+      "first_seen": "2026-11-10T20:32:51+00:00"
+    },
+    {
+      "id": "MHT-932d8791",
+      "kind": "tender",
+      "title": "1. PROVIDING AND INSTALLATION OF 1 HP SOLAR BASED DUAL PUMP ON EXISTING BOARE WELL/WELL AT GP CHIKANI (KA) TQ ARNI DIST YAVATMAL YTL_ARNI_CH",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Sx2DoruEdjqn7RwXBM06Hxw%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-11-10",
+      "owner": "Unassigned",
+      "note": "1. PROVIDING AND INSTALLATION OF 1 HP SOLAR BASED DUAL PUMP ON EXISTING BOARE WELL/WELL AT GP CHIKANI (KA) TQ ARNI DIST YAVATMAL YTL_ARNI_CHIKANI (KA)_2026 16-Nov-2026 10:00 AM 17-Nov-2026 10:00 AM 2. Supply of Various Types Construction Material ZPB/PSTUM/SAKH/ETN 01/2026-27 16-",
+      "priority": 50,
+      "first_seen": "2026-11-10T20:32:51+00:00"
+    },
+    {
+      "id": "MHT-8ca6cb09",
+      "kind": "tender",
+      "title": "3. Providing And Installation Of 1HP Solar based Dual Pump",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=S%2BfthbEnG6k5Q1K%2BiZ0IeSA%3D%3D",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-11-10",
+      "owner": "Unassigned",
+      "note": "3. Providing And Installation Of 1HP Solar based Dual Pump | NIT02/2026-27 | 16-Nov-2026 05:05 PM | 17-Nov-2026 05:05 PM",
+      "priority": 50,
+      "first_seen": "2026-11-10T20:32:51+00:00"
     }
   ]
 }
