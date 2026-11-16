@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T08:13:12+00:00",
+  "updated_at": "2026-11-16T22:59:05+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -104,6 +104,40 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
+      "id": "MHT-63344a71",
+      "kind": "tender",
+      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": "2026-03-01",
+      "detected": "2026-11-16",
+      "owner": "Unassigned",
+      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Announcements Debarment List Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
+      "priority": 62,
+      "first_seen": "2026-11-16T22:59:05+00:00"
+    },
+    {
+      "id": "MHT-e0acbf74",
+      "kind": "tender",
+      "title": "1. Construction of Out House, Polycarbonet Shed and Other Ancillary Works in the premises of Collector Quarter at Beed Tq. Dist. Beed PWD_Be",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SVH0%2FIFb%2B%2Bv%2BvxFosuTaDpQ%3D%3D",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": "2026-03-01",
+      "detected": "2026-11-16",
+      "owner": "Unassigned",
+      "note": "1. Construction of Out House, Polycarbonet Shed and Other Ancillary Works in the premises of Collector Quarter at Beed Tq. Dist. Beed PWD_Beed/5/2026-27 23-Nov-2026 06:55 PM 25-Nov-2026 11:00 AM 2. Construction of Cement Concrete Road and Drain at Various Place in Ward No.2 at Be",
+      "priority": 62,
+      "first_seen": "2026-11-16T22:59:05+00:00"
+    },
+    {
       "id": "SECI-be29e2c6",
       "kind": "tender",
       "title": "Tender for Design, Engineering, Supply, Construction, Erection, Testing, Commissioning and O&M of ISTS-Connected 60 MW (AC) Solar PV Power P",
@@ -136,6 +170,23 @@
       "note": " | SECI000295 | SECI-2026-TN000036 | SECI/C&P/PMC/11/07/2025-26 | RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding | 28/10/2026 | 14/12/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-10-28T18:59:25+00:00"
+    },
+    {
+      "id": "MHT-dddc88b9",
+      "kind": "tender",
+      "title": "5. Improvements to Road A) Talwade Canbay Chowk to Indrayani River Bridge At Nighoje Gaon B) ODR 57 - Kingfa Chowk to GEBR PFEIFFER MFG(INDI",
+      "org": "Maharashtra (MahaTenders)",
+      "source": "MahaTenders",
+      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=ScnTQE%2B7TO2TBqEK4201KBA%3D%3D",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": null,
+      "deadline": null,
+      "detected": "2026-11-16",
+      "owner": "Unassigned",
+      "note": "5. Improvements to Road A) Talwade Canbay Chowk to Indrayani River Bridge At Nighoje Gaon B) ODR 57 - Kingfa Chowk to GEBR PFEIFFER MFG(INDIA) Pvt Ltd C) Atlas Copco India Company Road D) Talegaon Aambi Navlakh Umbre Karanjvihire Road MDR 15 (For Pune G | Northpune/2026-27/32 | 2",
+      "priority": 50,
+      "first_seen": "2026-11-16T22:59:05+00:00"
     }
   ]
 }
