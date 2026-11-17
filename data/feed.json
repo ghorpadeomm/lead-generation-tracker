@@ -1,6 +1,23 @@
 {
-  "updated_at": "2026-11-17T09:28:39+00:00",
+  "updated_at": "2026-11-17T21:51:55+00:00",
   "items": [
+    {
+      "id": "NTPC-f2bf5308",
+      "kind": "tender",
+      "title": "EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 600MW (300MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR DHULE SOLAR PROJECT\r",
+      "org": "NTPC Ltd",
+      "source": "NTPC Portal",
+      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30392",
+      "state": "Maharashtra",
+      "value": null,
+      "capacity": 600.0,
+      "deadline": "2026-11-18",
+      "detected": "2026-11-17",
+      "owner": "Unassigned",
+      "note": "3 | NRE-CS-5848-004(EPC)-9 Corrigendum | EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 600MW (300MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR DHULE SOLAR PROJECT\r\n(MAHARASHTRA) (opens in a new tab) Renewable Energy | Renewable Energy | 18 Nov 2026 5:00 PM | Vie",
+      "priority": 100,
+      "first_seen": "2026-11-17T21:51:55+00:00"
+    },
     {
       "id": "SECI-4ac07ea4",
       "kind": "tender",
@@ -51,6 +68,23 @@
       "note": " | SECI000281 | SECI-2026-TN000028 | SECI/C&P/IPP/11/0008/26-27 | RfS for setting up of 4083.75 kW Grid-Connected Rooftop Solar PV Projects under RESCO mode at Constituent Colleges/Institutions of Central Agricultural University (CAU), Imphal - North Eastern Region (RTSPV T-XIII)",
       "priority": 75,
       "first_seen": "2026-10-25T06:27:57+00:00"
+    },
+    {
+      "id": "NTPC-0f015f41",
+      "kind": "tender",
+      "title": "Deployment of Two (2) no. of Commercial Vehicle (4WD) for a Period of Two (02) Years at Fatehgarh NTPC REL, Jaisalmer Solar Project (opens i",
+      "org": "NTPC Ltd",
+      "source": "NTPC Portal",
+      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30482",
+      "state": "Pan-India",
+      "value": null,
+      "capacity": null,
+      "deadline": "2026-11-20",
+      "detected": "2026-11-17",
+      "owner": "Unassigned",
+      "note": "2 | GEM/2026/B/8171399 | Deployment of Two (2) no. of Commercial Vehicle (4WD) for a Period of Two (02) Years at Fatehgarh NTPC REL, Jaisalmer Solar Project (opens in a new tab) Renewable Energy | Renewable Energy | 20 Nov 2026 3:00 PM | View tender GEM/2026/B/8171399 (opens in a",
+      "priority": 75,
+      "first_seen": "2026-11-17T21:51:55+00:00"
     },
     {
       "id": "SECI-a56334b6",
