@@ -1,23 +1,6 @@
 {
-  "updated_at": "2026-11-18T08:46:00+00:00",
+  "updated_at": "2026-11-18T21:31:07+00:00",
   "items": [
-    {
-      "id": "NTPC-f2bf5308",
-      "kind": "tender",
-      "title": "EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 600MW (300MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR DHULE SOLAR PROJECT\r",
-      "org": "NTPC Ltd",
-      "source": "NTPC Portal",
-      "source_url": "https://ntpctender.ntpc.co.in/NITDetails/NITs/30392",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": 600.0,
-      "deadline": "2026-11-18",
-      "detected": "2026-11-18",
-      "owner": "Unassigned",
-      "note": "3 | NRE-CS-5848-004(EPC)-9 Corrigendum | EPC PACKAGE WITH LAND FOR DEVELOPMENT OF UP TO 600MW (300MW+300MW) ISTS\r\nCONNECTED GROUND MOUNTED SOLAR PV PROJECT NEAR DHULE SOLAR PROJECT\r\n(MAHARASHTRA) (opens in a new tab) Renewable Energy | Renewable Energy | 18 Nov 2026 5:00 PM | Vie",
-      "priority": 100,
-      "first_seen": "2026-11-17T21:51:55+00:00"
-    },
     {
       "id": "SECI-4ac07ea4",
       "kind": "tender",
@@ -28,10 +11,10 @@
       "state": "Pan-India",
       "value": null,
       "capacity": 700.0,
-      "deadline": "2026-11-16",
+      "deadline": "2026-11-30",
       "detected": "2026-11-18",
       "owner": "Unassigned",
-      "note": " | SECI000278 | SECI-2026-TN000027 | SECI/C&P/IPP/15/0009/26-27 | 700 MW ISTS-Connected Solar PV Power Projects in India under TBCB (C&I-1) | 03/09/2026 | 16/11/2026 | View Details",
+      "note": " | SECI000278 | SECI-2026-TN000027 | SECI/C&P/IPP/15/0009/26-27 | 700 MW ISTS-Connected Solar PV Power Projects in India under TBCB (C&I-1) | 03/09/2026 | 30/11/2026 | View Details",
       "priority": 97,
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
