@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T08:30:16+00:00",
+  "updated_at": "2026-11-21T20:12:16+00:00",
   "items": [
     {
       "id": "SECI-4ac07ea4",
@@ -87,23 +87,6 @@
       "first_seen": "2026-10-25T06:27:57+00:00"
     },
     {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": null,
-      "deadline": "2026-11-17",
-      "detected": "2026-11-21",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Announcements Debarment List Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 62,
-      "first_seen": "2026-11-21T08:30:16+00:00"
-    },
-    {
       "id": "SECI-d2c77583",
       "kind": "tender",
       "title": "RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding",
@@ -119,40 +102,6 @@
       "note": " | SECI000295 | SECI-2026-TN000036 | SECI/C&P/PMC/11/07/2025-26 | RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding | 28/10/2026 | 14/12/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-10-28T18:59:25+00:00"
-    },
-    {
-      "id": "MHT-1da3ca67",
-      "kind": "tender",
-      "title": "1. Providing One Year Annual Maintenance Contract For The Year 2026-27 To NH 6 To Talvel Pimpalgaon Bu Junone Digar Amadgaon Nadgaon Kolhadi",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SzbIvsAoLEH7zfWE7Caf1qw%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-11-21",
-      "owner": "Unassigned",
-      "note": "1. Providing One Year Annual Maintenance Contract For The Year 2026-27 To NH 6 To Talvel Pimpalgaon Bu Junone Digar Amadgaon Nadgaon Kolhadi Shirsale Ruikheda Taroda Chikhali Road MDR 25 Km.12/00 To 22/00 And 26/00 To 30/00 Tal.Bodwad Dist Jalgaon E-Tender Notice No-19 For 2026-2",
-      "priority": 50,
-      "first_seen": "2026-11-21T08:30:16+00:00"
-    },
-    {
-      "id": "MHT-4172a575",
-      "kind": "tender",
-      "title": "5. Annual Maintenance To A) Kerhale Pimpri Ahirwadi Karjod Waghod Morgaon Kh Nehete MDR-71 At KM 00/00 To 4/500,14/00 To 16/00 B) Khioroda F",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SJXOxN7FbgngPNB8bhl3AbQ%3D%3D",
-      "state": "Pan-India",
-      "value": null,
-      "capacity": null,
-      "deadline": null,
-      "detected": "2026-11-21",
-      "owner": "Unassigned",
-      "note": "5. Annual Maintenance To A) Kerhale Pimpri Ahirwadi Karjod Waghod Morgaon Kh Nehete MDR-71 At KM 00/00 To 4/500,14/00 To 16/00 B) Khioroda Faizpur Rozoda Chinawal Vivara Kusumba To MDR-1 Road MDR-72 Km 22/500 To 27/00 Tal.Raver Dist.Jalgaon | E-Tender Notice No-19 For 2026-27-MSS",
-      "priority": 50,
-      "first_seen": "2026-11-21T08:30:16+00:00"
     }
   ]
 }
