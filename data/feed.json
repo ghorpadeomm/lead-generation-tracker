@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T09:52:54+00:00",
+  "updated_at": "2026-11-27T22:13:58+00:00",
   "items": [
     {
       "id": "NTPC-272007d2",
@@ -153,57 +153,6 @@
       "note": " | SECI000295 | SECI-2026-TN000036 | SECI/C&P/PMC/11/07/2025-26 | RfS for setting up Solar PV Power Project for NHAI (Phase-I) under Tariff-Based Competitive Bidding | 28/10/2026 | 14/12/2026 | View Details",
       "priority": 50,
       "first_seen": "2026-10-28T18:59:25+00:00"
-    },
-    {
-      "id": "MHT-63344a71",
-      "kind": "tender",
-      "title": "Welcome to eProcurement System The eProcurement System of Maharashtra enables the Tenderers to download the Tender Schedule free of cost and",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://gepnicreports.gov.in/eprocreports/maha/",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": 0.08,
-      "deadline": null,
-      "detected": "2026-11-27",
-      "owner": "Unassigned",
-      "note": "MIS Reports Tenders by Location Tenders by Organisation Tenders by Classification Tenders in Archive Tenders Status Cancelled/Retendered Downloads Announcements Debarment List Recognitions Site compatibility |  | MIS Reports Tenders by Location Tenders by Organisation Tenders by ",
-      "priority": 50,
-      "first_seen": "2026-11-27T09:52:54+00:00"
-    },
-    {
-      "id": "MHT-c289b5b9",
-      "kind": "tender",
-      "title": "1. Comprehensive Operation and Maintenance of 33/11 KV substation 4 nos., DTH 2 nos. and allied electrical distribution network in MIHAN SEZ",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=Sk3hcN7bYmNso4xTPCgg2YQ%3D%3D",
-      "state": "Maharashtra",
-      "value": null,
-      "capacity": 0.08,
-      "deadline": null,
-      "detected": "2026-11-27",
-      "owner": "Unassigned",
-      "note": "1. Comprehensive Operation and Maintenance of 33/11 KV substation 4 nos., DTH 2 nos. and allied electrical distribution network in MIHAN SEZ area, Nagpur MADC/MIHAN/Tender/2026-27/7 07-Dec-2026 02:00 PM 08-Dec-2026 02:00 PM 2. NOTICE NO. 1/2026-27 JWAGP2026 NOTICE NO. 1/2026-27 J",
-      "priority": 50,
-      "first_seen": "2026-11-27T09:52:54+00:00"
-    },
-    {
-      "id": "MHT-65ac64e4",
-      "kind": "tender",
-      "title": "9. Survey, Design, Fabrication, Supply, Installation, Testing and Commissioning of Total 80.00 kWp On GridConnected Rooftop Solar Pv Power P",
-      "org": "Maharashtra (MahaTenders)",
-      "source": "MahaTenders",
-      "source_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=Home&service=direct&session=T&sp=SQcaheffch0oBptMZeDmPyw%3D%3D",
-      "state": "Odisha",
-      "value": null,
-      "capacity": 0.08,
-      "deadline": null,
-      "detected": "2026-11-27",
-      "owner": "Unassigned",
-      "note": "9. Survey, Design, Fabrication, Supply, Installation, Testing and Commissioning of Total 80.00 kWp On GridConnected Rooftop Solar Pv Power Plant Including Comprehensive Maintenance Contract (CMC) For 3 Years | SMART/KAPCL/Goods/02/2026 | 06-Dec-2026 03:00 PM | 07-Dec-2026 03:00 P",
-      "priority": 50,
-      "first_seen": "2026-11-27T09:52:54+00:00"
     }
   ]
 }
